@@ -32,7 +32,6 @@ Esta wiki foi criada para **organizar o aprendizado contínuo** em áreas relaci
 ### Autor
 **Amauri Dall’Oglio**  
 Desenvolvedor .NET | Arquiteto de Software | Explorador de IA  
-[Perfil GitHub](https://github.com/AmauriDallOglio)
 
 ---
 
