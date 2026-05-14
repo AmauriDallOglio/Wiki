@@ -1,6 +1,20 @@
 
 TIVIT - .Net com GitHub Copilot
 
+
+Você se certificou nas seguintes habilidades:
+
+- .NET
+- C#
+- GitHub
+- Git
+- POO
+- Banco de Dados
+- GitHub Copilot
+
+<img width="1101" height="774" alt="image" src="https://github.com/user-attachments/assets/13a5feb9-3f47-4c2b-bad7-fe7f287b83f2" />
+
+
  
 https://web.dio.me/lab/criando-um-validador-de-bandeiras-de-cartao-de-credito-com-o-github-copilot/learning/d71c1ba2-8f3f-4b23-bfdf-b20bf8f13465?back=/track/tivit-net-github-copilot
 
