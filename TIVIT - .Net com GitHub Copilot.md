@@ -12,6 +12,9 @@ Você se certificou nas seguintes habilidades:
 - Banco de Dados
 - GitHub Copilot
 
+
+<img width="1010" height="693" alt="image" src="https://github.com/user-attachments/assets/e540a234-f21d-431f-9344-38b6b7b3632b" />
+
 <img width="1101" height="774" alt="image" src="https://github.com/user-attachments/assets/13a5feb9-3f47-4c2b-bad7-fe7f287b83f2" />
 
 
