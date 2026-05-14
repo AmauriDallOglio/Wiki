@@ -4,6 +4,10 @@ TIVIT - .Net com GitHub Copilot
  
 https://web.dio.me/lab/criando-um-validador-de-bandeiras-de-cartao-de-credito-com-o-github-copilot/learning/d71c1ba2-8f3f-4b23-bfdf-b20bf8f13465?back=/track/tivit-net-github-copilot
 
+# Desafio de projeto
+
+## Criando um Validador de Bandeiras de Cartão de Crédito com o GitHub Copilot
+
 
 - Introdução ao Ambiente .NET
 - Sintaxe Básica com .NET C#
