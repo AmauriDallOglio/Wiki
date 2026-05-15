@@ -27,6 +27,9 @@ O fluxo atual funciona da seguinte forma:
 4. **Persistência**  
    A resposta é gravada na tabela `Sessao`, permitindo histórico e reuso.
 
+
+
+ 
 ---
 
 ## Problema Atual
