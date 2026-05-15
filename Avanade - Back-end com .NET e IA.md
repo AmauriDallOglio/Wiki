@@ -6,15 +6,6 @@ Avanade - Back-end com .NET e IA
 <img width="125" height="120" alt="image" src="https://github.com/user-attachments/assets/ef6b908f-9873-42a3-8368-424c4f18c505" />
 
 
-- Programação Orientada a Objetos
-- <img width="1102" height="769" alt="image" src="https://github.com/user-attachments/assets/9a97bd5a-6c22-4011-92d7-99d21600b92c" />
-
-- Desenvolvimento de APIs
-- <img width="1094" height="761" alt="image" src="https://github.com/user-attachments/assets/a6035803-2fde-45de-beda-a7f65accb92c" />
-
-- Integração com Banco de Dados
-- <img width="1097" height="765" alt="image" src="https://github.com/user-attachments/assets/3acc4f19-8e69-4e4b-90e4-f12487b30abc" />
-
 - Introdução a Serviços de IA na Cloud com a Azure
 
 
