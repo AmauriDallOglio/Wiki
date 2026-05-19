@@ -3,7 +3,19 @@
 
 Avanade - Back-end com .NET e IA
 
-<img width="125" height="120" alt="image" src="https://github.com/user-attachments/assets/ef6b908f-9873-42a3-8368-424c4f18c505" />
+<img width="1108" height="785" alt="image" src="https://github.com/user-attachments/assets/ec3b75f4-0efc-47f4-80ff-9ca1c12af4b8" />
+
+
+C#
+.NET
+Git
+GitHub
+Docker
+Banco de Dados
+NoSQL
+Inteligência Artificial (IA)
+Azure OpenAI
+
 
 
 - Introdução a Serviços de IA na Cloud com a Azure
