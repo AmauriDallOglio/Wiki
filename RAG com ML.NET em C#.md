@@ -12,7 +12,15 @@ O objetivo é combinar **busca inteligente**, **geração de texto** e **aprendi
 
 ---
 
-<img width="1842" height="885" alt="image" src="https://github.com/user-attachments/assets/294e67ed-860f-492e-aac8-9c1b15469f88" />
+<img width="1844" height="892" alt="image" src="https://github.com/user-attachments/assets/1fac8ebc-2c8a-4921-9fb2-74f1954fabac" />
+
+---
+
+<img width="1906" height="849" alt="image" src="https://github.com/user-attachments/assets/d318538a-1022-4618-8580-231ec756dc95" />
+
+---
+
+<img width="1855" height="851" alt="image" src="https://github.com/user-attachments/assets/4e8c58dd-c0c5-4997-a2a0-c6db4f355a64" />
 
 ---
 
