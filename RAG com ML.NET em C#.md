@@ -7,6 +7,26 @@ O fluxo combina três camadas: memória de sessões, modelo treinado com ML.NET 
 
 Além disso, a solução possui aprendizado contínuo: cada interação é registrada em sessão e reutilizada no retreinamento periódico do modelo, permitindo melhorar a cobertura de respostas diretas ao longo do tempo e reduzir chamadas desnecessárias ao fluxo completo de RAG.
 
+<img width="2560" height="1440" alt="tech_stack_infographic_white" src="https://github.com/user-attachments/assets/996ac488-a6ba-47bc-8134-8e837c872516" />
+
+
+Resumo das Skills:
+1. .NET 8: Framework moderno para construção de APIs robustas.
+2. React: Biblioteca para interfaces de usuário dinâmicas.
+3. SQL Server: Persistência de dados relacional.
+4. Docker: Containerização para deploy consistente.
+5. Prometheus/Grafana: Monitoramento e visualização de métricas.
+6. ML.NET: Machine Learning nativo para predições.
+7. Ollama: Execução de modelos de linguagem (LLM) locais.
+8. EF Core: ORM para mapeamento objeto-relacional.
+9. OpenTelemetry: Instrumentação para observabilidade completa.
+10. Swagger: Documentação interativa de APIs.
+11. JWT: Autenticação segura baseada em tokens.
+12. RAG: Recuperação de contexto para enriquecer a IA.
+13. Arquitetura em Camadas: Organização e separação de responsabilidades.
+14. Padrão Repositório: Abstração do acesso a dados.
+
+
 O objetivo é unir recuperação de contexto, geração de linguagem natural e evolução contínua do conhecimento para entregar respostas cada vez mais rápidas, consistentes e precisas.
 
 
@@ -180,4 +200,7 @@ Resumo arquitetural (visão geral)
 - **Escalabilidade**: arquitetura pronta para novos domínios e personagens.
 
 ---
+
+
+
 
