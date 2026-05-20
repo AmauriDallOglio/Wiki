@@ -17,11 +17,15 @@ O objetivo é unir recuperação de contexto, geração de linguagem natural e e
 
 ---
 
-<img width="1844" height="892" alt="image" src="https://github.com/user-attachments/assets/1fac8ebc-2c8a-4921-9fb2-74f1954fabac" />
+<img width="1849" height="829" alt="image" src="https://github.com/user-attachments/assets/ef9d3a3b-3de4-4884-adc1-6018ec7f5b6a" />
 
 ---
 
 <img width="1906" height="849" alt="image" src="https://github.com/user-attachments/assets/d318538a-1022-4618-8580-231ec756dc95" />
+
+---
+
+<img width="1844" height="892" alt="image" src="https://github.com/user-attachments/assets/1fac8ebc-2c8a-4921-9fb2-74f1954fabac" />
 
 ---
 
