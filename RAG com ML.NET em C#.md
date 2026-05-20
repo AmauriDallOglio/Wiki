@@ -142,7 +142,7 @@ Pergunta → Histórico Sessao → ModeloML → RAG (RagServico + PromptServico)
 - Envia prompt contextual ao Ollama (/api/generate), aplica timeout e filtra respostas inválidas.
 - ExecutarPromptAsync(promptCompleto, cancellationToken)
 - Execução genérica de prompt no Ollama com tratamento de timeout/cancelamento.
-- ServidorOllama(urlBase, requestBody, cancellationToken, streaming=false)
+- ServidorOllama.
 - Método interno que faz POST, lê stream JSON linha a linha e concatena campo response.
 - ObterRespostasInvalidas()
 - Lista frases que indicam respostas sem valor, para fallback.
@@ -154,13 +154,6 @@ Pergunta → Histórico Sessao → ModeloML → RAG (RagServico + PromptServico)
 - Serviço de engenharia de prompt (montagem de instruções para o LLM).
 - GerarPromptGenerativo(pergunta, trechosLocalizados, cancellationToken)
 - Monta prompt com pergunta + contexto recuperado + regras obrigatórias.
-- PromptOrdemServico(manutentor)
-- Gera prompt textual para planejamento de ordens de serviço.
-- PromptOrdemServicoHtml(manutentor)
-- Gera prompt para saída em HTML/CSS.
-- Métodos auxiliares:
-- ObterListaOrdemServico, MontarPrompt, OrdemServicoConverterParaTexto,
-- GerarListaOrdensServico, CriarOrdem, GerarStatusAleatorio.
 - O que essa aplicação faz: Padroniza e estrutura prompts para aumentar qualidade e consistência das respostas.
 
 5) RagServico.cs
@@ -178,13 +171,9 @@ Resumo arquitetural (visão geral)
 - PromptServico monta o prompt final.
 - OllamaServico envia ao LLM local e retorna a resposta gerada.
 
-
-
-
-
 ---
 
-## Benefícios Esperados
+## Benefícios
 - **Velocidade**: respostas diretas do modelo treinado.  
 - **Eficiência**: menor carga sobre o pipeline RAG.  
 - **Aprendizado contínuo**: o sistema melhora automaticamente com o tempo.  
