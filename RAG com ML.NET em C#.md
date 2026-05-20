@@ -33,7 +33,7 @@ O objetivo é unir recuperação de contexto, geração de linguagem natural e e
 
 ---
 
-## Problema Atual
+## Problema encontrado
 
 Com o crescimento da base de dados e do número de consultas, a lentidão não está relacionada apenas ao uso do pipeline RAG, mas também a outros pontos de custo acumulado na aplicação. Hoje, além de executar etapas pesadas de recuperação e geração, o sistema também realiza varreduras extensas de texto, múltiplas operações de string e regex, chamadas externas ao Ollama com tempo limite elevado e persistência de sessão em toda requisição. Em cenários de maior concorrência, isso aumenta o tempo de resposta e o consumo de CPU e I/O.
 
@@ -43,8 +43,11 @@ Em resumo, o problema atual é multifatorial: o RAG completo em todas as pergunt
 
 ---
 
-##  Solução Proposta: Classe `MLSessao`
-Para otimizar o desempenho, será criada a classe **`MLSessao`**, responsável por **treinar modelos de aprendizado** com base nas respostas já armazenadas na tabela `Sessao`.
+##  Solução Proposta: 
+
+<img width="1672" height="941" alt="fluxo_processo_ia_hibrida_v3" src="https://github.com/user-attachments/assets/0ec6ed1f-1ea4-42ff-9d04-1d932e234541" />
+
+
 
 ### Objetivos:
 - Treinar com ML.NET usando histórico
