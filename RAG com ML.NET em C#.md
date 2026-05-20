@@ -12,6 +12,9 @@ O objetivo é combinar **busca inteligente**, **geração de texto** e **aprendi
 
 ---
 
+<img width="1842" height="885" alt="image" src="https://github.com/user-attachments/assets/294e67ed-860f-492e-aac8-9c1b15469f88" />
+
+---
 
 ## Problema Atual
 
