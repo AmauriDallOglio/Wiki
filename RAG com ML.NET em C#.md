@@ -1,8 +1,13 @@
 
 # Sistema RAG com Treinamento ML.NET
 
-Este projeto implementa um sistema baseado em **RAG (Retrieval-Augmented Generation)**, capaz de buscar e gerar respostas contextuais sobre personagens da com base em documentos imortados.  
-O objetivo é combinar **busca inteligente**, **geração de texto** e **aprendizado contínuo** para oferecer respostas rápidas e precisas.
+Este projeto implementa um sistema de perguntas e respostas com arquitetura híbrida de RAG (Retrieval-Augmented Generation), voltado para responder perguntas sobre personagens com base em documentos importados.
+
+O fluxo combina três camadas: memória de sessões, modelo treinado com ML.NET e geração contextual com Ollama. Primeiro, o sistema tenta responder pelo histórico já salvo (Sessao) e pelo modelo treinado (ModeloML), priorizando velocidade. Quando não há resposta confiável, ativa o pipeline RAG, que localiza trechos relevantes nos documentos, monta um prompt estruturado e envia ao modelo generativo para produzir a resposta final.
+
+Além disso, a solução possui aprendizado contínuo: cada interação é registrada em sessão e reutilizada no retreinamento periódico do modelo, permitindo melhorar a cobertura de respostas diretas ao longo do tempo e reduzir chamadas desnecessárias ao fluxo completo de RAG.
+
+O objetivo é unir recuperação de contexto, geração de linguagem natural e evolução contínua do conhecimento para entregar respostas cada vez mais rápidas, consistentes e precisas.
 
 
 <img width="1511" height="844" alt="image" src="https://github.com/user-attachments/assets/d89227d2-9341-41f6-8ced-1894619327da" />
