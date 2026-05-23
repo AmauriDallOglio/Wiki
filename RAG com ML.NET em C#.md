@@ -9,13 +9,6 @@ Além disso, a solução possui aprendizado contínuo: cada interação é regis
 
 <img width="2560" height="1440" alt="tech_stack_infographic_white" src="https://github.com/user-attachments/assets/996ac488-a6ba-47bc-8134-8e837c872516" />
 
-Instalação do servidor:
-
-https://github.com/AmauriDallOglio/Wiki/wiki/Ollama
-
-<img width="1006" height="336" alt="image" src="https://github.com/user-attachments/assets/b0fdb0a9-9c0e-421a-b5ac-6359b1ca257d" />
-
-
 Resumo das Skills:
 1. .NET 8: Framework moderno para construção de APIs robustas.
 2. React: Biblioteca para interfaces de usuário dinâmicas.
@@ -31,6 +24,13 @@ Resumo das Skills:
 12. RAG: Recuperação de contexto para enriquecer a IA.
 13. Arquitetura em Camadas: Organização e separação de responsabilidades.
 14. Padrão Repositório: Abstração do acesso a dados.
+
+Instalação do servidor:
+
+https://github.com/AmauriDallOglio/Wiki/wiki/Ollama
+
+<img width="1006" height="336" alt="image" src="https://github.com/user-attachments/assets/b0fdb0a9-9c0e-421a-b5ac-6359b1ca257d" />
+
 
 
 O objetivo é unir recuperação de contexto, geração de linguagem natural e evolução contínua do conhecimento para entregar respostas cada vez mais rápidas, consistentes e precisas.
