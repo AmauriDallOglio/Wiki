@@ -49,7 +49,7 @@ Prometheus:
 
 ---
 Grafana:
-<img width="1846" height="909" alt="image" src="https://github.com/user-attachments/assets/50a5b1ad-a772-45f0-8bfa-fc6e5d3004de" />
+<img width="1851" height="826" alt="image" src="https://github.com/user-attachments/assets/ea326a03-82d8-43aa-bc52-17543781de19" />
 
  
 ---
