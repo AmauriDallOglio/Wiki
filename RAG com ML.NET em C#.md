@@ -35,27 +35,26 @@ https://github.com/AmauriDallOglio/Wiki/wiki/Ollama
 
 O objetivo é unir recuperação de contexto, geração de linguagem natural e evolução contínua do conhecimento para entregar respostas cada vez mais rápidas, consistentes e precisas.
 
-
 <img width="1511" height="844" alt="image" src="https://github.com/user-attachments/assets/d89227d2-9341-41f6-8ced-1894619327da" />
-
 <img width="1511" height="812" alt="image" src="https://github.com/user-attachments/assets/b19c7326-6527-4f53-afc8-512ff9986e25" />
 <img width="1507" height="734" alt="image" src="https://github.com/user-attachments/assets/02344ef6-91fc-4414-8ad1-4ed8bbf1dc0c" />
 
 ---
-
+.NET:
 <img width="1849" height="829" alt="image" src="https://github.com/user-attachments/assets/ef9d3a3b-3de4-4884-adc1-6018ec7f5b6a" />
 
 ---
-
+Prometheus:
 <img width="1906" height="849" alt="image" src="https://github.com/user-attachments/assets/d318538a-1022-4618-8580-231ec756dc95" />
 
 ---
+Grafana:
+<img width="1855" height="766" alt="image" src="https://github.com/user-attachments/assets/076c6f1e-363f-4c76-9cf2-7f479f7b0c1f" />
 
-<img width="1844" height="892" alt="image" src="https://github.com/user-attachments/assets/1fac8ebc-2c8a-4921-9fb2-74f1954fabac" />
-
+ 
 ---
 
-<img width="1855" height="851" alt="image" src="https://github.com/user-attachments/assets/4e8c58dd-c0c5-4997-a2a0-c6db4f355a64" />
+<img width="1841" height="756" alt="image" src="https://github.com/user-attachments/assets/43d701e6-d6db-4e1b-bdc1-07f3f95a11e9" />
 
 ---
 
