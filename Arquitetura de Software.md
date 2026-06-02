@@ -257,19 +257,283 @@ Os padrões arquitetônicos definem a estrutura geral dos sistemas e orientam a 
 
 # Modelos de Serviço em Nuvem
 
-Os modelos de computação em nuvem são classificados em diferentes categorias:
+A computação em nuvem revolucionou a forma como aplicações e infraestruturas são construídas, disponibilizadas e consumidas. Atualmente, os serviços em nuvem são organizados em diferentes modelos, cada um oferecendo níveis distintos de responsabilidade, controle e abstração.
 
-## SaaS (Software as a Service)
+Os modelos de computação em nuvem são classificados em diferentes categorias: Tipos de Modalidades de Serviços na Nuvem
 
-Modelo em que o software é disponibilizado diretamente ao usuário pela internet, sem necessidade de instalação local.
+Os principais tipos de Modalidades de Serviços na Nuvem são:
 
-## PaaS (Platform as a Service)
+* IaaS (Infrastructure as a Service)
+* PaaS (Platform as a Service)
+* SaaS (Software as a Service)
 
-Fornece uma plataforma completa para desenvolvimento, implantação e gerenciamento de aplicações.
+Cada modalidade atende diferentes necessidades técnicas e estratégicas dentro das organizações.
 
-## IaaS (Infrastructure as a Service)
+---
 
-Disponibiliza infraestrutura computacional sob demanda, como servidores, redes e armazenamento.
+# IaaS (Infraestrutura como Serviço)
+
+<img width="907" height="294" alt="image" src="https://github.com/user-attachments/assets/64cdf0a6-b63f-4c91-a517-a0f9c1d7e507" />
+
+No modelo IaaS, a empresa aluga recursos computacionais como:
+
+* Servidores
+* Máquinas virtuais
+* Redes
+* Armazenamento
+
+Nesse cenário, o cliente possui maior controle sobre a infraestrutura e é responsável por grande parte da configuração e gerenciamento do ambiente.
+
+É como alugar um espaço vazio onde toda a estrutura precisa ser montada manualmente.
+
+Entre as principais responsabilidades do cliente estão:
+
+* Instalação do sistema operacional
+* Configuração do servidor web
+* Instalação do .NET
+* Deploy da aplicação
+* Configuração de firewall e SSL
+* Atualizações e monitoramento
+* Backup e manutenção
+
+Exemplo: Criar uma máquina virtual no Azure e instalar manualmente todo o ambiente necessário para executar uma API.
+
+Esse modelo é ideal para cenários que exigem:
+
+* Controle total da infraestrutura
+* Configurações específicas
+* Personalizações avançadas
+
+No exemplo apresentado, a máquina virtual "VM Azul do MiniCamp" permite acesso remoto utilizando RDP (Remote Desktop Protocol), possibilitando:
+
+* Acesso ao CMD
+* Instalação de programas
+* Configuração do ambiente
+* Gerenciamento do sistema operacional
+
+Quando disponibilizamos uma API utilizando IaaS, toda a configuração do ambiente é responsabilidade da equipe técnica.
+
+## Vantagens do IaaS
+
+* Controle total do ambiente
+* Flexibilidade de configuração
+* Maior personalização
+
+## Desvantagens do IaaS
+
+* Maior responsabilidade operacional
+* Necessidade de conhecimento técnico avançado
+* Maior custo de manutenção
+
+---
+
+# PaaS (Plataforma como Serviço)
+
+<img width="912" height="370" alt="image" src="https://github.com/user-attachments/assets/451603b6-5548-4165-a337-5b40520f4549" />
+
+No modelo PaaS, o provedor de nuvem entrega um ambiente pronto para hospedagem e execução de aplicações.
+
+Nesse cenário, o cliente não precisa gerenciar:
+
+* Sistema operacional
+* Infraestrutura
+* Atualizações
+* Escalabilidade
+* Segurança básica do ambiente
+
+O foco passa a ser exclusivamente o desenvolvimento e publicação da aplicação.
+
+Exemplo: Utilizar Azure App Service para hospedar uma API ASP.NET Core com Swagger.
+
+As principais atividades do desenvolvedor nesse modelo incluem:
+
+* Criar um App Service
+* Publicar o código
+* Configurar variáveis de ambiente
+* Integrar banco de dados
+* Realizar deploy contínuo
+
+O Azure gerencia automaticamente:
+
+* Infraestrutura
+* SSL
+* Escalabilidade
+* Balanceamento de carga
+* Atualizações do ambiente
+
+Outro exemplo apresentado foi o Azure SQL Database, um banco de dados relacional gerenciado pela Microsoft, onde toda a instalação e administração do SQL Server já são realizadas automaticamente pela plataforma.
+
+## Vantagens do PaaS
+
+* Menor preocupação com infraestrutura
+* Facilidade de escalabilidade
+* Agilidade no desenvolvimento
+* Integração simplificada com serviços cloud
+
+## Desvantagens do PaaS
+
+* Menor controle do ambiente
+* Limitações de personalização
+* Dependência do provedor
+
+---
+
+# SaaS (Software como Serviço)
+
+<img width="910" height="369" alt="image" src="https://github.com/user-attachments/assets/242929b4-4130-47c6-9f24-26f89b3d63ae" />
+
+O modelo SaaS representa aplicações prontas disponíveis diretamente pela internet.
+
+Nesse modelo, o usuário apenas utiliza o software sem precisar instalar, configurar ou administrar infraestrutura.
+
+Exemplos comuns incluem:
+
+* Microsoft Teams
+* Gmail
+* Netflix
+* Office 365
+
+O acesso normalmente ocorre por meio de:
+
+* Navegadores
+* Aplicativos móveis
+* Interfaces web
+
+Exemplo apresentado: utilização de plataformas como Power Platform ou OutSystems para consumir APIs e construir aplicações visuais sem necessidade de gerenciar infraestrutura.
+
+Outro exemplo citado é o uso do Postman Cloud para testes e documentação de APIs diretamente na nuvem.
+
+Até pouco tempo atrás, ferramentas como Word, Excel e PowerPoint exigiam instalação local. Atualmente, esses softwares estão disponíveis online, caracterizando claramente o modelo SaaS.
+
+## Vantagens do SaaS
+
+* Facilidade de uso
+* Zero preocupação com infraestrutura
+* Implantação rápida
+* Alta disponibilidade
+
+## Desvantagens do SaaS
+
+* Pouca customização
+* Dependência do fornecedor
+* Menor controle técnico
+
+---
+
+# Comparação dos Níveis de Controle
+
+<img width="897" height="505" alt="image" src="https://github.com/user-attachments/assets/d9e3e9d1-8fec-4b88-9af5-dc43d21318ab" />
+
+| Modelo | Infraestrutura | Sistema Operacional | Aplicação | Usuário Final |
+| ------ | -------------- | ------------------- | --------- | ------------- |
+| IaaS   | Cliente        | Cliente             | Cliente   | Cliente       |
+| PaaS   | Provedor       | Provedor            | Cliente   | Cliente       |
+| SaaS   | Provedor       | Provedor            | Provedor  | Cliente       |
+
+---
+
+# Modelo de Responsabilidade Compartilhada
+
+Na computação em nuvem, existe o conceito de responsabilidade compartilhada entre cliente e provedor.
+
+Quanto maior o nível de abstração do serviço, menor será a responsabilidade operacional do cliente.
+
+* No IaaS, o cliente gerencia quase tudo.
+* No PaaS, o cliente foca apenas na aplicação.
+* No SaaS, praticamente toda a gestão é responsabilidade do provedor.
+
+Esse modelo permite que empresas escolham o nível de controle e complexidade operacional mais adequado às suas necessidades.
+
+---
+
+# Grupos de Recursos
+
+<img width="858" height="361" alt="image" src="https://github.com/user-attachments/assets/6e02a487-31b2-490c-8d11-d33b401df4fb" />
+
+Os Grupos de Recursos (Resource Groups) são estruturas utilizadas no Azure para organizar recursos relacionados.
+
+Eles funcionam como unidades organizacionais que agrupam elementos como:
+
+* Máquinas virtuais
+* Bancos de dados
+* Redes
+* APIs
+* Storages
+
+Ao criar um recurso no Azure, normalmente outros componentes associados também são criados automaticamente.
+
+Por isso, os grupos de recursos ajudam a manter o ambiente organizado e facilitam:
+
+* Gerenciamento
+* Controle de acesso
+* Aplicação de políticas
+* Monitoramento
+* Governança
+
+---
+
+# Características dos Grupos de Recursos
+
+Entre as principais características dos grupos de recursos estão:
+
+* Um grupo pode conter diferentes tipos de recursos
+* Recursos podem estar em regiões diferentes
+* Um recurso pertence a apenas um grupo por vez
+* Recursos podem ser movidos entre grupos
+* O nome do grupo não pode ser alterado posteriormente
+
+As empresas normalmente organizam grupos de recursos por:
+
+* Projeto
+* Equipe
+* Aplicação
+* Ambiente
+* Função técnica
+
+---
+
+# Organização Inteligente no Azure
+
+Uma boa estratégia de organização facilita a governança do ambiente cloud.
+
+Os grupos de recursos podem funcionar como:
+
+* Unidades organizacionais
+* Estruturas de governança
+* Agrupamentos lógicos de aplicações
+
+Exemplo:
+
+* Grupo para APIs
+* Grupo para bancos de dados
+* Grupo para máquinas virtuais
+* Grupo para aplicações corporativas
+
+Essa organização melhora:
+
+* Visibilidade
+* Segurança
+* Gerenciamento operacional
+* Controle financeiro
+* Escalabilidade da infraestrutura
+
+---
+
+# Conclusão
+
+Os modelos de computação em nuvem oferecem diferentes níveis de abstração, responsabilidade e controle.
+
+A escolha entre IaaS, PaaS e SaaS depende de fatores como:
+
+* Necessidade de personalização
+* Complexidade operacional
+* Estrutura da equipe
+* Escalabilidade
+* Custos
+* Velocidade de entrega
+
+Além disso, conceitos como grupos de recursos e responsabilidade compartilhada são fundamentais para construção de ambientes organizados, escaláveis e eficientes dentro do Azure e de outras plataformas cloud.
+
 
 ---
 
