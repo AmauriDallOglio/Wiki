@@ -111,7 +111,7 @@ Cobrimos a importância de reutilizar instâncias de HttpClient e a melhor prát
 
 # Testes Unitários com xUnit ou MSTest
 
-
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_15_02" src="https://github.com/user-attachments/assets/c1b82709-e8ff-4c95-86ec-d0f3d3e7fa3e" />
 
 Testes unitários são uma parte fundamental do desenvolvimento de software moderno. Eles permitem verificar se pequenas unidades de código (métodos, classes) funcionam como esperado, de forma isolada. Isso ajuda a identificar bugs precocemente, facilita a refatoração e garante a qualidade e a manutenibilidade do código. Neste capítulo, focaremos em como escrever testes unitários em .NET usando frameworks populares como xUnit ou MSTest.
 
@@ -134,11 +134,16 @@ a estruturar testes usando o padrão Arrange-Act-Assert. Exploramos como usar a 
 
 # Persistência com Entity Framework Core
 
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_17_40" src="https://github.com/user-attachments/assets/3baf2157-ce8a-4266-8c3a-512edb265d4e" />
+
 Persistência de dados é a capacidade de armazenar e recuperar informações de forma duradoura, geralmente em um banco de dados. No ecossistema .NET, o Entity Framework Core (EF Core) é o Object-Relational Mapper (ORM) oficial e mais popular. Um ORM permite que você interaja com o banco de dados usando objetos C# e LINQ (Language Integrated Query), em vez de escrever SQL diretamente. Isso acelera o desenvolvimento e torna o código mais fácil de manter.
 
 Um ORM (Object-Relational Mapper) é uma ferramenta que mapeia objetos de um domínio de aplicação para tabelas em um banco de dados relacional. Ele atua como uma ponte entre o mundo orientado a objetos da sua aplicação e o mundo relacional do banco de dados.
 
+
 # Configuração do Entity Framework Core
+
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_20_35" src="https://github.com/user-attachments/assets/fc2514a6-43ab-40bd-97ec-280fd6b7b66b" />
 
 Para usar o EF Core em seu projeto, você precisará instalar os pacotes NuGet apropriados e configurar o contexto do banco de dados.
 
@@ -148,11 +153,15 @@ Em uma aplicação ASP.NET Core, você registra o DbContext no sistema de injeç
 
 # Code First vs Database First
 
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_23_12" src="https://github.com/user-attachments/assets/5fb01e41-036b-47d9-bd12-8cfafc9d10ef" />
+
 O EF Core suporta dois fluxos de trabalho principais para interagir com o banco de dados:
 * Code First: Você define seu modelo de domínio (suas classes C#) primeiro, e o EF Core gera o esquema do banco de dados (tabelas, colunas, relacionamentos) com base nesse modelo. Este é o fluxo de trabalho mais comum e recomendado para novos projetos.
 * Database First: Você tem um banco de dados existente, e o EF Core gera as classes C# (entidades e DbContext ) a partir desse esquema. Útil para integrar aplicações com bancos de dados legados.
 
 # Migrations
+
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_25_44" src="https://github.com/user-attachments/assets/9efd2f89-5a7a-47bf-a2fe-54cdf002151b" />
 
 Migrations (Migrações) são uma funcionalidade do EF Core que permite gerenciar alterações no esquema do banco de dados de forma incremental e controlada. Cadamigração representa um conjunto de alterações (ex: adicionar uma nova tabela, adicionar uma coluna) que podem ser aplicadas ao banco de dados.
 
@@ -166,6 +175,8 @@ dotnet ef database update NomeDaMigracaoAnterior
 dotnet ef database update 0
 
 # Relacionamentos entre entidades
+
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_28_30" src="https://github.com/user-attachments/assets/1db91b65-a6c0-48b1-87d4-e79cabab6163" />
 
 A entidade representa um objeto de negócio no sistema, como um Usuário , Produto ou Pedido . Ela deve conter as propriedades que descrevem seus atributos e, opcionalmente, métodos que encapsulam o comportamento relacionado a esses atributos. No contexto de um banco de dados, a entidade geralmente  orresponde a uma tabela, e sua correta modelagem é fundamental para a integridade e funcionalidade do sistema.
 
