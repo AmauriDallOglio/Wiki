@@ -25,9 +25,9 @@ Resumo das Skills:
 13. Arquitetura em Camadas: Organização e separação de responsabilidades.
 14. Padrão Repositório: Abstração do acesso a dados.
 
-Instalação do servidor:
+Instalação do Ollama: https://github.com/AmauriDallOglio/Wiki/wiki/Ollama
 
-https://github.com/AmauriDallOglio/Wiki/wiki/Ollama
+Definição de prompt e RAG: https://github.com/AmauriDallOglio/Wiki/blob/main/RAG.md
 
 <img width="1006" height="336" alt="image" src="https://github.com/user-attachments/assets/b0fdb0a9-9c0e-421a-b5ac-6359b1ca257d" />
 
