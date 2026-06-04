@@ -1,4 +1,6 @@
-# Tipos de projetos .NET
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_04_37" src="https://github.com/user-attachments/assets/93ed340f-d93d-45b9-bd27-8597b3eb4d59" /># Tipos de projetos .NET
+
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_02_00" src="https://github.com/user-attachments/assets/8de2e31a-15ab-43d7-98a6-d1114ad19b1c" />
 
 O ecossistema .NET oferece uma variedade de modelos de projeto (templates) para diferentes tipos de aplicações. Compreender esses tipos é fundamental para iniciar um novo projeto com a estrutura correta para suas necessidades. Os mais comuns incluem:
 
@@ -20,6 +22,9 @@ MAUI ( maui ): Para construir aplicações nativas multiplataforma para desktop 
 xUnit ( xunit ) ou MSTest ( mstest ): Para projetos de testes unitários.
 
 # Padrões de Projeto com .NET
+
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_04_37" src="https://github.com/user-attachments/assets/d5762b8e-b297-4e39-b208-69581a4707de" />
+
 Padrões de projeto são soluções reutilizáveis para problemas comuns de design de software. Eles são descrições de como resolver um problema que pode ser aplicado em diferentes situações. Usar padrões de projeto pode levar a um código mais robusto, flexível e fácil de manter. Nesta seção, exploraremos alguns padrões de projeto amplamente utilizados no desenvolvimento .NET.
 
 
@@ -48,7 +53,10 @@ especialmente com ASP.NET Core. Ele permite que você remova as dependências de
 Inversão de Controle (IoC): DI é uma forma de Inversão de Controle, onde o controle da criação e gerenciamento de dependências é invertido do objeto para um container de DI. * Testabilidade: Com DI, você pode facilmente substituir EmailService por uma implementação de IEmailService para testes (um "mock"
 ou "stub") que não envia e-mails reais, tornando os testes unitários mais rápidos e isolados. * Containers de DI: Frameworks como ASP.NET Core possuem containers de DI embutidos que gerenciam automaticamente a criação e injeção de dependências, simplificando muito o desenvolvimento.
 
+
 # Arquitetura em Camadas
+
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_07_46" src="https://github.com/user-attachments/assets/2eb958bc-4694-43b9-8ff7-5bcb40e2ff38" />
 
 Uma arquitetura bem definida é fundamental para o sucesso de qualquer projeto de software, especialmente à medida que ele cresce em complexidade. A arquitetura em camadas é uma abordagem comprovada para organizar o código de uma aplicação em grupos lógicos (camadas), onde cada camada tem uma responsabilidade específica. Isso promove a separação de preocupações (Separation of Concerns - SoC), tornando a aplicação mais fácil de entender, manter e evoluir.
 
@@ -79,6 +87,8 @@ Em um projeto .NET, esta camada geralmente é implementada como:
 
 
 # Consumo de APIs HTTP com HttpClient
+
+
 
 No desenvolvimento de aplicações modernas, é muito comum que elas precisem se comunicar com outros serviços através de APIs HTTP. O .NET fornece a classe
 HttpClient para enviar requisições HTTP e receber respostas de recursos identificados por URIs. Este capítulo abordará como usar HttpClient de forma eficaz, incluindo boas práticas, tratamento de diferentes métodos HTTP, serialização/deserialização de JSON e tratamento de erros.
