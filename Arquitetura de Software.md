@@ -207,6 +207,9 @@ Dessa forma, o arquiteto de software se torna um dos principais responsáveis pe
 
 # Princípios Gerais de uma Boa Arquitetura
 
+<img width="1536" height="1024" alt="Copilot_20260603_223527" src="https://github.com/user-attachments/assets/68ef579d-9d03-40e5-a2af-ae21405039f5" />
+
+
 Boas práticas de arquitetura de software são fundamentais para garantir que os sistemas sejam sustentáveis, escaláveis e preparados para evolução contínua. Entre os principais princípios destacam-se a modularidade, reutilização, escalabilidade e manutenibilidade.
 
 Ao seguir esses princípios, o software torna-se mais fácil de evoluir, menos sujeito a erros e mais rápido de desenvolver. Além disso, uma arquitetura bem definida permite maior organização das responsabilidades, redução de acoplamento entre componentes e melhoria da qualidade geral da solução.
@@ -267,6 +270,8 @@ Os padrões arquitetônicos definem a estrutura geral dos sistemas e orientam a 
 ---
 
 # Modelos de Serviço em Nuvem
+
+<img width="1536" height="1024" alt="Copilot_20260603_223722" src="https://github.com/user-attachments/assets/cf731b2f-dea6-480e-b5c9-e76b3d25025b" />
 
 A computação em nuvem revolucionou a forma como aplicações e infraestruturas são construídas, disponibilizadas e consumidas. Atualmente, os serviços em nuvem são organizados em diferentes modelos, cada um oferecendo níveis distintos de responsabilidade, controle e abstração.
 
