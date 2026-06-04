@@ -11,6 +11,9 @@ A arquitetura serve como um projeto fundamental, um mapa detalhado que guia o de
 
 # Objetivos da Arquitetura de Software
 
+<img width="1536" height="1024" alt="Copilot_20260603_223137" src="https://github.com/user-attachments/assets/cc9a64cf-872f-4c55-81bf-f231dac0b07a" />
+
+
 A arquitetura de software possui objetivos estratégicos que vão além da simples organização estrutural. Entre os principais, destacam-se:
 
 ## Escalabilidade
@@ -162,6 +165,9 @@ Assim, o arquiteto de software não só garante a robustez e a eficiência dos s
 ---
 
 # Principais Responsabilidades do Arquiteto de Software
+
+<img width="1536" height="1024" alt="Copilot_20260603_223343" src="https://github.com/user-attachments/assets/869385da-d9d1-4cd5-8d5e-0597c0d8e9c2" />
+
 
 ## Definição da Arquitetura
 
