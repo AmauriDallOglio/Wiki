@@ -1,4 +1,4 @@
-
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 09_54_45" src="https://github.com/user-attachments/assets/5389d3d7-2b84-4f76-8f6c-14d92c279ce3" />
 # Introdução à Arquitetura
 
 A arquitetura de software é o desenho estrutural de um sistema de software, mostrando como os componentes se organizam e interagem. Ela representa o projeto de alto nível que define como o software será construído e como suas partes vão trabalhar juntas.
@@ -641,6 +641,9 @@ Avaliam o comportamento do sistema sob alta demanda para identificar gargalos e 
 
 # Deploy e Containers
 
+<img width="1672" height="941" alt="ChatGPT Image 4 de jun  de 2026, 10_01_52" src="https://github.com/user-attachments/assets/5ad31006-b36a-4c18-a245-9c468a85ea29" />
+
+
 As práticas modernas de deploy utilizam containers e plataformas de orquestração.
 
 ## Containerização (Docker)
@@ -658,6 +661,9 @@ Estratégia de implantação gradual que libera novas versões para pequenos gru
 ---
 
 # Mensageria e Comunicação Assíncrona
+
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 09_59_38" src="https://github.com/user-attachments/assets/f5a52d4d-2a9e-4f95-8a05-1a2468ccc7cd" />
+
 
 A comunicação assíncrona permite desacoplamento e maior resiliência entre sistemas distribuídos.
 
@@ -692,6 +698,9 @@ No dia a dia do arquiteto de software, as decisões envolvem avaliar diferentes 
 
 # Monolito vs. Microserviços
 
+<img width="1536" height="1024" alt="Copilot_20260604_095158" src="https://github.com/user-attachments/assets/4ec7eb3b-4dd2-4010-8ebe-5e0d1a101f61" />
+
+
 Ao optar por uma arquitetura baseada em microserviços, o software passa a ser dividido em vários serviços independentes, muitas vezes distribuídos geograficamente.
 
 Essa abordagem proporciona maior escalabilidade, flexibilidade tecnológica e independência entre os módulos da aplicação. No entanto, a comunicação entre os serviços deixa de ser local e passa a ocorrer pela rede, o que pode impactar diretamente o desempenho e aumentar a complexidade operacional.
@@ -709,6 +718,9 @@ A decisão entre monólito e microserviços depende de fatores como:
 ---
 
 # Banco de Dados Relacional vs. NoSQL
+
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 09_54_45" src="https://github.com/user-attachments/assets/cae78916-ce36-4c51-822c-a3f16b66d022" />
+
 
 A escolha entre bancos de dados relacionais e NoSQL também envolve importantes trade-offs arquiteturais.
 
@@ -798,11 +810,11 @@ Frameworks como Zachman e TOGAF fornecem estruturas organizadas para desenvolvim
 
 # Arquitetura de Software x Soluções x Corporativa
 
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 09_56_55" src="https://github.com/user-attachments/assets/7fc203fd-6fde-4836-8747-7cf3f67c1df4" />
+
 A arquitetura de software, arquitetura de soluções e arquitetura corporativa representam três pilares essenciais da engenharia de sistemas.
 
----
-
-# Arquitetura de Software
+## Arquitetura de Software
 
 A arquitetura de software foca na estrutura interna dos sistemas, na organização dos componentes e nas decisões técnicas necessárias para garantir:
 
@@ -813,9 +825,7 @@ A arquitetura de software foca na estrutura interna dos sistemas, na organizaç�
 
 Ela define como os elementos do sistema irão interagir para formar uma solução coesa e sustentável.
 
----
-
-# Arquitetura de Soluções
+## Arquitetura de Soluções
 
 A arquitetura de soluções expande esse conceito para integração entre múltiplos sistemas e aplicações.
 
@@ -823,9 +833,7 @@ Seu objetivo é garantir que diferentes serviços, plataformas e tecnologias tra
 
 Ela atua diretamente na comunicação entre sistemas, interoperabilidade e fluxo de informações organizacionais.
 
----
-
-# Arquitetura Corporativa
+## Arquitetura Corporativa
 
 A arquitetura corporativa fornece uma visão estratégica e holística da organização, alinhando tecnologia aos objetivos empresariais.
 
