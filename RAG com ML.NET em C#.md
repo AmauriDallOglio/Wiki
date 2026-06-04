@@ -1,13 +1,17 @@
 
 # Sistema RAG com Treinamento ML.NET
 
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 16_54_49" src="https://github.com/user-attachments/assets/4428187e-4d34-492d-957b-06d742998d55" />
+
+
 Este projeto implementa um sistema de perguntas e respostas com arquitetura híbrida de RAG (Retrieval-Augmented Generation), voltado para responder perguntas sobre personagens com base em documentos importados.
 
 O fluxo combina três camadas: memória de sessões, modelo treinado com ML.NET e geração contextual com Ollama. Primeiro, o sistema tenta responder pelo histórico já salvo (Sessao) e pelo modelo treinado (ModeloML), priorizando velocidade. Quando não há resposta confiável, ativa o pipeline RAG, que localiza trechos relevantes nos documentos, monta um prompt estruturado e envia ao modelo generativo para produzir a resposta final.
 
 Além disso, a solução possui aprendizado contínuo: cada interação é registrada em sessão e reutilizada no retreinamento periódico do modelo, permitindo melhorar a cobertura de respostas diretas ao longo do tempo e reduzir chamadas desnecessárias ao fluxo completo de RAG.
 
-<img width="2560" height="1440" alt="tech_stack_infographic_white" src="https://github.com/user-attachments/assets/996ac488-a6ba-47bc-8134-8e837c872516" />
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 16_57_12" src="https://github.com/user-attachments/assets/56eb4e5a-a5ba-4867-b0d9-789eb2c0eba7" />
+
 
 Resumo das Skills:
 1. .NET 8: Framework moderno para construção de APIs robustas.
@@ -28,6 +32,7 @@ Resumo das Skills:
 Instalação do Ollama: https://github.com/AmauriDallOglio/Wiki/wiki/Ollama
 
 Definição de prompt e RAG: https://github.com/AmauriDallOglio/Wiki/blob/main/RAG.md
+
 
 <img width="1006" height="336" alt="image" src="https://github.com/user-attachments/assets/b0fdb0a9-9c0e-421a-b5ac-6359b1ca257d" />
 
