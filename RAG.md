@@ -1,5 +1,8 @@
 # As Etapas do Pipeline de RAG
 
+<img width="1024" height="1536" alt="Copilot_20260603_222251" src="https://github.com/user-attachments/assets/f4c311f8-c82e-437b-9aa7-77c41878bb16" />
+
+
 1. Ingestão de Documentos
 O primeiro passo é armazenar os documentos brutos em um local acessível. O Azure Blob Storage é o serviço padrão para isso. Para automação do carregamento, o Azure Data Factory pode orquestrar pipelines de ingestão por exemplo, prontuários médicos ou peças jurídicas sendo automaticamente carregadas no Blob Storage à medida que são gerados.
 
