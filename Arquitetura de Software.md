@@ -1,4 +1,4 @@
-<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 09_54_45" src="https://github.com/user-attachments/assets/5389d3d7-2b84-4f76-8f6c-14d92c279ce3" />
+
 # Introdução à Arquitetura
 
 A arquitetura de software é o desenho estrutural de um sistema de software, mostrando como os componentes se organizam e interagem. Ela representa o projeto de alto nível que define como o software será construído e como suas partes vão trabalhar juntas.
@@ -721,7 +721,7 @@ A decisão entre monólito e microserviços depende de fatores como:
 
 <img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 09_54_45" src="https://github.com/user-attachments/assets/cae78916-ce36-4c51-822c-a3f16b66d022" />
 
-
+ 
 A escolha entre bancos de dados relacionais e NoSQL também envolve importantes trade-offs arquiteturais.
 
 Os bancos NoSQL oferecem maior flexibilidade para lidar com grandes volumes de dados variados e não estruturados. Essa abordagem é bastante utilizada em sistemas distribuídos, aplicações em tempo real e cenários de Big Data.
