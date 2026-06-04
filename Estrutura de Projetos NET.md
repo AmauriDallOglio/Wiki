@@ -1,4 +1,5 @@
-<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_04_37" src="https://github.com/user-attachments/assets/93ed340f-d93d-45b9-bd27-8597b3eb4d59" /># Tipos de projetos .NET
+
+# Tipos de projetos .NET
 
 <img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_02_00" src="https://github.com/user-attachments/assets/8de2e31a-15ab-43d7-98a6-d1114ad19b1c" />
 
@@ -88,7 +89,7 @@ Em um projeto .NET, esta camada geralmente é implementada como:
 
 # Consumo de APIs HTTP com HttpClient
 
-
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_10_01" src="https://github.com/user-attachments/assets/9a1b0f14-6cf0-4eae-b4ac-3b479db19c96" />
 
 No desenvolvimento de aplicações modernas, é muito comum que elas precisem se comunicar com outros serviços através de APIs HTTP. O .NET fornece a classe
 HttpClient para enviar requisições HTTP e receber respostas de recursos identificados por URIs. Este capítulo abordará como usar HttpClient de forma eficaz, incluindo boas práticas, tratamento de diferentes métodos HTTP, serialização/deserialização de JSON e tratamento de erros.
@@ -98,7 +99,10 @@ HttpClient é a classe principal no .NET para fazer requisições HTTP. Ela forn
 Embora instanciar HttpClient uma única vez seja uma boa prática, gerenciar sua vida útil e configurações pode ser complexo em aplicações maiores. Para isso, o .NET Core introduziu IHttpClientFactory. Evite criar uma nova instância de HttpClient para cada requisição. Use uma única instância estática ou
 IHttpClientFactory . * Use IHttpClientFactory : Em aplicações ASP.NET Core, sempre prefira IHttpClientFactory para gerenciar HttpClient s. * Tratamento de Erros: Sempre inclua blocos try-catch para lidar com HttpRequestException e outras exceções de rede. * Timeouts: Configure timeouts para suas requisições para evitar que a aplicação fique travada esperando por uma resposta que nunca chega. Isso pode ser feito no HttpClient ou via CancellationTokenSource.
 
+
 # Serialização e deserialização JSON
+
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_12_14" src="https://github.com/user-attachments/assets/d4e13434-2155-4e17-ae1d-3980441ade24" />
 
 Para trabalhar com APIs RESTful, é essencial converter objetos C# para JSON (serialização) e JSON para objetos C# (deserialização). O .NET 5+ inclui
 System.Text.Json como a biblioteca padrão, que é de alto desempenho e eficiente. Alternativamente, Newtonsoft.Json (Json.NET) é uma opção popular e madura.  Para consumir APIs que exigem autenticação, você pode configurar o HttpClient para incluir os cabeçalhos de autenticação necessários. Impotante saber ao consumir APIs HTTP em aplicações .NET usando a classe HttpClient . 
@@ -106,6 +110,8 @@ System.Text.Json como a biblioteca padrão, que é de alto desempenho e eficient
 Cobrimos a importância de reutilizar instâncias de HttpClient e a melhor prática de usar IHttpClientFactory em aplicações ASP.NET Core para gerenciar a vida útil e a configuração dos clientes HTTP. Exploramos como realizar diferentes tipos de requisições (GET, POST, PUT, DELETE), como serializar e deserializar dados JSON usando System.Text.Json , e a importância do tratamento robusto de erros e timeouts. Finalmente, vimos como configurar a autenticação para acessar APIs protegidas. Com este conhecimento, você está bem equipado para integrar sua aplicação .NET com uma variedade de serviços externos.
 
 # Testes Unitários com xUnit ou MSTest
+
+
 
 Testes unitários são uma parte fundamental do desenvolvimento de software moderno. Eles permitem verificar se pequenas unidades de código (métodos, classes) funcionam como esperado, de forma isolada. Isso ajuda a identificar bugs precocemente, facilita a refatoração e garante a qualidade e a manutenibilidade do código. Neste capítulo, focaremos em como escrever testes unitários em .NET usando frameworks populares como xUnit ou MSTest.
 
