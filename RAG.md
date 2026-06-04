@@ -32,12 +32,9 @@ Por fim, é essencial estimular uma comunicação clara e natural. Trate a IA co
 Seguindo essas práticas, você consegue extrair o máximo de uma ferramenta de IA, obtendo respostas mais claras, assertivas e contextualizadas. Sempre valide o conhecimento gerado, mas utilize essas ferramentas como aceleradoras do seu aprendizado ou como suporte para conhecimento complexo, comunicando-se de forma clara e estruturada. Isso aumentará significativamente a qualidade dos resultados obtidos.
 
 
-
-
-
 # As Etapas do Pipeline de RAG
 
-<img width="1024" height="1536" alt="Copilot_20260603_222251" src="https://github.com/user-attachments/assets/f4c311f8-c82e-437b-9aa7-77c41878bb16" />
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 16_48_52" src="https://github.com/user-attachments/assets/b77f7fc2-bb09-448d-8b2f-20a8abea60c1" />
 
 
 1. Ingestão de Documentos
