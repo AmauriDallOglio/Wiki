@@ -43,6 +43,8 @@ Esses objetivos tornam a arquitetura um elemento essencial para o sucesso de qua
 
 # Estilos Arquiteturais
 
+<img width="1284" height="773" alt="image" src="https://github.com/user-attachments/assets/3c463bdb-c17f-48af-b44f-a31e068f02ca" />
+
 Existem diferentes estilos arquiteturais que podem ser aplicados conforme o contexto e os requisitos do sistema.
 
 ## Arquitetura em Camadas
@@ -128,6 +130,9 @@ O padrão MVC é amplamente adotado no desenvolvimento de aplicações web e mó
 
 
 # Papel do Arquiteto
+
+<img width="1536" height="1024" alt="Copilot_20260603_222942" src="https://github.com/user-attachments/assets/bd48c666-c0b5-409d-a54b-e5e59a6c6257" />
+
 
 Um arquiteto de software é um profissional essencial no desenvolvimento de sistemas complexos, atuando como o responsável por definir a estrutura e os padrões de uma aplicação. Suas atividades incluem a criação de modelos de arquitetura, que descrevem a estrutura geral do sistema e detalham como seus componentes interagem.
 
