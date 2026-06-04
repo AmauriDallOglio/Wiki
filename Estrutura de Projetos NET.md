@@ -28,10 +28,8 @@ xUnit ( xunit ) ou MSTest ( mstest ): Para projetos de testes unitários.
 
 Padrões de projeto são soluções reutilizáveis para problemas comuns de design de software. Eles são descrições de como resolver um problema que pode ser aplicado em diferentes situações. Usar padrões de projeto pode levar a um código mais robusto, flexível e fácil de manter. Nesta seção, exploraremos alguns padrões de projeto amplamente utilizados no desenvolvimento .NET.
 
-
 ## Singleton Pattern
 O padrão Singleton garante que uma classe tenha apenas uma instância e fornece um ponto de acesso global a ela. É útil quando você precisa de uma única instância de uma classe para coordenar ações em todo o sistema, como um gerenciador de logs, um pool de conexões de banco de dados ou um objeto de configuração.
-
 
 ## Factory Pattern
 
@@ -44,7 +42,6 @@ O padrão Repository (Repositório) isola a lógica de acesso a dados do restant
 ## Observer Pattern
 
 O padrão Observer (Observador) define uma dependência um-para-muitos entre objetos, de modo que quando um objeto muda de estado, todos os seus dependentes são notificados e atualizados automaticamente. É comumente usado para implementar sistemas de eventos e notificações.
-
 
 ## Dependency Injection Pattern
 
@@ -291,6 +288,9 @@ recomendadas para cada tópico, as equipes de desenvolvimento podem construir si
 
 # Injeção de Dependência na prática
 
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_52_59" src="https://github.com/user-attachments/assets/a0133e73-01d7-47c3-b8e2-f040ef36e6a0" />
+
+
 o padrão de Injeção de Dependência (DI) como uma forma de desacoplar componentes e tornar o código mais testável e modular. Neste capítulo, aprofundaremos na aplicação prática da Injeção de Dependência no ecossistema .NET, focando no container de DI embutido no .NET Core e ASP.NET Core,
 nos diferentes ciclos de vida dos serviços e nas melhores práticas.
 
@@ -430,6 +430,9 @@ Desde os fundamentos da plataforma e da linguagem C# até tópicos mais avançad
 Esperamos que esta apostila tenha fornecido uma base sólida e prática para você construir aplicações .NET robustas, eficientes e de alta qualidade. O ecossistema .NET é vasto e está em constante evolução, e a chave para o sucesso é a aprendizagem contínua e a aplicação prática dos conhecimentos adquiridos. Lembre-se de que a teoria é importante, mas a prática é fundamental. Encorajamos você a experimentar os exemplos de código, construir seus próprios projetos e explorar as diversas ferramentas e recursos que o .NET e o Visual Studio Code oferecem. A comunidade .NET é vibrante e acolhedora, e há uma infinidade de recursos online, documentação oficial e fóruns para ajudá-lo em sua jornada.
 
 # Checklist de Desenvolvimento
+
+<img width="1024" height="1536" alt="ChatGPT Image 4 de jun  de 2026, 13_50_31" src="https://github.com/user-attachments/assets/3adbe81b-7393-419e-9de9-434955b50742" />
+
 
 ## 1. Levantamento de Requisitos
 
