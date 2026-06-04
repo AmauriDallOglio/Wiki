@@ -65,6 +65,8 @@ Grafana:
 
 ## Problema encontrado
 
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 16_59_25" src="https://github.com/user-attachments/assets/16a5af86-060b-465b-9d86-cfef792230d0" />
+
 Com o crescimento da base de dados e do número de consultas, a lentidão não está relacionada apenas ao uso do pipeline RAG, mas também a outros pontos de custo acumulado na aplicação. Hoje, além de executar etapas pesadas de recuperação e geração, o sistema também realiza varreduras extensas de texto, múltiplas operações de string e regex, chamadas externas ao Ollama com tempo limite elevado e persistência de sessão em toda requisição. Em cenários de maior concorrência, isso aumenta o tempo de resposta e o consumo de CPU e I/O.
 
 Outro fator relevante é que parte do fluxo ainda pode bloquear processamento assíncrono e gerar contenção em carga, enquanto componentes de inferência e cache exigem cuidados de escalabilidade para operar bem com muitos acessos simultâneos. Somado a isso, logs detalhados em pontos críticos do fluxo acabam adicionando sobrecarga extra em produção.
@@ -80,6 +82,10 @@ Em resumo, o problema atual é multifatorial: o RAG completo em todas as pergunt
 
 
 ### Objetivos:
+
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 17_01_46" src="https://github.com/user-attachments/assets/102b0b8d-6b58-4658-a4c3-bcf796594bb4" />
+
+
 - Treinar com ML.NET usando histórico
   - Implementado em MachineLearningServico.CriarModelo(...).
   - Fonte de treino: tabela Sessao (_sessaoRepo.ObterTodosAsync).
