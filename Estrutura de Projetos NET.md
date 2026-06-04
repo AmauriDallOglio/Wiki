@@ -389,4 +389,277 @@ o mundo do Docker e como ele se integra ao desenvolvimento .NET. Entendemos a di
 Desde os fundamentos da plataforma e da linguagem C# até tópicos mais avançados como padrões de projeto, arquitetura em camadas, persistência de dados com Entity Framework Core, consumo  de APIs HTTP, testes unitários, injeção de dependência, gerenciamento de configuração e deploy com Docker.
 Esperamos que esta apostila tenha fornecido uma base sólida e prática para você construir aplicações .NET robustas, eficientes e de alta qualidade. O ecossistema .NET é vasto e está em constante evolução, e a chave para o sucesso é a aprendizagem contínua e a aplicação prática dos conhecimentos adquiridos. Lembre-se de que a teoria é importante, mas a prática é fundamental. Encorajamos você a experimentar os exemplos de código, construir seus próprios projetos e explorar as diversas ferramentas e recursos que o .NET e o Visual Studio Code oferecem. A comunidade .NET é vibrante e acolhedora, e há uma infinidade de recursos online, documentação oficial e fóruns para ajudá-lo em sua jornada.
 
+# Checklist de Desenvolvimento
+
+## 1. Levantamento de Requisitos
+
+### Requisitos Funcionais
+
+* [ ] Identificar funcionalidades principais do sistema
+* [ ] Mapear regras de negócio
+* [ ] Definir fluxos principais de uso
+* [ ] Identificar integrações externas
+* [ ] Definir permissões e perfis de acesso
+* [ ] Validar requisitos com stakeholders
+
+### Requisitos Não Funcionais
+
+* [ ] Definir requisitos de performance
+* [ ] Definir escalabilidade esperada
+* [ ] Definir requisitos de segurança
+* [ ] Definir requisitos de disponibilidade
+* [ ] Definir requisitos de observabilidade
+* [ ] Definir estratégia de backup e recuperação
+
+---
+
+# 2. Arquitetura da Solução
+
+## Arquitetura
+
+* [ ] Definir estilo arquitetural
+* [ ] Validar uso de Clean Architecture
+* [ ] Definir separação de camadas
+* [ ] Definir padrões arquiteturais
+* [ ] Definir estratégia de modularização
+* [ ] Definir comunicação entre serviços
+
+## Modelagem
+
+* [ ] Modelar entidades principais
+* [ ] Definir aggregates e relacionamentos
+* [ ] Definir contratos/interfaces
+* [ ] Modelar DTOs
+* [ ] Definir convenções de nomenclatura
+
+---
+
+# 3. Banco de Dados
+
+## Modelagem de Dados
+
+* [ ] Definir modelo relacional ou NoSQL
+* [ ] Criar diagrama de entidades
+* [ ] Definir índices
+* [ ] Definir constraints
+* [ ] Validar normalização
+* [ ] Planejar versionamento de migrations
+
+## Performance
+
+* [ ] Avaliar consultas críticas
+* [ ] Criar estratégia de cache
+* [ ] Planejar paginação
+* [ ] Validar payloads grandes
+* [ ] Definir política de retenção de dados
+
+---
+
+# 4. Backend
+
+## Estrutura da API
+
+* [ ] Definir padrão REST
+* [ ] Definir versionamento
+* [ ] Padronizar respostas
+* [ ] Implementar middlewares globais
+* [ ] Configurar tratamento de exceções
+* [ ] Definir códigos HTTP semânticos
+
+## Segurança
+
+* [ ] Configurar autenticação
+* [ ] Configurar autorização
+* [ ] Implementar JWT/OAuth2
+* [ ] Configurar HTTPS/HSTS
+* [ ] Implementar Rate Limiting
+* [ ] Validar proteção contra ataques comuns
+
+## Qualidade
+
+* [ ] Aplicar princípios SOLID
+* [ ] Implementar injeção de dependência
+* [ ] Separar DTOs das entidades
+* [ ] Implementar validações
+* [ ] Revisar acoplamento entre camadas
+* [ ] Garantir baixo acoplamento e alta coesão
+
+---
+
+# 5. Frontend
+
+## Estrutura
+
+* [ ] Definir arquitetura frontend
+* [ ] Organizar componentes
+* [ ] Separar services/hooks/stores
+* [ ] Criar gerenciamento de estado
+* [ ] Padronizar rotas
+* [ ] Implementar tratamento global de erros
+
+## UX/UI
+
+* [ ] Validar responsividade
+* [ ] Validar acessibilidade
+* [ ] Criar feedback visual de carregamento
+* [ ] Padronizar componentes visuais
+* [ ] Validar experiência do usuário
+
+---
+
+# 6. Observabilidade
+
+## Logging
+
+* [ ] Implementar logging estruturado
+* [ ] Adicionar Correlation ID
+* [ ] Criar logs de auditoria
+* [ ] Configurar níveis de log
+
+## Monitoramento
+
+* [ ] Configurar métricas
+* [ ] Configurar dashboards
+* [ ] Implementar health checks
+* [ ] Configurar alertas
+* [ ] Monitorar uso de recursos
+
+---
+
+# 7. Tarefas Assíncronas e Mensageria
+
+## Background Jobs
+
+* [ ] Definir tarefas em background
+* [ ] Configurar retry
+* [ ] Evitar concorrência duplicada
+* [ ] Monitorar falhas
+
+## Mensageria
+
+* [ ] Definir broker de mensagens
+* [ ] Planejar filas e tópicos
+* [ ] Garantir idempotência
+* [ ] Definir política de retry e DLQ
+
+---
+
+# 8. Testes
+
+## Testes Automatizados
+
+* [ ] Criar testes unitários
+* [ ] Criar testes de integração
+* [ ] Criar testes end-to-end
+* [ ] Validar cobertura mínima
+* [ ] Automatizar execução no pipeline
+
+## Qualidade
+
+* [ ] Revisar código
+* [ ] Validar padrões de projeto
+* [ ] Executar análise estática
+* [ ] Validar vulnerabilidades
+
+---
+
+# 9. DevOps e Deploy
+
+## CI/CD
+
+* [ ] Configurar pipeline CI/CD
+* [ ] Automatizar build
+* [ ] Automatizar testes
+* [ ] Automatizar deploy
+* [ ] Configurar rollback
+
+## Containers
+
+* [ ] Criar Dockerfile
+* [ ] Configurar docker-compose
+* [ ] Configurar Kubernetes
+* [ ] Validar escalabilidade horizontal
+* [ ] Configurar variáveis de ambiente
+
+## Estratégias de Deploy
+
+* [ ] Validar Canary Deploy
+* [ ] Validar Blue/Green Deploy
+* [ ] Planejar rollback seguro
+* [ ] Monitorar deploy em produção
+
+---
+
+# 10. Segurança e Governança
+
+## Governança
+
+* [ ] Definir padrão de branches
+* [ ] Definir política de commits
+* [ ] Padronizar pull requests
+* [ ] Definir fluxo de code review
+
+## Segurança
+
+* [ ] Gerenciar secrets adequadamente
+* [ ] Configurar permissões mínimas
+* [ ] Validar LGPD/GDPR
+* [ ] Implementar criptografia sensível
+* [ ] Revisar acessos administrativos
+
+---
+
+# 11. Inteligência Artificial (Opcional)
+
+## IA Generativa
+
+* [ ] Definir modelo LLM
+* [ ] Definir estratégia RAG
+* [ ] Validar contexto recuperado
+* [ ] Implementar controle de tokens
+* [ ] Persistir sessões/contexto
+
+## Machine Learning
+
+* [ ] Definir dataset
+* [ ] Validar treinamento
+* [ ] Medir confiança do modelo
+* [ ] Automatizar retreinamento
+* [ ] Monitorar deriva do modelo
+
+---
+
+# 12. Checklist Final de Produção
+
+## Antes do Go Live
+
+* [ ] Validar ambiente produtivo
+* [ ] Executar testes finais
+* [ ] Validar observabilidade
+* [ ] Validar backup
+* [ ] Validar segurança
+* [ ] Validar documentação
+* [ ] Validar rollback
+* [ ] Aprovação final do negócio
+
+---
+
+# 13. Pós-Produção
+
+## Operação
+
+* [ ] Monitorar erros
+* [ ] Monitorar performance
+* [ ] Monitorar consumo de infraestrutura
+* [ ] Validar experiência dos usuários
+* [ ] Planejar melhorias contínuas
+
+## Evolução
+
+* [ ] Revisar débito técnico
+* [ ] Revisar arquitetura periodicamente
+* [ ] Atualizar dependências
+* [ ] Planejar novas funcionalidades
+
+
 
