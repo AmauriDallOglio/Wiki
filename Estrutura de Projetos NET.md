@@ -300,9 +300,14 @@ O .NET Core e o ASP.NET Core vêm com um container de Injeção de Dependência 
 
 # Container de DI nativo do .NET
 
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_31_32" src="https://github.com/user-attachments/assets/9a28ba98-84a6-4ae5-a53b-08bd02343069" />
+
+
 O container de DI do .NET é acessível através da interface IServiceCollection no Program.cs (ou Startup.cs em versões mais antigas do ASP.NET Core). É aqui que você registra seus serviços e suas implementações.
 
 # Ciclos de vida (Singleton, Scoped, Transient)
+
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_33_58" src="https://github.com/user-attachments/assets/4b4b3ab4-2738-4b49-8524-4f838ae23d89" />
 
 Ao registrar um serviço no container de DI, você especifica seu ciclo de vida, que determina como e quando as instâncias desse serviço serão criadas e reutilizadas. Os três ciclos de vida principais são:
 
@@ -317,6 +322,8 @@ Uma dependência Singleton pode consumir serviços Singleton . Uma dependência 
 
 # Registrando serviços
 
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_35_57" src="https://github.com/user-attachments/assets/cbac9c92-70d9-473c-8bf8-4ce1f5836718" />
+
 * Existem várias maneiras de registrar serviços no container de DI: Por Interface e Implementação: A forma mais comum, onde você mapeia uma interface para uma implementação concreta. csharp builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 
 * Por Tipo Concreto: Se uma classe não tiver uma interface e você quiser registrá-la diretamente. csharp  uilder.Services.AddTransient<MinhaClasseUtilitaria>(); 
@@ -327,12 +334,13 @@ Uma dependência Singleton pode consumir serviços Singleton . Uma dependência 
 
 # Injeção em controllers e serviços
 
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_39_19" src="https://github.com/user-attachments/assets/32cdbb61-1af8-4370-87ce-8b9771e077d8" />
+
 Uma vez que os serviços são registrados, o container de DI se encarrega de injetá-los onde forem solicitados. A forma mais comum é a injeção via construtor.
 
 O container de DI resolve automaticamente a cadeia de dependências. Se ProdutoService depende de IProdutoRepository e ILoggerService , e  IProdutoRepository depende de AppDbContext , o container construirá toda essa árvore de objetos para você.
 
-Injeção de Construtor: Prefira a injeção de construtor. Ela torna as dependências de uma classe explícitas e garante que a classe esteja em um
-estado válido após a construção.
+Injeção de Construtor: Prefira a injeção de construtor. Ela torna as dependências de uma classe explícitas e garante que a classe esteja em um estado válido após a construção.
 * Injetar Interfaces, não Implementações: Sempre que possível, injete interfaces ( IEmailService ) em vez de classes concretas ( EmailService ). Isso promove o desacoplamento e facilita a troca de implementações (por exemplo, para testes).
 * Princípio da Responsabilidade Única (SRP): Classes com muitas dependências injetadas (muitos parâmetros no construtor) podem indicar que a classe tem
 muitas responsabilidades. Considere refatorar e dividir a classe.
@@ -344,7 +352,10 @@ Na aplicação prática da Injeção de Dependência no .NET. Vimos como o conta
 como eles são injetados automaticamente em controllers e outras classes. Finalmente, discutimos as melhores práticas para usar a DI de forma eficaz,
 garantindo que suas aplicações sejam modulares, testáveis e fáceis de manter. A Injeção de Dependência é uma ferramenta poderosa que, quando bem utilizada, eleva significativamente a qualidade do seu código .NET.
 
+
 # Configuração de Aplicações (appsettings.json)
+
+<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 13_43_58" src="https://github.com/user-attachments/assets/6f813b92-4a92-4718-9151-2d7210af3154" />
 
 Gerenciar a configuração de uma aplicação de forma eficaz é crucial para o desenvolvimento, implantação e manutenção de software. As aplicações precisam de diferentes configurações para diferentes ambientes (desenvolvimento, homologação, produção), e essas configurações não devem estar codificadas diretamente no códigofonte. O .NET fornece um sistema de configuração flexível e extensível que permite ler configurações de várias fontes, como arquivos JSON, variáveis de ambiente e argumentos de linha de comando.
 
@@ -387,6 +398,8 @@ pasta do projeto, em seu perfil de usuário.
 O sistema de configuração flexível do .NET. Aprendemos a usar arquivos appsettings.json para configurações hierárquicas e como sobrescrevê-las com configurações específicas de ambiente e variáveis de ambiente. Aprofundamos no Options Pattern, uma prática recomendada para consumir configurações de forma fortemente tipada e desacoplada. Finalmente, enfatizamos a importância de nunca armazenar segredos no controle de código-fonte e discutimos alternativas seguras como User Secrets e serviços de gerenciamento de segredos na nuvem. Um gerenciamento de configuração adequado é essencial para construir aplicações seguras, flexíveis e fáceis de implantar.
 
 # Deploy local com Docker
+
+<img width="864" height="1821" alt="ChatGPT Image 4 de jun  de 2026, 13_47_27" src="https://github.com/user-attachments/assets/06fa597d-1660-4268-b38b-9162c0da0466" />
 
 Docker é uma plataforma de contêineres que permite empacotar uma aplicação e todas as suas dependências em um ambiente isolado e portátil, chamado contêiner. Isso garante que a aplicação funcione de forma consistente em qualquer ambiente, desde o desenvolvimento local até a produção. Para desenvolvedores .NET, o Docker se tornou uma ferramenta indispensável para simplificar o deploy, o desenvolvimento e a colaboração. Neste capítulo, exploraremos como conteinerizar aplicações .NET e gerenciá-las localmente com Docker.
 
