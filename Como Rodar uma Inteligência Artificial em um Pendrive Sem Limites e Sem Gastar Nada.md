@@ -1,6 +1,11 @@
 
 # Como Rodar uma Inteligência Artificial em um Pendrive Sem Limites e Sem Gastar Nada
 
+
+## Primeira Etapa
+
+<img width="1536" height="1024" alt="ChatGPT Image 6 de jun  de 2026, 20_45_47" src="https://github.com/user-attachments/assets/67faf2e7-88ed-45da-b980-6360a56a0fd3" />
+
 Primeiro, conecte o seu pendrive ao computador e formate-o em exFat. Ele precisa ter, no mínimo, 16 GB de armazenamento e estar formatado no sistema de arquivos **exFAT**.
 
 Feito isso, Ao acessar a página do projeto no GitHub (https://github.com/mozilla-ai/llamafile), localize a área de download e clique no link da versão mais recente. Em seguida, desça até encontrar a seção **Releases**, onde estará disponível o primeiro arquivo para download. Basta clicar nele para baixar a última versão.
@@ -10,6 +15,8 @@ Feito isso, Ao acessar a página do projeto no GitHub (https://github.com/mozill
 Esse arquivo possui aproximadamente 1 GB, por isso é importante utilizar um pendrive com espaço suficiente. Após o download, renomeie o arquivo para **.exe** e copie-o para dentro do pendrive. Essa é a primeira etapa.
 
 ## Segunda Etapa
+
+<img width="1536" height="1024" alt="ChatGPT Image 6 de jun  de 2026, 20_48_42" src="https://github.com/user-attachments/assets/a5198c43-de8e-4af2-8250-571c7b2843ad" />
 
 Agora, acesse o site **Hugging Face**.  [https://huggingface.co/](https://huggingface.co/)
 
@@ -27,6 +34,9 @@ Após concluir o download, copie também esse arquivo para o pendrive.
 
 
 ## Terceira Etapa
+
+<img width="1536" height="1024" alt="ChatGPT Image 6 de jun  de 2026, 20_50_48" src="https://github.com/user-attachments/assets/956848f9-fd76-4515-b10e-a72cc21933c0" />
+
 
 Com os dois arquivos já armazenados no pendrive,
 
