@@ -123,10 +123,11 @@ Carregando parte 2:
 Carregando parte 3:
 <img width="1750" height="973" alt="image" src="https://github.com/user-attachments/assets/02fc93b9-6825-495c-b4e3-eacd91936832" />
 
-
 Sempre que conectar o pendrive ao computador, basta executar o arquivo **.bat** criado anteriormente.
 
 Uma janela de comandos será aberta. Aguarde o carregamento completo do sistema. Ao final do processo, será exibido um link local.
+<img width="995" height="572" alt="image" src="https://github.com/user-attachments/assets/59089e9d-fa73-4226-a718-337795993835" />
+
 
 Pressione **Ctrl** no teclado e clique sobre esse link para abri-lo no navegador.
 
