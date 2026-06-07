@@ -8,6 +8,8 @@
 
 Primeiro, conecte o seu pendrive ao computador e formate-o em exFat. Ele precisa ter, no mínimo, 16 GB de armazenamento e estar formatado no sistema de arquivos **exFAT**.
 
+<img width="293" height="563" alt="image" src="https://github.com/user-attachments/assets/e9c671e8-9622-4e04-9508-17fe6bafdff6" />
+
 Feito isso, Ao acessar a página do projeto no GitHub (https://github.com/mozilla-ai/llamafile), localize a área de download e clique no link da versão mais recente. Em seguida, desça até encontrar a seção **Releases**, onde estará disponível o primeiro arquivo para download. Basta clicar nele para baixar a última versão.
 
 <img width="1473" height="320" alt="image" src="https://github.com/user-attachments/assets/285e51ac-0622-4ff2-afff-9768a73d0f34" />
@@ -111,6 +113,14 @@ Pendrive │
 ## Executando a Inteligência Artificial
 
 Pronto. Agora você tem uma inteligência artificial rodando diretamente do seu pendrive.
+
+Carregando parte 1:
+<img width="1302" height="740" alt="image" src="https://github.com/user-attachments/assets/ba6d2bca-7b49-44bc-bc1b-08f644200ded" />
+
+Carregando parte 2:
+<img width="1717" height="796" alt="image" src="https://github.com/user-attachments/assets/84471c58-bd30-47f7-a682-6ec38b2f1999" />
+
+
 
 Sempre que conectar o pendrive ao computador, basta executar o arquivo **.bat** criado anteriormente.
 
