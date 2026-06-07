@@ -14,6 +14,9 @@ Feito isso, Ao acessar a página do projeto no GitHub (https://github.com/mozill
 
 Esse arquivo possui aproximadamente 1 GB, por isso é importante utilizar um pendrive com espaço suficiente. Após o download, renomeie o arquivo para **.exe** e copie-o para dentro do pendrive. Essa é a primeira etapa.
 
+<img width="1267" height="346" alt="image" src="https://github.com/user-attachments/assets/1dd17549-bc8e-43f6-9f84-00859d9849bc" />
+
+
 ## Segunda Etapa
 
 Agora, acesse o site **Hugging Face**.  [https://huggingface.co/](https://huggingface.co/)
@@ -30,6 +33,8 @@ Normalmente, esses arquivos possuem alguns gigabytes de tamanho. No exemplo apre
 
 Após concluir o download, copie também esse arquivo para o pendrive.
 
+<img width="895" height="356" alt="image" src="https://github.com/user-attachments/assets/03209770-0924-40d8-bb74-ceccf22e49ce" />
+
 
 ## Terceira Etapa
 
@@ -45,16 +50,12 @@ Abra o **Bloco de Notas** e escreva o código necessário para executar a aplica
 O comando do seu arquivo install.bat ou iniciar.bat deveria ficar assim:
 
 ```
-@echo off
-```
-
-```
 .\llamafile-0.10.1.exe --server --model qwen3-4b-thinking-2507.Q4_K_M.gguf
 ```
 
-```
-pause
-```
+<img width="827" height="137" alt="image" src="https://github.com/user-attachments/assets/b5b1bcec-55ad-46d3-84a7-12bb6a921569" />
+
+ 
 
 Ou, se quiser abrir automaticamente o navegador:
 
@@ -79,6 +80,8 @@ pause
 ```
 
 Agora, clique em **Salvar Como** com a extensão .bat e grave esse arquivo diretamente no pendrive;
+
+<img width="1164" height="348" alt="image" src="https://github.com/user-attachments/assets/767e01a0-2e17-4b6d-8009-cbf029f8c0a2" />
 
 Esse arquivo será o responsável por executar todo o processo automaticamente.
 
@@ -116,12 +119,15 @@ Carregando parte 3:
 Sempre que conectar o pendrive ao computador, basta executar o arquivo **.bat** criado anteriormente.
 
 Uma janela de comandos será aberta. Aguarde o carregamento completo do sistema. Ao final do processo, será exibido um link local.
-<img width="995" height="572" alt="image" src="https://github.com/user-attachments/assets/59089e9d-fa73-4226-a718-337795993835" />
-
 
 Pressione **Ctrl** no teclado e clique sobre esse link para abri-lo no navegador.
 
 A partir desse momento, você terá acesso a uma interface de inteligência artificial executando localmente, diretamente do seu próprio pendrive.
+
+<img width="995" height="572" alt="image" src="https://github.com/user-attachments/assets/59089e9d-fa73-4226-a718-337795993835" />
+
+<img width="796" height="675" alt="image" src="https://github.com/user-attachments/assets/2763e5c4-fb0c-429a-8829-ca85bc69ea80" />
+
 
 ## Recursos Disponíveis
 
