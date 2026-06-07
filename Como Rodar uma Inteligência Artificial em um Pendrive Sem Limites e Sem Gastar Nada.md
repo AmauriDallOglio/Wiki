@@ -120,6 +120,8 @@ Carregando parte 1:
 Carregando parte 2:
 <img width="1717" height="796" alt="image" src="https://github.com/user-attachments/assets/84471c58-bd30-47f7-a682-6ec38b2f1999" />
 
+Carregando parte 3:
+<img width="1750" height="973" alt="image" src="https://github.com/user-attachments/assets/02fc93b9-6825-495c-b4e3-eacd91936832" />
 
 
 Sempre que conectar o pendrive ao computador, basta executar o arquivo **.bat** criado anteriormente.
