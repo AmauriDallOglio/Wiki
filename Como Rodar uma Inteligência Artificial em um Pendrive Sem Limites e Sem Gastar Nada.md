@@ -104,11 +104,8 @@ Pendrive │
 └── iniciar.bat
 ```
 
-```
-.\llamafile.exe --server --model
-.\llamafile.exe --server --model qwen3-4b-instruct.gguf
-.\llamafile.exe --server --model llama-3.2-3b-instruct.gguf
-```
+
+
 
 ## Executando a Inteligência Artificial
 
