@@ -11,8 +11,7 @@ A arquitetura serve como um projeto fundamental, um mapa detalhado que guia o de
 
 # Objetivos da Arquitetura de Software
 
-<img width="1536" height="1024" alt="Copilot_20260603_223137" src="https://github.com/user-attachments/assets/cc9a64cf-872f-4c55-81bf-f231dac0b07a" />
-
+ 
 
 A arquitetura de software possui objetivos estratégicos que vão além da simples organização estrutural. Entre os principais, destacam-se:
 
@@ -46,8 +45,7 @@ Esses objetivos tornam a arquitetura um elemento essencial para o sucesso de qua
 
 # Estilos Arquiteturais
 
-<img width="1284" height="773" alt="image" src="https://github.com/user-attachments/assets/3c463bdb-c17f-48af-b44f-a31e068f02ca" />
-
+ 
 Existem diferentes estilos arquiteturais que podem ser aplicados conforme o contexto e os requisitos do sistema.
 
 ## Arquitetura em Camadas
@@ -134,8 +132,7 @@ O padrão MVC é amplamente adotado no desenvolvimento de aplicações web e mó
 
 # Papel do Arquiteto
 
-<img width="1536" height="1024" alt="Copilot_20260603_222942" src="https://github.com/user-attachments/assets/bd48c666-c0b5-409d-a54b-e5e59a6c6257" />
-
+ 
 
 Um arquiteto de software é um profissional essencial no desenvolvimento de sistemas complexos, atuando como o responsável por definir a estrutura e os padrões de uma aplicação. Suas atividades incluem a criação de modelos de arquitetura, que descrevem a estrutura geral do sistema e detalham como seus componentes interagem.
 
@@ -166,8 +163,7 @@ Assim, o arquiteto de software não só garante a robustez e a eficiência dos s
 
 # Principais Responsabilidades do Arquiteto de Software
 
-<img width="1536" height="1024" alt="Copilot_20260603_223343" src="https://github.com/user-attachments/assets/869385da-d9d1-4cd5-8d5e-0597c0d8e9c2" />
-
+ 
 
 ## Definição da Arquitetura
 
@@ -207,9 +203,7 @@ Dessa forma, o arquiteto de software se torna um dos principais responsáveis pe
 
 # Princípios Gerais de uma Boa Arquitetura
 
-<img width="1536" height="1024" alt="Copilot_20260603_223527" src="https://github.com/user-attachments/assets/68ef579d-9d03-40e5-a2af-ae21405039f5" />
-
-
+ 
 Boas práticas de arquitetura de software são fundamentais para garantir que os sistemas sejam sustentáveis, escaláveis e preparados para evolução contínua. Entre os principais princípios destacam-se a modularidade, reutilização, escalabilidade e manutenibilidade.
 
 Ao seguir esses princípios, o software torna-se mais fácil de evoluir, menos sujeito a erros e mais rápido de desenvolver. Além disso, uma arquitetura bem definida permite maior organização das responsabilidades, redução de acoplamento entre componentes e melhoria da qualidade geral da solução.
