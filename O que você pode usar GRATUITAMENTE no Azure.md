@@ -2,7 +2,10 @@
 
 Este documento detalha os serviços gratuitos disponíveis no Azure, focando em ferramentas de Inteligência Artificial que podem ser utilizadas para diversos propósitos, desde análise de texto até processamento de fala e documentos. O objetivo é fornecer um guia claro sobre como iniciar o uso dessas ferramentas sem custos iniciais, destacando seus limites e aplicações.
 
-###  1. Language Studio (RECOMENDADO)
+<img width="1536" height="1024" alt="ChatGPT Image 10 de jun  de 2026, 20_55_57" src="https://github.com/user-attachments/assets/1fa7fc8d-467b-4c0c-a994-964f217e1b99" />
+
+
+###  1. Language Studio
 
 O Azure Language Studio é uma plataforma robusta e altamente recomendada para explorar as capacidades de processamento de linguagem natural (PLN) do Azure. Através dele, é possível realizar diversas análises em textos, como a **Análise de Sentimento**, que identifica a polaridade emocional de um texto; a **Extração de Frases-chave**, que resume os pontos principais de um conteúdo; a **Detecção de Idioma**, que identifica automaticamente a língua em que um texto foi escrito; e a **Extração de Entidades**, que reconhece e classifica informações como nomes de pessoas, locais e organizações. Este serviço oferece um **limite gratuito de aproximadamente 5.000 textos por mês**, tornando-o uma excelente opção para quem está começando a explorar as funcionalidades de IA da Microsoft. Para acessá-lo, visite: [https://language.cognitive.azure.com](https://language.cognitive.azure.com).
 
