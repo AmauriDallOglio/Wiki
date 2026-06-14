@@ -1,6 +1,14 @@
 
 # Sistema RAG com Treinamento ML.NET
 
+### Aplicação .net: https://github.com/AmauriDallOglio/Ollama
+
+### Instalação do Ollama: https://github.com/AmauriDallOglio/Wiki/wiki/Ollama
+
+### Definição de prompt e RAG: https://github.com/AmauriDallOglio/Wiki/blob/main/Transforma%C3%A7%C3%A3o%20Digital.md
+
+
+
 <img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 16_54_49" src="https://github.com/user-attachments/assets/4428187e-4d34-492d-957b-06d742998d55" />
 
 
@@ -28,12 +36,6 @@ Resumo das Skills:
 12. RAG: Recuperação de contexto para enriquecer a IA.
 13. Arquitetura em Camadas: Organização e separação de responsabilidades.
 14. Padrão Repositório: Abstração do acesso a dados.
-
-Aplicação .net: https://github.com/AmauriDallOglio/Ollama
-
-Instalação do Ollama: https://github.com/AmauriDallOglio/Wiki/wiki/Ollama
-
-Definição de prompt e RAG: https://github.com/AmauriDallOglio/Wiki/blob/main/Transforma%C3%A7%C3%A3o%20Digital.md
 
 
 
