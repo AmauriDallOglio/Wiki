@@ -706,3 +706,226 @@ Esperamos que esta apostila tenha fornecido uma base sólida e prática para voc
 
 
 
+
+
+# Plano de Estudo Avançado .NET 8 & Arquitetura Moderna
+
+## 1. Fundamentos do C# e da Plataforma .NET
+
+### 1.1. Sintaxe e Tipos de Dados
+
+- [ ] 1.1.1. Tipos Primitivos, Structs, Enums
+- [ ] 1.1.2. Arrays e Coleções Simples
+
+### 1.2. Programação Orientada a Objetos (OOP)
+
+- [ ] 1.2.1. Encapsulamento, Herança, Polimorfismo, Abstração
+- [ ] 1.2.2. Classes: Regular, Estática, Selada, Abstrata, Parcial
+- [ ] 1.2.3. Princípio da Responsabilidade Única
+
+### 1.3. Genéricos, Delegates e LINQ
+
+- [ ] 1.3.1. Genéricos e Delegates
+- [ ] 1.3.2. Expressões Lambda
+- [ ] 1.3.3. LINQ para manipulação de dados
+
+### 1.4. Exceções e Programação Assíncrona
+
+- [ ] 1.4.1. try/catch/finally
+- [ ] 1.4.2. async/await
+- [ ] 1.4.3. Task, TPL, Paralelismo
+
+### 1.5. Coleções e Reflexão
+
+- [ ] 1.5.1. List, Dictionary, HashSet, Queue, Stack
+- [ ] 1.5.2. Reflexão com System.Reflection
+
+## 2. Princípios e Padrões de Desenvolvimento
+
+### 2.1. Princípios de Design
+
+- [ ] 2.1.1. SOLID
+- [ ] 2.1.2. Clean Code
+- [ ] 2.1.3. DRY / YAGNI / KISS
+- [ ] 2.1.4. Separação de Responsabilidades (SRP)
+- [ ] 2.1.5. Fail Fast
+
+### 2.2. Padrões de Projeto
+
+- [ ] 2.2.1. GOF: Singleton, Factory, Builder, Strategy, Observer, Repository
+- [ ] 2.2.2. DDD (Domain-Driven Design)
+- [ ] 2.2.3. Specification Pattern
+- [ ] 2.2.4. CQRS + MediatR
+- [ ] 2.2.5. Repository Pattern
+- [ ] 2.2.6. Vertical Slice Architecture
+
+## 3. Arquitetura de Software
+
+- [ ] 3.1. Clean Architecture
+- [ ] 3.2. Hexagonal Architecture (Ports & Adapters)
+- [ ] 3.3. Microsserviços
+- [ ] 3.3.1. API Gateway
+- [ ] 3.3.2. Service Discovery
+- [ ] 3.3.3. Logging Centralizado
+- [ ] 3.3.4. Coreografia vs Orquestração
+- [ ] 3.4. Event-Driven Architecture
+- [ ] 3.5. Event Sourcing e CQRS
+- [ ] 3.6. Serverless Apps (Azure Functions)
+- [ ] 3.7. Stateless vs Stateful
+- [ ] 3.8. TOGAF e C4 Model
+
+## 4. Persistência e Acesso a Dados
+
+### 4.1. Banco de Dados Relacional
+
+- [ ] 4.1.1. PostgreSQL, SQL Server, MySQL
+- [ ] 4.1.2. Modelagem, Normalização, Relacionamentos
+
+### 4.2. Banco de Dados NoSQL
+
+- [ ] 4.2.1. MongoDB, Cassandra
+- [ ] 4.2.2. Chave-valor, documentos, agregações
+
+### 4.3. ORMs
+
+- [ ] 4.3.1. Entity Framework Core
+- [ ] Code First
+- [ ] Database First
+- [ ] 4.3.2. Dapper
+
+### 4.4. Estratégias de Consulta
+
+- [ ] 4.4.1. Lazy Loading vs Eager Loading
+- [ ] 4.4.2. Otimização de Consultas
+- [ ] 4.4.3. Unit of Work
+
+### 4.5. Cache
+
+- [ ] 4.5.1. In-Memory
+- [ ] 4.5.2. Redis / Cache Distribuído
+
+## 5. Testes e Qualidade de Software
+
+### 5.1. Testes Automatizados
+
+- [ ] 5.1.1. Testes Unitários (xUnit, NUnit, MSTest)
+- [ ] 5.1.2. Testes de Integração
+- [ ] 5.1.3. Testes de Carga (JMeter, k6)
+- [ ] 5.1.4. Testes End-to-End
+
+### 5.2. Estratégias de Testes
+
+- [ ] 5.2.1. TDD (Test-Driven Development)
+- [ ] 5.2.2. BDD (SpecFlow)
+- [ ] 5.2.3. Mocking: Moq, FakeItEasy
+- [ ] 5.2.4. Cobertura de Testes
+
+## 6. Observabilidade, Resiliência e Performance
+
+### 6.1. Observabilidade
+
+- [ ] 6.1.1. Logs estruturados (Serilog)
+- [ ] 6.1.2. OpenTelemetry
+- [ ] 6.1.3. Monitoramento (Prometheus, Grafana)
+
+### 6.2. Resiliência
+
+- [ ] 6.2.1. Polly: Retry, Timeout, Circuit Breaker
+- [ ] 6.2.2. Alta Disponibilidade e Escalabilidade
+
+### 6.3. Performance
+
+- [ ] 6.3.1. Benchmark.NET
+- [ ] 6.3.2. Profiler, dotMemory, PerfView
+
+### 6.4. Qualidade em Produção
+
+- [ ] 6.4.1. Feature Flags
+- [ ] 6.4.2. Testes A/B
+- [ ] 6.4.3. Tratamento centralizado de erros
+- [ ] 6.4.4. Segurança contra ataques comuns (XSS, CSRF, SQL Injection, HTTPS)
+
+## 7. Deploy, Containers e DevOps
+
+### 7.1. Controle de Versão com Git
+
+- [ ] 7.1.1. Git Básico
+
+### 7.2. Containers e Orquestração
+
+- [ ] 7.2.1. Docker
+
+### 7.3. Integração e Deploy Contínuos
+
+- [ ] 7.3.1. Azure Pipelines / GitHub Actions / Jenkins
+
+## 8. Mensageria e Sistemas Distribuídos
+
+### 8.1. Brokers de Mensagem
+
+- [ ] 8.1.1. RabbitMQ
+- [ ] 8.1.2. Azure Service Bus
+- [ ] 8.1.3. Apache Kafka
+
+### 8.2. Abstrações e Frameworks
+
+- [ ] 8.2.1. MassTransit
+- [ ] 8.2.2. Dapr
+
+### 8.3. Estratégias Distribuídas
+
+- [ ] 8.3.1. Event Broker vs Message Broker
+- [ ] 8.3.2. Dead Letter Queue (DLQ)
+- [ ] 8.3.3. Event-Driven com Coreografia e Orquestração
+- [ ] 8.3.4. Service Discovery (Consul, Eureka)
+- [ ] 8.3.5. Load Balancing & Failover
+- [ ] 8.3.6. Cache distribuído
+
+## 9. APIs Modernas com .NET 8
+
+- [ ] 9.1. APIs RESTful
+- [ ] 9.2. Minimal APIs
+- [ ] 9.3. CORS
+- [ ] 9.4. Documentação com Swagger / OpenAPI
+- [ ] 9.5. Versionamento de API e Content Negotiation
+- [ ] 9.6. Middlewares personalizados
+
+### 9.7. Autenticação e Autorização
+
+- [ ] 9.7.1. JWT, OAuth2, OpenID Connect
+- [ ] 9.7.2. IdentityServer
+- [ ] 9.7.3. Claims, Roles e Policies
+
+## 10. Desenvolvimento Web Moderno
+
+- [ ] 10.1. Blazor (WebAssembly)
+- [ ] 10.2. SignalR (Tempo Real no Frontend)
+- [ ] 10.3. Integração com Angular / React
+- [ ] 10.4. Razor Pages, Model Binding
+- [ ] 10.5. Manipulação de Formulários
+- [ ] 10.6. TagHelpers
+
+## 11. Avançado em .NET 8 e Concorrência
+
+### 11.1. Concorrência
+
+- [ ] 11.1.1. Task, Parallel, TPL
+- [ ] 11.1.2. SemaphoreSlim, Channels
+- [ ] 11.1.3. Async/Await
+
+### 11.2. Background Jobs
+
+- [ ] 11.2.1. Hangfire
+- [ ] 11.2.2. Agendamento de Tarefas
+
+- [ ] 11.3. Mediator Pattern com MediatR
+- [ ] 11.4. Centralização de Tratamento de Erros
+
+### 11.5. Gerenciamento de Memória
+
+- [ ] 11.5.1. Garbage Collector (GC)
+- [ ] 11.5.2. Heap vs Stack
+- [ ] 11.5.3. Memory Leak Analysis
+
+
+
