@@ -51,7 +51,8 @@ O objetivo é unir recuperação de contexto, geração de linguagem natural e e
 
 ---
 .NET:
-<img width="1849" height="829" alt="image" src="https://github.com/user-attachments/assets/ef9d3a3b-3de4-4884-adc1-6018ec7f5b6a" />
+<img width="1858" height="858" alt="image" src="https://github.com/user-attachments/assets/1e4e663e-b79d-4a9f-bb19-e053aa6ba104" />
+<img width="1471" height="905" alt="image" src="https://github.com/user-attachments/assets/2d96767c-07e1-49af-82dc-cb4e09c7f608" />
 
 ---
 Prometheus:
