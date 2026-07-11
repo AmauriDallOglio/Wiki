@@ -23,68 +23,131 @@
 
 # 1 Fundamentos do C#
 
-## Linguagem
-
+## 1.1 Sintaxe e Tipos de Dados
 - [ ] Tipos Primitivos
-- [ ] Struct
-- [ ] Enum
+- [ ] Structs
+- [ ] Enums
+- [ ] Records
+- [ ] Nullable Reference Types
 - [ ] Arrays
-- [ ] Collections
+- [ ] Span<T> / Memory<T>
 
-## Programação Orientada a Objetos
-
-- [ ] Classes
-- [ ] Interfaces
+## 1.2 Programação Orientada a Objetos
+- [ ] Encapsulamento
 - [ ] Herança
 - [ ] Polimorfismo
-- [ ] Encapsulamento
 - [ ] Abstração
+- [ ] Interfaces
+- [ ] Classes
+- [ ] Classes Abstratas
+- [ ] Classes Estáticas
+- [ ] Classes Parciais
+- [ ] Records
 
-## Recursos Avançados
-
+## 1.3 Recursos Avançados
 - [ ] Generics
 - [ ] Delegates
-- [ ] LINQ
+- [ ] Events
+- [ ] Expression Trees
 - [ ] Reflection
-- [ ] Async/Await
-- [ ] Paralelismo
+- [ ] Attributes
+- [ ] Source Generators
+
+## 1.4 LINQ
+- [ ] LINQ to Objects
+- [ ] LINQ to Entities
+- [ ] Expressões Lambda
+- [ ] Métodos de Extensão
+
+## 1.5 Concorrência
+- [ ] async/await
+- [ ] Task
+- [ ] Parallel
+- [ ] TPL
+- [ ] SemaphoreSlim
+- [ ] Channels
+- [ ] CancellationToken
+
+## 1.6 Tratamento de Erros
+- [ ] try/catch/finally
+- [ ] Exceções Customizadas
+- [ ] Global Exception Handler
 
 ---
 
 # 2 Engenharia de Software
 
-## Princípios
-
+## 2.1 Princípios
 - [ ] SOLID
 - [ ] Clean Code
+- [ ] Clean Architecture
 - [ ] DRY
 - [ ] KISS
 - [ ] YAGNI
 - [ ] Fail Fast
 
-## Design Patterns
-
+## 2.2 Design Patterns (GoF)
+- [ ] Singleton
 - [ ] Factory
 - [ ] Builder
 - [ ] Strategy
 - [ ] Observer
+- [ ] Decorator
+- [ ] Adapter
+- [ ] Facade
 - [ ] Repository
-- [ ] Specification
+
+## 2.3 Domain-Driven Design
+- [ ] Entidades
+- [ ] Value Objects
+- [ ] Aggregates
+- [ ] Domain Events
+- [ ] Repositories
+- [ ] Bounded Context
+- [ ] Ubiquitous Language
+
+## 2.4 Arquiteturas
+- [ ] Clean Architecture
+- [ ] Onion Architecture
+- [ ] Hexagonal
+- [ ] Vertical Slice
+- [ ] Modular Monolith
+- [ ] Layered Architecture
+
+## 2.5 CQRS
+- [ ] Commands
+- [ ] Queries
+- [ ] MediatR
+- [ ] Pipeline Behavior
 
 ---
 
 # 3 Arquitetura de Software
 
 ## Arquiteturas
-
 - [ ] Clean Architecture
 - [ ] Onion
 - [ ] Hexagonal
 - [ ] Vertical Slice
 - [ ] Microsserviços
 
-### Arquitetura da API
+## Arquiteturas Distribuídas
+- [ ] Microsserviços
+- [ ] API Gateway
+- [ ] Backend for Frontend (BFF)
+- [ ] Service Discovery
+- [ ] Event Driven
+- [ ] Event Sourcing
+- [ ] Saga Pattern
+- [ ] Outbox Pattern
 
+## Modelagem
+- [ ] C4 Model
+- [ ] UML
+- [ ] TOGAF
+- [ ] ADR (Architecture Decision Records)
+
+### Arquitetura da API
 - [ ] Clean Architecture
 - [ ] Regras independentes de framework
 - [ ] Comunicação REST
@@ -146,216 +209,254 @@
 # 4 APIs Modernas
 
 ## ASP.NET Core
-
 - [ ] Controllers
 - [ ] Minimal API
 - [ ] Middleware
 
 ## REST
-
 - [ ] HTTP
 - [ ] Versionamento
 - [ ] Swagger/OpenAPI
 - [ ] HATEOAS
 
 ## Segurança
-
 - [ ] JWT
 - [ ] OAuth2
 - [ ] OpenID Connect
 - [ ] Identity
+- [ ] Claims
+- [ ] Policies
+- [ ] HTTPS
+- [ ] HSTS
+- [ ] CORS
+- [ ] CSP
+- [ ] XSS
+- [ ] CSRF
+- [ ] SQL Injection
+- [ ] Rate Limiting
+- [ ] Secrets Management
 
 ---
 
 # 5 Persistência
 
 ## Banco Relacional
-
 - [ ] SQL Server
 - [ ] PostgreSQL
 - [ ] MySQL
 
-## NoSQL
+## Modelagem
+- [ ] Relacionamentos
+- [ ] Índices
+- [ ] Normalização
+- [ ] Procedures
+- [ ] Views
 
+## NoSQL
 - [ ] MongoDB
 - [ ] Redis
 
 ## ORM
-
 - [ ] Entity Framework Core
 - [ ] Dapper
 
+## Entity Framework Core
+- [ ] Code First
+- [ ] Database First
+- [ ] Migrations
+- [ ] Fluent API
+
+## Dapper
+- [ ] CRUD
+- [ ] Queries Performáticas
+
+## Performance
+- [ ] Lazy Loading
+- [ ] Eager Loading
+- [ ] Split Queries
+- [ ] Compiled Queries
+
+## Cache
+- [ ] Memory Cache
+- [ ] Redis
+- [ ] Distributed Cache
+
 ---
 
-# 6 Testes
+# 6. Desenvolvimento Web
+- [ ] Blazor
+- [ ] SignalR
+- [ ] Razor Pages
+- [ ] React
+- [ ] Angular
+- [ ] Tag Helpers
 
+---
+
+# 7 Testes
 ## Automatizados
-
 - [ ] xUnit
 - [ ] NUnit
 - [ ] MSTest
 
 ## Qualidade
-
 - [ ] TDD
 - [ ] BDD
 - [ ] Mock
-- [ ] Cobertura
+- [ ] Integração
+- [ ] End-to-End
+- [ ] Performance (k6)
+- [ ] Benchmark.NET
 
 ---
 
-# 7 Observabilidade
+# 8 Observabilidade
 
 ## Logs
-
 - [ ] Serilog
 - [ ] ILogger
 
 ## Métricas
-
 - [ ] Prometheus
 - [ ] Grafana
 
 ## Telemetria
-
 - [ ] OpenTelemetry
 - [ ] Application Insights
 
+## Monitoramento
+- [ ] Application Insights
+- [ ] Health Checks
+
 ---
 
-# 8 Performance
-
-## Cache
-
-- [ ] Memory Cache
-- [ ] Redis
+# 9 Performance
 
 ## Resiliência
-
 - [ ] Polly
 - [ ] Retry
 - [ ] Timeout
 - [ ] Circuit Breaker
+- [ ] Bulkhead
+- [ ] Fallback
 
 ## Performance
-
 - [ ] Benchmark.NET
 - [ ] Profiling
 
 ---
 
-# 9 Containers & Cloud
+# 10 Containers & Cloud
 
 ## Containers
-
 - [ ] Docker
 - [ ] Docker Compose
 
 ## Kubernetes
-
 - [ ] Pods
 - [ ] Services
+- [ ] Deployments
 - [ ] Ingress
 
 ## Azure
-
 - [ ] App Service
 - [ ] Azure SQL
-- [ ] Storage
+- [ ] Azure Storage
 - [ ] Azure Functions
-- [ ] Service Bus
+- [ ] Azure Service Bus
+- [ ] Azure Key Vault
+- [ ] Azure Monitor
 
 ---
 
-# 10 DevOps
+# 11 DevOps
 
 ## Git
-
 - [ ] Git Flow
 - [ ] Pull Request
 - [ ] Code Review
 
 ## CI/CD
-
-- [ ] Azure DevOps
 - [ ] GitHub Actions
+- [ ] Azure DevOps
+- [ ] Jenkins
 
 ## Infraestrutura
-
 - [ ] IaC
 - [ ] Bicep
 - [ ] Terraform
 
 ---
 
-# 11 Sistemas Distribuídos
+# 12 Sistemas Distribuídos
 
 ## Mensageria
-
 - [ ] RabbitMQ
 - [ ] Kafka
 - [ ] Azure Service Bus
 
 ## Arquitetura
-
 - [ ] Event Driven
 - [ ] Saga
 - [ ] Outbox Pattern
 
+## Frameworks
+- [ ] MassTransit
+- [ ] Dapr
+
 ---
 
-# 12 Inteligência Artificial
+# 13 Inteligência Artificial
 
 ## Machine Learning
-
 - [ ] ML.NET
 
 ## LLM
-
 - [ ] Ollama
 - [ ] OpenAI
 - [ ] Gemma
 
 ## IA Generativa
-
 - [ ] Prompt Engineering
 - [ ] RAG
 - [ ] Embeddings
 - [ ] Vector Database
 
 ## AI Engineering
-
-- [ ] AI Agents
-- [ ] MCP
 - [ ] Semantic Kernel
+- [ ] AI Agents
+- [ ] MCP (Model Context Protocol)
+- [ ] Function Calling
 
 ---
 
-# 13 Governança Técnica
+# 14 Governança Técnica
 
 ## Documentação
-
 - [ ] README
 - [ ] ADR
 - [ ] Diagramas C4
 - [ ] UML
+- [ ] OpenAPI
 
 ## Desenvolvimento
-
-- [ ] Checklist
 - [ ] Coding Standards
 - [ ] Code Review
-- [ ] Branch Strategy
+- [ ] Checklist de Desenvolvimento
+- [ ] Definition of Done
+- [ ] Git Flow
 
 ## Qualidade
-
 - [ ] SonarQube
-- [ ] Coverage
+- [ ] Cobertura de Testes
 - [ ] Security Scan
+- [ ] Dependabot
+- [ ] SAST
+- [ ] DAST
 
 ---
 
-# 14 Checklist de Desenvolvimento
+# 15 Checklist de Desenvolvimento
 
 - [ ] Planejamento
 - [ ] Levantamento de Requisitos
@@ -369,7 +470,7 @@
 - [ ] Evolução Contínua
 
 
-# 15 Plano de Estudo Avançado (.NET 8 & Arquitetura Moderna)
+# 16 Plano de Estudo Avançado (.NET 8 & Arquitetura Moderna)
 
 - [ ] Fundamentos C# e OOP  
 - [ ] Padrões de projeto (GOF, DDD, CQRS)  
