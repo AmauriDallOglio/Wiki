@@ -83,6 +83,49 @@
 - [ ] Vertical Slice
 - [ ] Microsserviços
 
+### Arquitetura da API
+
+- [ ] Clean Architecture
+- [ ] Regras independentes de framework
+- [ ] Comunicação REST
+- [ ] Separação de responsabilidades
+- [ ] Restringir CORS por ambiente  
+- [ ] Garantir HTTPS/HSTS em produção  
+- [ ] Reativar autenticação/autorização nos endpoints  
+- [ ] Remover segredos de `appsettings.json`  
+- [ ] Padronizar respostas HTTP  
+- [ ] Adicionar versionamento de API  
+- [ ] Criar correlation ID por requisição  
+- [ ] Melhorar logs estruturados  
+- [ ] Configurar resiliência com Polly  
+- [ ] Adicionar health checks  
+- [ ] Criar testes automatizados (controllers, pipeline, jobs)  
+- [ ] Validar entradas com FluentValidation  
+- [ ] Documentar decisões arquiteturais (ADRs)  
+- [ ] Middleware centralizado de erros  
+- [ ] Suporte a Docker e IIS  
+- [ ] Swagger/OpenAPI configurado  
+- [ ] Endpoint de métricas Prometheus  
+- [ ] Configuração tipada e organizada  
+
+### Camadas
+
+- [ ] Domain
+- [ ] Application
+- [ ] Infrastructure
+- [ ] Presentation/API
+
+### Padrões
+
+- [ ] CQRS
+- [ ] DDD
+- [ ] Repository Pattern
+- [ ] API Gateway
+- [ ] Hangfire
+- [ ] MediatR
+- [ ] SignalR
+- [ ] Application Insights
+
 ## DDD
 
 - [ ] Entidades
@@ -326,3 +369,17 @@
 - [ ] Evolução Contínua
 
 
+# 15 Plano de Estudo Avançado (.NET 8 & Arquitetura Moderna)
+
+- [ ] Fundamentos C# e OOP  
+- [ ] Padrões de projeto (GOF, DDD, CQRS)  
+- [ ] Arquiteturas modernas (Clean, Hexagonal, Microsserviços, Event-Driven)  
+- [ ] Persistência (SQL, NoSQL, EF Core, Dapper)  
+- [ ] Testes (unitários, integração, carga)  
+- [ ] Observabilidade (Serilog, Prometheus, OpenTelemetry)  
+- [ ] Resiliência (Polly, Circuit Breaker)  
+- [ ] DevOps (Docker, CI/CD, Azure Pipelines)  
+- [ ] Mensageria (RabbitMQ, Kafka, Azure Service Bus)  
+- [ ] APIs modernas com .NET 8  
+- [ ] Desenvolvimento Web (Blazor, SignalR)  
+- [ ] Concorrência e Background Jobs  
