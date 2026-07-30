@@ -8,10 +8,6 @@
 ### Definição de prompt e RAG: https://github.com/AmauriDallOglio/Wiki/blob/main/Transforma%C3%A7%C3%A3o%20Digital.md
 
 
-
-<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 16_54_49" src="https://github.com/user-attachments/assets/4428187e-4d34-492d-957b-06d742998d55" />
-
-
 Este projeto implementa um sistema de perguntas e respostas com arquitetura híbrida de RAG (Retrieval-Augmented Generation), voltado para responder perguntas sobre personagens com base em documentos importados.
 
 O fluxo combina três camadas: memória de sessões, modelo treinado com ML.NET e geração contextual com Ollama. Primeiro, o sistema tenta responder pelo histórico já salvo (Sessao) e pelo modelo treinado (ModeloML), priorizando velocidade. Quando não há resposta confiável, ativa o pipeline RAG, que localiza trechos relevantes nos documentos, monta um prompt estruturado e envia ao modelo generativo para produzir a resposta final.
@@ -89,7 +85,6 @@ Em resumo, o problema atual é multifatorial: o RAG completo em todas as pergunt
 
 ### Objetivos:
 
-<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 17_01_46" src="https://github.com/user-attachments/assets/102b0b8d-6b58-4658-a4c3-bcf796594bb4" />
 
 
 - Treinar com ML.NET usando histórico
