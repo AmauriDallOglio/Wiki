@@ -67,8 +67,6 @@ Grafana:
 
 ## Problema encontrado
 
-<img width="1536" height="1024" alt="ChatGPT Image 4 de jun  de 2026, 16_59_25" src="https://github.com/user-attachments/assets/16a5af86-060b-465b-9d86-cfef792230d0" />
-
 Com o crescimento da base de dados e do número de consultas, a lentidão não está relacionada apenas ao uso do pipeline RAG, mas também a outros pontos de custo acumulado na aplicação. Hoje, além de executar etapas pesadas de recuperação e geração, o sistema também realiza varreduras extensas de texto, múltiplas operações de string e regex, chamadas externas ao Ollama com tempo limite elevado e persistência de sessão em toda requisição. Em cenários de maior concorrência, isso aumenta o tempo de resposta e o consumo de CPU e I/O.
 
 Outro fator relevante é que parte do fluxo ainda pode bloquear processamento assíncrono e gerar contenção em carga, enquanto componentes de inferência e cache exigem cuidados de escalabilidade para operar bem com muitos acessos simultâneos. Somado a isso, logs detalhados em pontos críticos do fluxo acabam adicionando sobrecarga extra em produção.
@@ -78,46 +76,6 @@ Em resumo, o problema atual é multifatorial: o RAG completo em todas as pergunt
 ---
 
 ##  Solução Proposta: 
-
-<img width="1672" height="941" alt="fluxo_processo_ia_hibrida_v3" src="https://github.com/user-attachments/assets/0ec6ed1f-1ea4-42ff-9d04-1d932e234541" />
-
-
-
-### Objetivos:
-
-
-
-- Treinar com ML.NET usando histórico
-  - Implementado em MachineLearningServico.CriarModelo(...).
-  - Fonte de treino: tabela Sessao (_sessaoRepo.ObterTodosAsync).
-  - Pipeline ML.NET: FeaturizeText + SdcaMaximumEntropy.
-- Armazenar modelo treinado em ModeloML
-  - Implementado no mesmo método.
-  - Serializa ITransformer para byte[] e salva via _IModeloMLRepositorio.SalvarAsync(modeloML, ...).
-- Serviço background a cada 1 hora para retreino
-  - Estrutura existe no projeto (Ollama.Api/Configuracao/Tarefas/TarefaModeloML.cs), que é o local correto para esse job.
-  - O comportamento esperado é chamar periodicamente CriarModelo(...) (e em seguida manter cache atualizado com CarregaModeloNoCache(...), que já ocorre dentro do fluxo atual).
-- Responder direto do modelo sem passar no RAG
-  - Implementado em GenerativoPipeline.PerguntarAsync(...):
-  - tenta histórico Sessao;
-  - depois tenta MachineLearningServico.ObterRespostaModeloMachineLearning(...);
-  - se houver resposta com confiança, retorna e não passa no RagServico.
-
-- Resumo para documentação:
-  - Sessões alimentam treino ML.NET.
-  - Modelo treinado é persistido em ModeloML.
-  - Job em background retreina periodicamente (1h).
-  - Em runtime, se ModeloML acertar com confiança, resposta é imediata e bypassa RAG/Ollama.
-
-Sessões alimentam treino ML.NET.
-Modelo treinado é persistido em ModeloML.
-Job em background retreina periodicamente (1h).
-Em runtime, se ModeloML acertar com confiança, resposta é imediata e bypassa RAG/Ollama.
-
-
----
-
-##  Fluxo com ML.NET
 
 - Usuário envia a pergunta para GenerativoPipeline.PerguntarAsync.
 - O sistema consulta primeiro o histórico em Sessao (ObterPorPerguntaAsync).
