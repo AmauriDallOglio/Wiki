@@ -14,4 +14,27 @@ Durante a instalação, marque “Add Python to PATH”.
 <img width="1438" height="533" alt="image" src="https://github.com/user-attachments/assets/6841a007-2874-4a9e-93f4-86f736ee2e78" />
 
 
+# Abrir o terminal
+
+Rodar o comando winget install Gyan.FFmpeg
+
+<img width="1898" height="625" alt="image" src="https://github.com/user-attachments/assets/ec1ba8e9-0b3c-4510-af7e-e810e5813011" />
+
+Teste mostrou que o FFmpeg está instalado e funcionando corretamente no Windows PowerShell:
+
+<img width="1883" height="632" alt="image" src="https://github.com/user-attachments/assets/f4c03fd3-5713-4aa1-ae7d-462fc7f0bdd8" />
+
+
+# Instalar o Whisper via pip
+
+No mesmo PowerShell, rode: pip install -U openai-whisper
+
+O pip baixa e instala automaticamente o Whisper e todas as dependências necessárias (como PyTorch).
+Atualizações basta rodar: pip install -U openai-whisper para atualizar.
+
+<img width="1673" height="332" alt="image" src="https://github.com/user-attachments/assets/ab1680a5-f4b0-4b8c-885f-1ab2a7ce9d5a" />
+
+
+
+
 
