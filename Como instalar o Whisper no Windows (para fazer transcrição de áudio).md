@@ -25,6 +25,31 @@ Teste mostrou que o FFmpeg está instalado e funcionando corretamente no Windows
 
 <img width="1883" height="632" alt="image" src="https://github.com/user-attachments/assets/f4c03fd3-5713-4aa1-ae7d-462fc7f0bdd8" />
 
+Validar se foi instalado com o comando: PS C:\amauri> Get-ChildItem -Path C:\ -Filter ffmpeg.exe -Recurse -ErrorAction SilentlyContinue | Select-Object FullName
+PS C:\amauri>
+
+Se não encontrar nada (resultado vazio), significa que o ffmpeg não está instalado de fato como executável
+
+## Baixar o ffmpeg
+
+Acessar: https://www.gyan.dev/ffmpeg/builds/
+
+<img width="1798" height="503" alt="image" src="https://github.com/user-attachments/assets/dfc2df45-8f7c-4fe3-9fae-e02e1fcbc470" />
+
+
+- No Windows PowerShell executar: 
+  - PS C:\WINDOWS\system32> Test-Path "C:\Ffmpeg\ffmpeg-8.1.2-essentials_build\bin\ffmpeg.exe"
+  - PS C:\WINDOWS\system32> C:\Ffmpeg\ffmpeg-8.1.2-essentials_build\bin\ffmpeg.exe
+
+<img width="1385" height="428" alt="image" src="https://github.com/user-attachments/assets/1d18d59b-1a7b-4743-a994-4558482e79e3" />
+
+Antes de testar pela API, um teste rápido direto:
+
+python C:\Amauri\GitHub\Whisper\Whisper.Api\bin\Debug\net8.0\Scripts\transcrever_whisper.py "C:\Amauri\Gravando.mp3" base pt
+
+<img width="1544" height="476" alt="image" src="https://github.com/user-attachments/assets/628765a4-c75c-456a-bbae-ae2dae326380" />
+
+
 
 # Instalar o Whisper via pip
 
