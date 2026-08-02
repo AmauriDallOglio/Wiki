@@ -37,6 +37,17 @@ Atualizações basta rodar: pip install -U openai-whisper ;
 <img width="1673" height="332" alt="image" src="https://github.com/user-attachments/assets/ab1680a5-f4b0-4b8c-885f-1ab2a7ce9d5a" />
 
 
+# Atualização
+
+python -m pip install --upgrade pip
+pip install -U openai-whisper
+
+<img width="1819" height="799" alt="image" src="https://github.com/user-attachments/assets/8ac916fc-b0ef-4b5d-b06e-f3df1802f30a" />
 
 
+# Testando
+
+Usar o comando: whisper C:\Amauri\Gravando.mp3 --model small --language pt
+
+<img width="1337" height="115" alt="image" src="https://github.com/user-attachments/assets/f098060c-3a51-4fe8-a1a7-3169f44f6412" />
 
