@@ -1,3 +1,8 @@
+Desenvolvendo uma api para fornecer um serviço web (endpoint HTTP) que recebe um arquivo de áudio e devolve o texto transcrito daquele áudio, em português.
+
+Este serviço é útil para: transcrever gravações de reuniões, notas de voz, entrevistas, aulas gravadas, ou qualquer necessidade de converter áudio em texto de forma automatizada expondo isso como uma API que outros sistemas podem chamar.
+
+<img width="1432" height="786" alt="image" src="https://github.com/user-attachments/assets/45ecb123-bf99-433d-a339-ec5cd6751af3" />
 
 
 # Instalar Python
@@ -52,6 +57,8 @@ python C:\Amauri\GitHub\Whisper\Whisper.Api\bin\Debug\net8.0\Scripts\transcrever
 
 
 # Instalar o Whisper via pip
+
+O Whisper é uma biblioteca Python (não existe uma versão nativa robusta em C#/.NET com a mesma qualidade de modelo), então a solução foi criar uma ponte: a API .NET recebe as requisições HTTP normalmente (o que é natural em .NET), mas delega o trabalho pesado de IA para um subprocesso Python, que é onde o modelo de fala-para-texto realmente roda.
 
 No PowerShell, rode: pip install -U openai-whisper
 
