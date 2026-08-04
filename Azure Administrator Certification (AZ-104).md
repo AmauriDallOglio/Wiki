@@ -198,4 +198,45 @@ Além disso, o Entra ID oferece a funcionalidade de **reset de senha em modo sel
 Outras funcionalidades incluem operações em lote, permitindo gerenciar múltiplos usuários de uma vez, e configurações adicionais de auditoria e segurança. O Entra ID, portanto, centraliza o gerenciamento de identidades, oferecendo recursos modernos de autenticação, autorização e administração de usuários.
 
 
+# Overview (Grupos, Roles e Acessos)
+
+Existe a parte de **grupos**, lembrando que os grupos aqui são diferentes dos grupos em ambientes on-premises. Ao criar um novo grupo, é possível escolher entre **grupo de segurança** ou **grupo do Microsoft 365**. O grupo do 365 é utilizado quando se deseja ter um espaço de interação, como chats e colaboração entre pessoas, por exemplo, um grupo de tecnologia. Já o grupo de segurança é voltado para atribuição de funções e permissões em recursos. Essa diferença é importante e costuma aparecer em provas de certificação.
+
+Ao configurar um grupo do 365, é necessário inserir nome, descrição e membros. Já no grupo de segurança, além do nome e descrição, é possível definir se ele será atribuído manualmente ou dinamicamente, dependendo da licença disponível. No caso do Microsoft 365, existe ainda a opção de configurar um grupo de e-mail que receberá recursos relacionados. Também é possível definir quem são os donos e membros do grupo. Essa diferença entre grupos de segurança e grupos do 365 é um ponto de atenção.
+
+Outro aspecto é a **identidade externa**, que permite convidar usuários para colaborar no ambiente. É possível configurar self-service para trazer usuários externos, criando contas específicas para colaboração. Além disso, existem as **roles administrativas**, que definem permissões específicas para usuários. Muitas vezes há confusão nesse ponto, pois em ambientes on-premises as permissões são atribuídas de forma diferente. No Entra ID, cada role tem funções bem definidas. Por exemplo, o administrador de helpdesk pode redefinir senhas de usuários e administradores de helpdesk, mas não pode criar grupos. Já o administrador de usuários pode gerenciar todos os aspectos relacionados a usuários e grupos, incluindo redefinição de senhas. É importante entender que essas permissões são limitadas ao escopo definido pela role.
+
+Existe também a funcionalidade de **acesso condicional**, que garante que os usuários só consigam acessar recursos sob determinadas condições. Por exemplo, é possível configurar que o acesso só seja permitido se o IP de origem estiver dentro de uma faixa específica, como acessos realizados apenas do Brasil. No entanto, para criar políticas de acesso condicional é necessário possuir licenças Premium. Recursos como termos de uso, VPN Connect e controles customizados também dependem da versão utilizada.
+
+Outro ponto relevante é o **Access Review**, que ajuda a manter o ambiente organizado. Quanto maior a empresa, maior a necessidade de revisar permissões. O Access Review permite que gestores recebam periodicamente uma lista de usuários e seus acessos, verificando se ainda fazem sentido. Por exemplo, um colaborador que mudou de setor pode continuar com permissões antigas que não são mais necessárias. O gestor pode revisar e solicitar a remoção desses acessos, garantindo que cada usuário tenha apenas o permissionamento adequado. Esse processo é essencial para manter a segurança e a governança do ambiente.
+
+Portanto, os recursos de grupos, roles e acessos no Microsoft Entra ID oferecem flexibilidade e segurança, permitindo organizar usuários, atribuir permissões específicas e garantir que os acessos sejam constantemente revisados e ajustados conforme a necessidade da organização.
+
+
+# Criando uma Conta de Usuário Nova
+
+Voltando para a parte de usuários, como podemos fazer a criação de uma nova conta? Por enquanto não inserimos outros nomes de domínio, então vamos seguir com o domínio padrão. Primeiramente, é possível criar um novo usuário ou convidar um usuário externo. Vamos fazer as duas coisas, começando pela criação de um novo usuário.
+
+O nome principal dessa pessoa será “Aspira”, nosso estagiário. O domínio utilizado será o padrão, e o nickname deriva do user principal. O display name será “Aspira da TI”. Em seguida, configuramos a senha. Por padrão, o sistema gera automaticamente uma senha inicial. É possível desmarcar essa opção e definir uma senha manual, mas de qualquer forma, no primeiro login o usuário será obrigado a alterar a senha. A prática recomendada é manter a geração automática, copiar a senha inicial e armazená-la em um bloco de notas para repassar ao usuário. Assim, no primeiro acesso ele insere a senha inicial e cria uma nova senha definitiva.
+
+Outro ponto importante é que a conta pode ser criada habilitada ou desabilitada. Isso é útil quando recebemos dados de novos colaboradores que ainda não começaram a trabalhar. Podemos criar as contas antecipadamente, mas deixá-las desabilitadas até a data de início, garantindo segurança e evitando acessos indevidos. Da mesma forma, contas externas podem ser criadas desabilitadas para impedir login até que sejam necessárias.
+
+Na configuração de identidade, o **User Type** será “Member”, e podemos adicionar informações como cargo, empresa e departamento. No caso do Aspira, será estagiário da TI. Existe também a configuração de **User Location**, que define a localidade do usuário. Embora não seja obrigatória, é altamente recomendada. Essa informação é utilizada em regras de segurança, como bloqueio de login por região ou validação de acessos. Por exemplo, se definirmos que usuários só podem acessar do Brasil, o sistema precisa saber a localidade configurada para validar. Além disso, em cenários de licenciamento, a ausência dessa informação pode causar erros na atribuição de licenças. Já houve casos em que a ativação de licenças falhou porque o campo de localidade não estava preenchido. Portanto, sempre configure a localidade corretamente.
+
+Após definir essas informações, é possível adicionar o usuário a grupos, roles e unidades administrativas. No caso do Aspira, não foram atribuídas regras adicionais. Finalizando, basta confirmar a criação e a conta é gerada rapidamente. Assim, temos o novo usuário “Aspira da TI” criado e pronto para ser utilizado.
+
+
+
+# Criando um Invite External User
+
+Como havia comentado, também é possível fazer um **invite de usuários externos**. Para isso, utilizamos um e-mail externo e seguimos o processo de criação de um usuário convidado. A primeira etapa é convidar o colaborador externo, inserindo o e-mail da pessoa e definindo o display name. É possível personalizar a mensagem de convite, tornando-a mais amigável, como “Você está sendo convidado a participar e acessar os recursos da organização”.
+
+Após configurar, basta avançar e concluir o convite. O usuário externo será criado como **Guest**, enquanto os usuários internos permanecem como **Members**. No exemplo, temos o usuário interno “Aspira” e o usuário externo “Valéria XP”, que aparece como convidado. O sistema envia um e-mail padrão informando que o usuário foi convidado para acessar aplicativos da organização. Esse e-mail contém o domínio padrão e a mensagem de convite, permitindo que o usuário aceite e passe a ter acesso.
+
+Ao aceitar o convite, o usuário externo consegue acessar o diretório principal e visualizar algumas informações. No entanto, como não possui licenças ou permissões atribuídas, não terá acesso a recursos adicionais. Ele pode ver a estrutura básica, mas não consegue criar novos usuários ou realizar ações administrativas. O acesso é limitado a visualização, até que sejam atribuídas permissões específicas.
+
+Esse processo demonstra como funciona a criação de uma conta externa via invite. É importante lembrar que, sem licenciamento adequado, o usuário convidado terá acesso restrito. Para que ele possa participar de forma mais ativa, será necessário configurar permissões e licenças adicionais. Esse será o próximo passo, pois sem trocar o modelo de licença não será possível avançar em alguns laboratórios. Portanto, é recomendável que você já tenha criado sua conta nova e esteja preparado para os próximos conteúdos, que exigirão acesso mais privilegiado.
+
+
+
 
