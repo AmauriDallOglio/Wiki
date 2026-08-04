@@ -238,5 +238,90 @@ Ao aceitar o convite, o usuário externo consegue acessar o diretório principal
 Esse processo demonstra como funciona a criação de uma conta externa via invite. É importante lembrar que, sem licenciamento adequado, o usuário convidado terá acesso restrito. Para que ele possa participar de forma mais ativa, será necessário configurar permissões e licenças adicionais. Esse será o próximo passo, pois sem trocar o modelo de licença não será possível avançar em alguns laboratórios. Portanto, é recomendável que você já tenha criado sua conta nova e esteja preparado para os próximos conteúdos, que exigirão acesso mais privilegiado.
 
 
+# Conta, Usuários e Grupos
+
+Como comentei anteriormente, o fato de termos acesso ao **Active Directory** na nuvem, que agora possui a nomenclatura de **Microsoft Entra ID**, não significa que a criação de contas será feita exclusivamente na nuvem. Muito pelo contrário: se você possui um ambiente físico com data center e servidores dentro da sua empresa, o ideal é que seja feita uma **sincronização das contas**. Dessa forma, os usuários continuam sendo criados no ambiente on-premises e são replicados automaticamente para a nuvem. É assim que funciona na prática.
+
+Ainda assim, é possível criar usuários diretamente na nuvem ou dar acesso a usuários que não existem no ambiente on-premises. Esses casos são específicos e atendem a necessidades pontuais. Na tela de gerenciamento de usuários, percebemos que os nomes de exibição seguem um padrão. Esse padrão, chamado de **UPN (User Principal Name)**, é gerado automaticamente quando criamos a conta no Entra ID. Ele geralmente assume o formato `usuario@onmicrosoft.com`, que pode não ser muito familiar ou amigável. Esse UPN padrão não pode ser alterado, mas é possível adicionar um domínio da empresa para que novos usuários sejam criados com endereços mais adequados, como `usuario@minhaempresa.com`.
+
+Outro ponto importante é que podemos ter **usuários convidados**. Por exemplo, em uma auditoria, uma pessoa externa pode precisar acessar o ambiente por um período específico. Nesse caso, não é necessário criar uma conta permanente para ela. O ideal é convidar esse usuário externo, atribuir as permissões necessárias e, após o término da atividade, encerrar o acesso. Isso evita acúmulo de contas desnecessárias e melhora a gestão de segurança.
+
+Independentemente do tipo de usuário — seja membro, convidado ou replicado do ambiente on-premises — todos precisam ter uma conta registrada para conseguir acessar o portal. Cada conta possui propriedades associadas, como informações de perfil e licenciamento. Essas contas são utilizadas tanto para **autenticação** quanto para **autorização**. A autenticação garante que o usuário e senha estão corretos, enquanto a autorização define o que esse usuário pode ou não fazer dentro do ambiente.
+
+Portanto, a gestão de contas, usuários e grupos no Microsoft Entra ID é fundamental para manter a organização, segurança e eficiência do ambiente de nuvem, integrando-se de forma prática com ambientes locais e permitindo flexibilidade para diferentes cenários.
+
+
+# Gerenciar Contas de Usuário
+
+No gerenciamento de contas de usuário, é possível criar novos usuários, realizar criação em massa, convidar usuários externos, excluir usuários em massa e até mesmo fazer o download da lista de usuários para validação. Ao criar uma nova conta, podemos optar por criar um usuário da organização ou convidar um usuário externo. Essa última opção é utilizada quando queremos dar acesso a alguém que não faz parte da empresa, como um colaborador temporário ou auditor.
+
+É importante lembrar que, se o ambiente não for 100% na nuvem, a criação de usuários deve ser feita no ambiente on-premises, que então replica para a nuvem. O processo funciona sempre dessa forma: do on-premises para a nuvem, e nunca o inverso. Portanto, se alguém criar um usuário diretamente na nuvem em um ambiente híbrido, esse usuário não aparecerá no ambiente local. Nesse caso, o procedimento correto é excluir o usuário criado na nuvem e refazer a criação no ambiente on-premises, aguardando a replicação.
+
+Outro ponto relevante é o gerenciamento do **MFA (Multi-Factor Authentication)**. Essa configuração determina que, além da senha, o usuário precisa confirmar sua identidade por meio de um segundo fator, como um celular, garantindo maior segurança no acesso ao sistema.
+
+No contexto de administração, quem consegue gerenciar contas de usuário são os administradores com permissões específicas. Existem duas permissões principais: **Administrador Global** e **Administrador de Usuários**. O Administrador Global possui acesso amplo e generalista, não limitado apenas à gestão de contas de usuário, enquanto o Administrador de Usuários tem acesso restrito apenas à gestão de contas. Por questões de segurança, geralmente as empresas preferem atribuir a permissão de Administrador de Usuários, evitando conceder privilégios excessivos.
+
+Também é possível adicionar informações adicionais ao perfil do usuário, como cargo e dados de contato. Embora sejam opcionais, quanto mais informações o usuário tiver registradas, melhor será a gestão. Outro ponto importante são os **usuários excluídos**. Quando uma conta é excluída, existe um período de até 30 dias em que ela pode ser restaurada. Após esse prazo, a conta é permanentemente removida. Esse detalhe é relevante tanto para o dia a dia quanto para provas de certificação, pois é comum aparecer questões relacionadas a esse prazo de restauração.
+
+Além disso, é possível validar **logs de auditoria** relacionados à autenticação. Esses registros são fundamentais para acompanhar acessos realizados pelos colaboradores e identificar comportamentos suspeitos. Por exemplo, se um usuário acessa fora do horário de trabalho, é possível verificar se foi realmente ele ou se a conta foi comprometida. O acesso aos logs de auditoria é essencial tanto para monitoramento interno quanto para segurança do ambiente.
+
+Portanto, o gerenciamento de contas de usuário no Microsoft Entra ID envolve criação, exclusão, replicação, configuração de MFA, atribuição de permissões administrativas e análise de auditoria. Esses processos garantem organização, segurança e eficiência na gestão de identidades dentro da nuvem.
+
+
+# Execute Atualizações em Massa
+
+Aqui temos um cenário de **atualizações em massa**. Como isso funciona? Imagine que você trabalha em uma empresa multinacional ou de grande porte e precisa, de repente, adicionar uma lista de 30, 50 ou até 100 pessoas. Esses usuários podem ser convidados externos ou novos colaboradores. Também pode ser necessário realizar exclusões em massa dentro do **Active Directory na nuvem (Microsoft Entra ID)**.
+
+É importante lembrar que, se você excluir um usuário em um ambiente sincronizado, essa exclusão deve ser feita no **AD on-premises**, pois ele replica para a nuvem. No entanto, quando falamos de usuários nativos da nuvem ou convidados externos (invites), podemos realizar esse processo diretamente no Entra ID. Esse procedimento é chamado de **bulk operation** quando utilizamos o ambiente em inglês.
+
+No portal, é possível criar novos usuários, fazer download da lista de usuários com suas configurações de perfil e realizar tanto a criação quanto a exclusão em massa. O processo funciona da seguinte forma: baixamos um modelo em formato **CSV** (semelhante a um Excel, mas com parâmetros específicos separados por vírgulas ou ponto e vírgula). Esse arquivo contém a estrutura necessária para que os dados sejam interpretados corretamente. Após substituir as informações no modelo, basta carregar o arquivo no portal e o sistema executa automaticamente a criação ou exclusão dos usuários.
+
+Esse recurso é bastante útil em situações como auditorias. Por exemplo, se a empresa vai receber dez auditores temporários, é possível adicionar todos de uma vez utilizando o modelo CSV. Após o término da auditoria, o mesmo arquivo pode ser utilizado para realizar a exclusão em massa, sem necessidade de excluir cada usuário individualmente. Isso torna o processo muito mais rápido e eficiente.
+
+As atualizações em massa podem ser aplicadas tanto para usuários quanto para membros de grupos. No entanto, é fundamental lembrar que para realizar essas operações é necessário possuir permissões adequadas, como **Administrador Global** ou **Administrador de Usuários**. Somente essas permissões permitem executar esse tipo de gestão. O modelo CSV, baixado diretamente do portal, é a ferramenta que possibilita organizar e executar essas operações de forma prática e segura.
+
+
+# Criar Contas de Grupo
+
+Com relação às contas de grupo, nós temos dois modelos principais: **grupos de segurança** e **grupos do Microsoft 365**. Esses modelos de contas são bastante utilizados no dia a dia e também são frequentemente cobrados em provas de certificação. É importante lembrar que, diferentemente do **Active Directory local**, no Entra ID não existe hierarquia de unidades organizacionais. Todos os usuários e grupos estão em um mesmo plano, sem subdivisões estruturais.
+
+Os grupos servem para dois estilos de trabalho distintos. Os **grupos de segurança** são utilizados principalmente em cenários de permissões e licenciamentos. Eles permitem atribuir acessos específicos a usuários e dispositivos, garantindo que apenas quem precisa tenha acesso a determinados recursos. Já os **grupos do Microsoft 365** são voltados para colaboração entre setores. Esses grupos permitem criar espaços de interação, como equipes no Microsoft Teams, onde os membros podem se comunicar e compartilhar informações de forma integrada.
+
+Um ponto importante é o modelo de atribuição. Por exemplo, se temos um usuário chamado Valéria, que pertence ao setor de Tecnologia (TI), podemos configurar uma regra dinâmica para que todos os usuários desse setor sejam automaticamente adicionados ao grupo correspondente. Esse é o chamado **modelo dinâmico de atribuições**. Assim, se Valéria mudar de setor, passando para Contabilidade, ela será automaticamente removida dos grupos de TI e adicionada aos grupos de Contabilidade. Esse modelo garante que os grupos estejam sempre atualizados conforme as mudanças de perfil dos usuários.
+
+Existe também o **modelo atribuído**, onde os usuários são adicionados manualmente aos grupos. Esse modelo pode ser utilizado, mas em organizações muito grandes torna-se arriscado, pois é fácil esquecer de adicionar ou remover alguém. O modelo dinâmico, por outro lado, automatiza esse processo com base em regras definidas.
+
+Além disso, é possível utilizar **dispositivos dinâmicos** em grupos de segurança. Como os dispositivos também podem ser autenticados no ambiente, eles podem ser adicionados a grupos de segurança para receber políticas e permissões específicas. No entanto, dispositivos não podem ser adicionados a grupos do Microsoft 365, já que esses grupos são voltados para interação entre pessoas.
+
+Portanto, os grupos no Microsoft Entra ID são ferramentas essenciais para organizar permissões e colaboração. Os grupos de segurança garantem controle de acesso, enquanto os grupos do Microsoft 365 promovem integração entre equipes. A escolha entre atribuição manual ou dinâmica depende do tamanho da organização e da necessidade de automação no gerenciamento de usuários e dispositivos.
+
+
+
+# Atribuir Licenças a Usuários e Grupos
+
+No Microsoft Entra ID, temos diferentes modelos de licenciamento. Existe o modelo gratuito, que oferece funcionalidades básicas, e também os modelos **P1** e **P2**, que adicionam recursos mais avançados. Além disso, existem serviços adicionais relacionados, que podem ser exigidos ou não dependendo do tipo de acesso que se deseja conceder.
+
+É possível trabalhar com mais de um modelo de licença relacionado ao Microsoft 365. Por exemplo, algumas pessoas podem receber a licença **E5**, que é a mais completa e inclui todas as funcionalidades, enquanto outras podem receber a licença **E3**, que possui menos recursos. Dessa forma, cada usuário ou grupo recebe a licença adequada conforme a necessidade da organização.
+
+O processo de atribuição de licenças é simples: basta selecionar o usuário ou grupo e definir qual licença será aplicada. Essa flexibilidade permite que diferentes setores ou funções dentro da empresa tenham acesso apenas ao que realmente precisam. Além disso, quando um colaborador é desligado, a licença atribuída a ele pode ser removida e reaproveitada para outro usuário, garantindo melhor gestão dos recursos disponíveis.
+
+Portanto, o gerenciamento de licenças no Entra ID é essencial para controlar custos, otimizar recursos e assegurar que cada usuário tenha acesso às ferramentas necessárias para desempenhar suas funções.
+
+
+# Criar Unidades Administrativas
+
+As **unidades administrativas** são uma forma de organizar melhor a empresa dentro do Microsoft Entra ID, dependendo da situação e da estrutura da organização. Elas não são equivalentes às unidades organizacionais do Active Directory local, mas cumprem um papel semelhante ao permitir uma gestão mais segmentada.
+
+Imagine uma empresa que atua em todo o território nacional, com sede em cada capital do Brasil. Cada estado organiza seus acessos e faz a gestão de seus próprios usuários. Por exemplo, o setor de TI do Rio Grande do Sul atende apenas os colaboradores daquela localidade, sem necessidade de gerenciar usuários de outros estados. Nesse caso, é possível criar uma unidade administrativa específica para o Rio Grande do Sul, atribuindo a ela os usuários e grupos correspondentes, além de definir o escopo de permissões. Assim, o setor de TI daquela região terá autonomia para gerenciar apenas os usuários locais.
+
+Esse modelo é o mais próximo que conseguimos chegar da estrutura tradicional do Active Directory, ainda que não seja exatamente igual. Ele permite que a gestão seja descentralizada, mas organizada, garantindo que cada equipe de TI cuide apenas da sua área de responsabilidade. Para implementar unidades administrativas, é necessário ter uma licença **P1 ou P2** do Microsoft Entra ID, além de privilégios administrativos, como o acesso de **Administrador Global**, para criar e configurar o ambiente.
+
+É importante destacar que essa funcionalidade faz sentido principalmente em empresas de grande porte, com operações distribuídas em diferentes regiões ou países. Se a empresa possui apenas um setor de TI que atende todos os usuários, a criação de unidades administrativas não será necessária. No entanto, em cenários onde há separação por localidades ou regiões, elas são fundamentais para manter a organização e garantir que cada equipe atenda apenas os usuários sob sua responsabilidade.
+
+Em provas de certificação, é comum aparecer questões relacionadas a esse tema. Por exemplo, pode ser apresentado um cenário em que a empresa possui operações em várias regiões e cada área de TI atende apenas sua localidade. Nesse caso, a resposta correta seria a utilização de **unidades administrativas**, pois elas permitem segmentar a gestão sem alterar a estrutura geral do ambiente.
+
+Portanto, as unidades administrativas são uma ferramenta poderosa para empresas que precisam dividir responsabilidades de gestão de usuários e grupos por regiões ou setores, mantendo a organização e a eficiência no gerenciamento de identidades dentro da nuvem.
+
+
 
 
