@@ -64,6 +64,8 @@ ffmpeg.exe
 whisper.exe
 ```
 
+Como instalar whisper e ffmpeg: https://github.com/AmauriDallOglio/Wiki/blob/main/Whisper%20no%20Windows%20(para%20fazer%20transcri%C3%A7%C3%A3o%20de%20%C3%A1udio).md
+
 Essas ferramentas podem ser armazenadas em uma única pasta.
 
 Exemplo:
