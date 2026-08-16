@@ -198,55 +198,17 @@ Comando:
 yt-dlp.exe -x --audio-format mp3 "URL_DO_VIDEO"
 ```
 
-Exemplo:
+<img width="1805" height="596" alt="image" src="https://github.com/user-attachments/assets/5e9253e1-3e53-4b5c-bf46-0491c27bc735" />
 
-```powershell
-yt-dlp.exe -x --audio-format mp3 "https://www.youtube.com/watch?v=XXXXXXXX"
-```
+Executar o serviço no servidor:
 
-O parâmetro:
+<img width="1516" height="352" alt="image" src="https://github.com/user-attachments/assets/1317f0a3-8cc9-4962-8975-c4e1a6eafb8c" />
 
-```text
--x
-```
-
-indica que o objetivo é extrair o áudio.
-
-O parâmetro:
-
-```text
---audio-format mp3
-```
-
-solicita que o áudio seja convertido para o formato MP3.
 
 ---
+ 
 
-# 8. Salvando o MP3 em uma pasta específica
-
-Para o projeto, foi definida a pasta:
-
-```text
-C:\Mp3
-```
-
-O comando pode ser configurado da seguinte forma:
-
-```powershell
-yt-dlp.exe -x --audio-format mp3 -o "C:\Mp3\%(title)s.%(ext)s" "URL_DO_VIDEO"
-```
-
-O arquivo será salvo utilizando o título do vídeo.
-
-Exemplo:
-
-```text
-C:\Mp3\Nome do vídeo.mp3
-```
-
----
-
-# 9. FFmpeg
+# 8. FFmpeg
 
 O **FFmpeg** é utilizado no processamento e conversão do áudio.
 
@@ -266,7 +228,7 @@ O `ffprobe.exe` também é utilizado por algumas operações relacionadas ao pro
 
 ---
 
-# 10. Whisper
+# 9. Whisper
 
 O **Whisper** será utilizado para transformar o áudio em texto.
 
@@ -292,7 +254,7 @@ A API .NET poderá executar o Whisper utilizando `System.Diagnostics.Process`, d
 
 ---
 
-# 11. Estrutura da API .NET
+# 10. Estrutura da API .NET
 
 A aplicação foi estruturada para separar as responsabilidades.
 
