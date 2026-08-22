@@ -9,28 +9,20 @@ O fluxo implementado é:
 ```text
 URL do vídeo
      │
-     ▼
    API .NET
      │
-     ▼
   yt-dlp.exe
      │
-     ▼
  Download do áudio
      │
-     ▼
    FFmpeg
      │
-     ▼
      MP3
      │
-     ▼
   whisper.exe
      │
-     ▼
  Transcrição
      │
-     ▼
  Texto retornado pela API
 ```
 
