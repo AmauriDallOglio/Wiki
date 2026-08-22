@@ -59,6 +59,23 @@ Na API você precisa liberar o endpoint /metrics da autenticação JWT e garanti
 
 Baixe o Prometheus em [prometheus.io/download](https://prometheus.io/download).
 
+Defina a pasta para gerenciar os arquivos no meu caso destinei em: C:\Prometheus
+<img width="1319" height="292" alt="image" src="https://github.com/user-attachments/assets/5e264554-2d93-41d3-a241-5cb14769992c" />
+
+É necessário ativar o serviço no servidor pelo executavél: prometheus.exe
+<img width="1287" height="255" alt="image" src="https://github.com/user-attachments/assets/ab84f288-6da3-465c-a721-edb2dede263d" />
+
+Para testar acesso o endereço do servidor: http://localhost:9090/targets caso aparece na tela apareca a mensagem "Não é possível aceder a este site" valide se o arquivo .exe foi executado.
+<img width="1512" height="519" alt="image" src="https://github.com/user-attachments/assets/15dc3a80-1160-41ec-9dbd-721d391d2cff" />
+
+Com o processo configurados os serviços devem ser apresentados dessa forma:
+<img width="1902" height="850" alt="image" src="https://github.com/user-attachments/assets/beaf2867-63f0-4917-baa9-dcfce6aa9b39" />
+
+Para rodar todos os serviços poderá criar um arquivo bat:
+ 
+
+
+
 Rodar Prometheus, no PowerShell, dentro da pasta do Prometheus: .\prometheus.exe --config.file=prometheus.yml
 <img width="1900" height="551" alt="image" src="https://github.com/user-attachments/assets/550e0cd6-d552-4805-9cb3-7d2771414733" />
 
