@@ -184,9 +184,12 @@ scrape_configs:
 ```
 
 
+Para rodar todos os serviços (Prometheus e Grafana)
 
+Para o start do Prometheus no Windows sem precisar digitar os comandos manualmente no PowerShell, você pode criar um arquivo .bat. Esse arquivo vai abrir o Prometheus já com o prometheus.yml configurado.
 
-Para rodar todos os serviços (Prometheus e Grafana) poderá criar um arquivo bat:
+Abra o Bloco de Notas, cole o conteúdo abaixo, salve como start-prometheus.bat dentro da pasta C:\Prometheus.  Atenção: escolha “Todos os arquivos (.)” em vez de “.txt” na hora de salvar. Dê um duplo clique no arquivo start-prometheus.bat. O Prometheus vai iniciar e abrir os logs no console.
+
 
 ```text
 @echo off
@@ -200,75 +203,11 @@ pause
 
 ```
 
-
- 
-Se você tem outro serviço rodando e quer que o Prometheus monitore esse serviço também, o que precisa ser feito é adicionar mais um scrape job no arquivo prometheus.yml.
-
-
-global:
-  scrape_interval: 15s
-
-scrape_configs:
-  - job_name: "prometheus"
-    static_configs:
-      - targets: ["localhost:9090"]
-
-  - job_name: "autenticacaojwt"
-    static_configs:
-      - targets: ["localhost:5135"]
-
-  - job_name: "maia"
-    static_configs:
-      - targets: ["localhost:5035"]
-
-  - job_name: "ollama"
-    static_configs:
-      - targets: ["localhost:5140"]
-
-  - job_name: "email"
-    static_configs:
-      - targets: ["localhost:5050"]
-
-  - job_name: "dropbox"
-    static_configs:
-      - targets: ["localhost:5055"]
-
-  - job_name: "financeiro"
-    static_configs:
-      - targets: ["localhost:5057"]
-
-
-Para o start do Prometheus no Windows sem precisar digitar os comandos manualmente no PowerShell, você pode criar um arquivo .bat. Esse arquivo vai abrir o Prometheus já com o prometheus.yml configurado.
-
-Crie o script start-prometheus.bat:
-Abra o Bloco de Notas, cole o conteúdo abaixo, salve como start-prometheus.bat dentro da pasta C:\Prometheus.  Atenção: escolha “Todos os arquivos (.)” em vez de “.txt” na hora de salvar. Dê um duplo clique no arquivo start-prometheus.bat. O Prometheus vai iniciar e abrir os logs no console.
-
-Acesse http://localhost:9090 no navegador para confirmar.
-
-'@echo off
-
-cd /d C:\Prometheus
-
-echo Iniciando Prometheus...
-
-start prometheus.exe --config.file=prometheus.yml
-
-timeout /t 5 >nul
-
-start http://localhost:9090/targets
-
-pause'
-
-
-
 Verificar targets: 
 * Acesse http://localhost:9090/targets 
 
 <img width="1551" height="591" alt="image" src="https://github.com/user-attachments/assets/52e9cb66-3285-4c56-b09a-f3057e08f0b8" />
 
-Você deve ver dois jobs:
-* prometheus → status UP
-* autenticacaojwt → status UP (se sua API estiver rodando e expondo métricas).
 
 
 
