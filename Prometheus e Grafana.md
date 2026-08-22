@@ -71,22 +71,137 @@ Para testar acesso o endereço do servidor: http://localhost:9090/targets caso a
 Com o processo configurados os serviços devem ser apresentados dessa forma:
 <img width="1902" height="850" alt="image" src="https://github.com/user-attachments/assets/beaf2867-63f0-4917-baa9-dcfce6aa9b39" />
 
-Para rodar todos os serviços poderá criar um arquivo bat:
- 
-
-
-
-Rodar Prometheus, no PowerShell, dentro da pasta do Prometheus: .\prometheus.exe --config.file=prometheus.yml
-<img width="1900" height="551" alt="image" src="https://github.com/user-attachments/assets/550e0cd6-d552-4805-9cb3-7d2771414733" />
-
-<img width="1244" height="244" alt="image" src="https://github.com/user-attachments/assets/5344cdf4-b657-47ee-8b03-9bb8feb7c80f" />
 
 Crie o arquivo prometheus.yml com os jobs dos serviços: O prometheus.yml atual está configurado apenas para o próprio Prometheus (localhost:9090). Se você quer que ele coletemétricas da sua API .NET, precisa adicionar um novo scrape_config apontando para o endpoint /metrics da sua aplicação.
 
+<img width="1597" height="752" alt="image" src="https://github.com/user-attachments/assets/24e65b66-b82c-40dd-8256-4475f9cce6f9" />
+
 * Se a sua API está rodando em http://localhost:5135/swagger/index.html, isso significa que ela está exposta na porta 5135. Para o Prometheus conseguir coletar métricas, você precisa ajustar o prometheus.yml para apontar para essa porta e para o endpoint /metrics (que é onde o OpenTelemetry expõe os dados).
 
-<img width="1605" height="898" alt="image" src="https://github.com/user-attachments/assets/e00b6d88-ad96-40cd-8550-1562f59ae4be" />
+Se você tem outro serviço rodando e quer que o Prometheus monitore esse serviço também, o que precisa ser feito é adicionar mais um scrape job no arquivo prometheus.yml. Exemplo abaixo:
 
+```text
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  # Prometheus monitorando a si mesmo
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+        labels:
+          app: "prometheus"
+
+  # Autenticador JWT
+  - job_name: "autenticacaojwt"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:5135"]
+        labels:
+          app: "autenticacaojwt"
+
+  # Maia (Frontend BFF)
+  - job_name: "maia"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:5173"]
+        labels:
+          app: "maia"
+
+  # Ollama (IA local)
+  - job_name: "ollama"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:5140"]
+        labels:
+          app: "ollama"
+
+  # Email (Backend)
+  - job_name: "email"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:5035"]
+        labels:
+          app: "email"
+
+  # Dropbox (Backend)
+  - job_name: "dropbox"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:5137"]
+        labels:
+          app: "dropbox"
+
+  # Financeiro (Backend)
+  - job_name: "financeiro"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:5057"]
+        labels:
+          app: "financeiro"
+
+  # PrometheusNet (Backend)
+  - job_name: "prometheusNet"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:5169"]
+        labels:
+          app: "prometheusNet"
+
+   # Autenticador JWT IIS
+  - job_name: "autenticacaojwt iis"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:5002"]
+        labels:
+          app: "autenticacaojwt"
+
+  # Ollama IIS
+  - job_name: "ollama iis"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:5003"]
+        labels:
+          app: "ollama"
+
+  # Dropbox IIS
+  - job_name: "dropbox iis"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:5004"]
+        labels:
+          app: "dropbox"
+
+  # Financeiro IIS
+  - job_name: "financeiro iis"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:5005"]
+        labels:
+          app: "financeiro"
+
+```
+
+
+
+
+Para rodar todos os serviços (Prometheus e Grafana) poderá criar um arquivo bat:
+
+```text
+@echo off
+cd /d C:\Prometheus
+echo Iniciando Prometheus...
+start prometheus.exe --config.file=prometheus.yml
+timeout /t 5 >nul
+start http://localhost:9090/targets
+start http://localhost:3000/d/adpxkgd/autenticacao-jwt?orgId=1&from=now-6h&to=now&timezone=browser
+pause
+
+```
+
+
+ 
 Se você tem outro serviço rodando e quer que o Prometheus monitore esse serviço também, o que precisa ser feito é adicionar mais um scrape job no arquivo prometheus.yml.
 
 
