@@ -211,15 +211,44 @@ Quandos os serviços estão ativos (em execução) os cards são identificados n
 <img width="1551" height="591" alt="image" src="https://github.com/user-attachments/assets/52e9cb66-3285-4c56-b09a-f3057e08f0b8" />
 
 
-
-
-
 ## Grafana
 
 * É uma plataforma de visualização de dados.
 * Ele se conecta ao Prometheus (que coleta os dados) e transforma em gráficos, dashboards e alertas.
 * Benefício: em vez de olhar números crus, você vê painéis visuais que facilitam a análise e tomada de decisão.
 * Exemplo: um gráfico mostrando a latência p95 do serviço Financeiro ou um gauge mostrando se o AutenticadorJwt está UP ou DOWN.
+
+
+Rode o servidor (grafana-server.exe).
+* Baixe o Grafana em [grafana.com](https://grafana.com/grafana/download).
+* <img width="1316" height="440" alt="image" src="https://github.com/user-attachments/assets/b8b0ebfb-5bd1-4a5f-abd9-6c8d1177fc44" />
+
+* Instale e rode o servidor (grafana-server.exe).
+* <img width="1400" height="122" alt="image" src="https://github.com/user-attachments/assets/c3f762fd-0f1a-43bb-9bc2-e010f6c4112f" />
+
+* Rode o servidor (grafana-server.exe).
+* Acesse http://localhost:3000
+  * Usuário padrão: admin
+  * Senha padrão: admin (vai pedir para trocar na primeira vez).
+* Configure o Prometheus como Data Source:
+  * URL: http://localhost:9090
+  * Clique em Save & Test.
+
+### Conectar o Grafana ao Prometheus
+
+No Grafana, vá em Configuration > Data Sources.
+Clique em Add data source.
+Escolha Prometheus.
+onfigure a URL: http://localhost:9090
+
+<img width="1440" height="675" alt="image" src="https://github.com/user-attachments/assets/b46158d7-150b-4c0a-a7ca-248389cbf34e" />
+
+Se tudo estiver certo, o Grafana confirma a conexão.
+
+<img width="1259" height="273" alt="image" src="https://github.com/user-attachments/assets/d1e9f5f7-e707-487d-b889-988295a5c040" />
+
+<img width="1467" height="674" alt="image" src="https://github.com/user-attachments/assets/e9921f39-3217-48ff-a336-dac93d5846eb" />
+
 
 ### Para que servem os Dashboards
 
@@ -243,35 +272,6 @@ Quandos os serviços estão ativos (em execução) os cards são identificados n
 * Benefício: desacoplamento. Cada serviço pode evoluir, escalar ou ser substituído sem impactar os outros.
 * O Prometheus + Grafana entram como observabilidade centralizada, monitorando todos esses serviços em conjunto.
 
- 
-Rode o servidor (grafana-server.exe).
-* Baixe o Grafana em [grafana.com](https://grafana.com/grafana/download).
-* Instale e rode o servidor (grafana-server.exe).
-* Rode o servidor (grafana-server.exe).
-* Acesse http://localhost:3000
-  * Usuário padrão: admin
-  * Senha padrão: admin (vai pedir para trocar na primeira vez).
-* Configure o Prometheus como Data Source:
-  * URL: http://localhost:9090
-  * Clique em Save & Test.
-
-### Conectar o Grafana ao Prometheus
-
-No Grafana, vá em Configuration > Data Sources.
-Clique em Add data source.
-Escolha Prometheus.
-onfigure a URL: http://localhost:9090
-
-<img width="1440" height="675" alt="image" src="https://github.com/user-attachments/assets/b46158d7-150b-4c0a-a7ca-248389cbf34e" />
-
-Se tudo estiver certo, o Grafana confirma a conexão.
-
-<img width="1259" height="273" alt="image" src="https://github.com/user-attachments/assets/d1e9f5f7-e707-487d-b889-988295a5c040" />
-
-
-<img width="1467" height="674" alt="image" src="https://github.com/user-attachments/assets/e9921f39-3217-48ff-a336-dac93d5846eb" />
-
-
 ## Dashboards no Grafana
 
 Para montar dashboards no Grafana, você precisa saber quais métricas estão disponíveis nos seus serviços instrumentados com OpenTelemetry + Prometheus. Aqui vai uma lista prática das métricas mais comuns que você pode usar:
@@ -279,7 +279,11 @@ Para montar dashboards no Grafana, você precisa saber quais métricas estão di
 <img width="1277" height="848" alt="image" src="https://github.com/user-attachments/assets/aa11d255-534d-4f26-8d82-1261ddea380b" />
 
 
-Métricas principais para .NET
+Exemplos de gráficos:
 
 <img width="1839" height="812" alt="image" src="https://github.com/user-attachments/assets/c47522d5-6f7a-4dca-baec-81236394ef44" />
 
+<img width="1864" height="737" alt="image" src="https://github.com/user-attachments/assets/4efac98b-b793-4048-9c4f-bee310da6b96" />
+
+
+<img width="1899" height="714" alt="image" src="https://github.com/user-attachments/assets/212724b2-72dc-4b3e-ac80-f494829dc172" />
