@@ -206,6 +206,8 @@ pause
 Verificar targets: 
 * Acesse http://localhost:9090/targets 
 
+Quandos os serviços estão ativos (em execução) os cards são identificados na cor verde;
+
 <img width="1551" height="591" alt="image" src="https://github.com/user-attachments/assets/52e9cb66-3285-4c56-b09a-f3057e08f0b8" />
 
 
