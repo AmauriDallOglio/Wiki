@@ -101,10 +101,6 @@ https://github.com/yt-dlp/yt-dlp/releases/tag/2026.07.04
 
 Após realizar o download do `yt-dlp.exe`, coloque o executável na pasta:
 
-```text
-C:\Ferramentas
-```
-
 Exemplo:
 
 ```text
@@ -116,15 +112,6 @@ A existência do arquivo pode ser verificada pelo PowerShell:
 ```powershell
 dir C:\Ferramentas
 ```
-
-Resultado esperado:
-
-```text
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----                ...                   ...    yt-dlp.exe
-```
-
 ---
 
 # 5. Não executar o yt-dlp com duplo clique
