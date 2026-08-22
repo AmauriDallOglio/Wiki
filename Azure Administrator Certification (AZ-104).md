@@ -323,5 +323,98 @@ Em provas de certificação, é comum aparecer questões relacionadas a esse tem
 Portanto, as unidades administrativas são uma ferramenta poderosa para empresas que precisam dividir responsabilidades de gestão de usuários e grupos por regiões ou setores, mantendo a organização e a eficiência no gerenciamento de identidades dentro da nuvem.
 
 
+# Monitoramento
+
+Iniciando administração de monitoramento. Já percorremos diversos recursos e configurações dentro do Microsoft Azure e agora vamos falar sobre ferramentas de monitoramento, análise e coleta de logs. O conteúdo é dividido em três tópicos: configuração do Azure Monitor, alertas do Azure Monitor e análise de logs. Embora seja um módulo mais curto, representa cerca de 10 a 15% da prova, portanto é essencial manter a atenção.
+
+---
+
+## Recursos e Componentes do Azure Monitor
+
+Monitorar é uma necessidade em qualquer ambiente de TI. Não importa se os recursos estão na nuvem ou on-premises, eles podem sofrer indisponibilidade, lentidão ou erros de configuração. O **Azure Monitor** é a ferramenta que oferece visibilidade sobre métricas, integridade e desempenho dos recursos. Ele permite configurar alertas, coletar métricas, logs de atividades e diagnósticos, além de integrar com aplicações externas como Grafana ou Zabbix.
+
+Entre os componentes do Azure Monitor estão:
+- **Métricas**: valores numéricos que indicam o estado de um recurso.
+- **Logs**: registros detalhados de eventos e atividades.
+- **Insights**: visão detalhada de aplicações, redes, máquinas virtuais e containers.
+- **Alertas**: notificações configuradas para eventos críticos.
+- **Integrações**: possibilidade de exportar dados para hubs de eventos, aplicações externas ou armazenamentos.
+
+O Azure Monitor coleta dados de diferentes fontes, como aplicativos, infraestrutura e plataforma, permitindo análises avançadas e respostas rápidas a incidentes.
+
+---
+
+## Diferença entre Métricas e Logs
+
+É importante entender que **métricas e logs não são a mesma coisa**.
+
+- **Métricas**: são valores numéricos que descrevem aspectos de um sistema em determinado tempo. Por exemplo, um disco com 95% de uso ou uma máquina desligada há três minutos. São dados leves, quase em tempo real, que mostram desempenho e disponibilidade.
+  
+- **Logs**: são registros detalhados de eventos, como autenticações, exclusões de recursos ou falhas de conexão. Contêm propriedades diversas e permitem análises mais profundas. Logs podem ser consultados no **Log Analytics**, exportados para armazenamento ou integrados com ferramentas como Power BI.
+
+As métricas mostram números objetivos, enquanto os logs trazem mensagens e detalhes de eventos. Ambos são complementares: métricas ajudam a identificar rapidamente o estado de um recurso, e logs permitem investigar o que aconteceu em determinado momento.
+
+---
+
+## Exemplos de Uso
+
+- **Métricas**: número de conexões recebidas em um e-commerce, percentual de uso de CPU ou memória de uma máquina virtual.
+- **Logs**: registro de quem criou ou excluiu uma rede virtual, horário de login de um usuário, falhas em diagnósticos de aplicativos.
+
+Os logs de atividades são especialmente importantes para auditorias, pois permitem verificar ações realizadas em recursos, identificar responsáveis e validar conformidade. É possível filtrar logs por assinatura, intervalo de tempo, severidade do evento e exportá-los para análise.
+
+O monitoramento no Azure é essencial para garantir disponibilidade, desempenho e segurança dos recursos. Métricas e logs devem ser utilizados em conjunto para oferecer uma visão completa do ambiente. Além disso, é importante configurar alertas e definir estratégias de resposta para incidentes, garantindo que qualquer problema seja identificado e tratado rapidamente.
+
+
+# Explorando o Azure Monitor na Prática
+
+O **Azure Monitor** é um painel integrado que já está disponível no portal e cabe a nós configurá-lo. No overview, temos a parte de insights de containers, máquinas virtuais, redes e aplicações, além de informações sobre alertas e logs. É possível integrar o monitoramento com ferramentas externas como Grafana ou Prometheus, ampliando a visibilidade do ambiente. Para habilitar o monitoramento de uma máquina virtual, por exemplo, é necessário criar um workspace, que funciona como um repositório para armazenar métricas e logs. A partir daí, conseguimos coletar e analisar informações de desempenho e disponibilidade.
+
+Além das máquinas virtuais, o Azure Monitor também permite acompanhar contas de armazenamento, containers e redes. Os **logs de atividades** registram tudo o que acontece na conta, desde criação de recursos até falhas. Outro recurso importante é o **Service Health**, que informa indisponibilidades ou manutenções planejadas nos serviços da Microsoft. Antes de alterar configurações ou assumir que o problema é interno, é essencial validar se existe algum incidente declarado no Service Health. Isso evita diagnósticos equivocados e garante maior segurança na administração.
+
+---
+
+# Alertas do Azure Monitor
+
+Os alertas no Azure Monitor são baseados em métricas e logs coletados dos recursos. Eles permitem que eventos críticos sejam sinalizados para os administradores. É fundamental configurar regras de alerta para cada recurso, pois sem isso os problemas podem passar despercebidos. Por exemplo, se uma máquina virtual atingir 80% de uso de CPU ou disco, é necessário que alguém seja avisado. Caso contrário, a informação ficará apenas registrada nos logs, sem notificação.
+
+A criação de alertas deve fazer parte de um checklist de administração, assim como backups e permissões. É preciso definir o escopo (máquina, banco de dados, rede), as condições (percentual de uso, falhas de conexão, latência) e a criticidade (informativo, warning, erro ou crítico). A partir daí, configuramos um **grupo de ações**, que determina como os responsáveis serão notificados. As notificações podem ser enviadas por e-mail, SMS, push, Teams ou até integradas com sistemas de abertura de chamados.
+
+---
+
+# Regras de Alerta e Grupos de Ação
+
+As **regras de alerta** combinam recursos, sinais e condições para disparar notificações. É possível criar regras prontas para uso, como monitoramento de CPU, disco ou memória, ou configurar regras personalizadas para cenários específicos. Cada regra precisa ter um nome, escopo, condição e severidade definida. Também é possível desabilitar regras que não façam mais sentido para o ambiente.
+
+Os **grupos de ação** são responsáveis por enviar notificações quando uma regra é acionada. É possível configurar até cinco grupos de ação por regra, permitindo que diferentes canais sejam utilizados simultaneamente. Por exemplo, um alerta pode abrir automaticamente um ticket em uma ferramenta de atendimento, enviar uma mensagem no Teams e disparar um SMS para o time de plantão. Essa flexibilidade garante que os problemas sejam comunicados rapidamente e tratados com urgência.
+
+O monitoramento no Azure não é ativado automaticamente. É responsabilidade do administrador habilitar os recursos, configurar métricas, logs, alertas e grupos de ação. Essa prática garante que problemas sejam identificados e resolvidos antes de impactarem os usuários. Métricas e logs têm objetivos diferentes, mas complementares: métricas mostram números de desempenho, enquanto logs registram eventos detalhados. Juntos, eles oferecem uma visão completa do ambiente.
+
+Portanto, como administradores do Azure, precisamos assumir essa responsabilidade e garantir que o monitoramento esteja ativo e configurado corretamente. Essa é uma das etapas fundamentais para manter a disponibilidade, segurança e eficiência dos recursos na nuvem.
+
+# Criação do Log Analytics
+
+Iniciando a parte de monitoramento, sabemos que precisamos reunir informações que podem disparar alertas com base em regras previamente determinadas. No entanto, existem situações em que é necessário analisar esses dados de forma mais minuciosa, e é aqui que entra o **Log Analytics**. Conforme os dados vão sendo armazenados, é fundamental que façamos algo com eles, evitando apenas acumular informações que consomem espaço e geram custos sem trazer valor.
+
+O Log Analytics é um ambiente que permite consultas utilizando a linguagem **KQL (Kusto Query Language)**. Essa linguagem é utilizada para recuperar e analisar informações armazenadas no ambiente. O serviço coleta e organiza dados gerados pelos recursos e ambientes, tanto na nuvem quanto on-premises. É possível descrever consultas específicas, direcionadas a usuários, IPs ou eventos, permitindo análises detalhadas de login, atualizações de sistema, incidentes operacionais e muito mais.
+
+Para utilizar o Log Analytics, o primeiro passo é criar um **workspace**, que funciona como um repositório de dados. Esse workspace é configurado com assinatura, grupo de recursos, nome e região. A partir dele, os dados são coletados e ficam disponíveis para consultas. É possível ter múltiplos workspaces por assinatura, conforme a necessidade da organização. Esse recurso é essencial para ferramentas de segurança como o Microsoft Sentinel, que dependem de workspaces para avaliar a segurança do ambiente.
+
+Com o Log Analytics, é possível realizar consultas avançadas, exportar resultados para Power BI ou Excel, e até automatizar alertas com base nas análises. Exemplos incluem eventos de login do Windows, syslog do Linux, informações de agentes, vlogs personalizados e regras de alerta. A linguagem KQL é um ponto importante em provas de certificação, sendo necessário conhecer sua função e aplicação, mesmo que não seja exigido escrever consultas completas.
+
+---
+
+# Explorando Análise de Logs na Prática
+
+No laboratório do módulo 11, trabalhamos com a administração de monitoramento dentro do Microsoft Azure, focando na análise de logs com o Log Analytics. Após criar o workspace, é possível acessar o serviço pelo Azure Monitor, onde encontramos logs de atividades, alertas, métricas e registros consolidados da assinatura.
+
+O Log Analytics funciona como um container que armazena dados coletados de diferentes fontes. As consultas são feitas em **KQL**, permitindo recuperar e consolidar informações de forma rápida e precisa. Existem consultas prontas disponíveis no ambiente, mas também é possível criar consultas personalizadas para atender necessidades específicas. Isso é especialmente útil em cenários de segurança, auditoria e monitoramento de desempenho.
+
+As consultas podem ser configuradas para rodar automaticamente, integradas a alertas, ou exportadas para ferramentas como Power BI e Excel. Exemplos de consultas incluem auditoria de monitoramento, análise de recursos, desktops virtuais, containers, bancos de dados, segurança, máquinas virtuais e workloads. É possível verificar discos livres, eventos aguardando processamento, serviços do Windows parados, entre outros.
+
+A linguagem KQL é essencial para explorar o Log Analytics. Com ela, administradores podem buscar informações específicas, como falhas de autorização ou eventos críticos, e consolidar dados por usuário, recurso ou período de tempo. Embora algumas consultas já estejam disponíveis, é importante saber como criar novas, adaptando-se às necessidades do ambiente.
+
+Portanto, o Log Analytics é uma ferramenta poderosa para coleta, análise e consulta de dados no Azure. Ele permite que administradores tenham maior controle sobre o ambiente, identifiquem problemas rapidamente e tomem decisões baseadas em informações detalhadas e confiáveis.
+
 
 
