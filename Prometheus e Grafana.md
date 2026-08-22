@@ -17,13 +17,19 @@ Cada serviço expõe métricas via /metrics para serem coletadas pelo Prometheus
 
 Para monitorar os resultados implentados (timeouts, retries e fallbacks), precisa expor essas informações como logs, métricas e traces. Isso permite acompanhar em tempo real no Grafana.
 
-<img width="1191" height="656" alt="image" src="https://github.com/user-attachments/assets/3fc30c18-4c86-4bd4-86fb-7734104825e6" />
-
 Instalar pacotes:
 * dotnet add package OpenTelemetry.Extensions.Hosting
 * dotnet add package OpenTelemetry.Instrumentation.AspNetCore
 * dotnet add package OpenTelemetry.Instrumentation.Http
 * dotnet add package OpenTelemetry.Exporter.Prometheus.AspNetCore
+* <img width="1739" height="641" alt="image" src="https://github.com/user-attachments/assets/9faf8de9-6ae4-4ba3-9fcb-0e19d904b906" />
+
+Configuração nos projetos:
+* <img width="1676" height="697" alt="image" src="https://github.com/user-attachments/assets/974acd67-9360-4f7a-afde-e957956e499e" />
+
+Mapeamento de métricas para tratamento de erros:
+<img width="1787" height="520" alt="image" src="https://github.com/user-attachments/assets/2321b08e-315b-407a-9937-6d6fcc86094f" />
+
 
 Resultado
 * O Prometheus coleta métricas acessando http://localhost:5000/metrics.
@@ -32,7 +38,6 @@ Resultado
   * http_client_request_duration_seconds (latência das chamadas externas)
   * http_server_requests_total (quantidade de requisições)
   * http_client_requests_total (quantidade de chamadas externas)
-
 
 
 ## Prometheus
