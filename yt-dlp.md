@@ -216,10 +216,8 @@ O processo será:
 ```text
 MP3
  │
- ▼
 Whisper
  │
- ▼
 Texto
 ```
 
