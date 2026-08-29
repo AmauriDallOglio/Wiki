@@ -49,19 +49,37 @@ Ignore a configuração de CI/CD no Deployment Center, não é necessária porqu
 
 
 ### 2. Criar credencial federada (OIDC)
-- Vá em **App Registration → GitHubDeployAppSerilog → Credenciais federadas → Adicionar**  
-- Emissor: `https://token.actions.githubusercontent.com`  
-- Organização: `AmauriDallOglio`  
-- Repositório: `Serilog`  
-- Tipo de entidade: **Ramificação**  
-- Nome da ramificação: `master`  
-- Nome: `GitHubActions-Serilog-Master`  
-- Salve.  
-- O **Identificador de assunto** deve ficar exatamente:  
 
+<img width="1370" height="578" alt="image" src="https://github.com/user-attachments/assets/6c50be87-289b-4142-9393-3e2365881bbd" />
+Erro Se AADSTS70025: The client 'GitHubDeployAppSerilog' has no configured federated identity credentials.
 
-repo:AmauriDallOglio/Serilog:ref:refs/heads/master
+Vá no portal do Azure → abra Microsoft Entra ID → No painel que você mostrou, clique em Registros de aplicativo. → Na lista, selecione o app GitHubDeployAppSerilog.
 
+<img width="1062" height="620" alt="image" src="https://github.com/user-attachments/assets/ad10072c-1ec5-41b1-94bb-26f201e5cdb5" />
+
+- Vá em **App Registration → GitHubDeployAppSerilog →  “Certificados e segredos”  → Credenciais federadas → Adicionar**
+
+<img width="1325" height="501" alt="image" src="https://github.com/user-attachments/assets/491b0178-64fd-4009-982c-8ea865bf69ca" />
+
+<img width="913" height="681" alt="image" src="https://github.com/user-attachments/assets/ac4a2b8d-505b-4e6a-b1b1-7324d44b8382" />
+<img width="898" height="290" alt="image" src="https://github.com/user-attachments/assets/c6da9981-9289-4a0a-8035-1e49fcea6323" />
+
+- Emissor: `https://token.actions.githubusercontent.com`
+- Organização: `AmauriDallOglio`
+- Organization ID: 
+- GitHub organization ID: 
+- Repositório: Serilog
+- Repository ID: 
+- GitHub repository ID: 
+- Tipo de entidade: `Ramificação`  (Branch)
+  - Isso porque o seu workflow dispara sempre que há push no branch master.
+- Com base na seleção: `master`
+- Identificador de assunto: `repo:AmauriDallOglio/Serilog:ref:refs/heads/master`
+- Nome: `GitHubActions-Serilog-Master`
+- Descrição: `Credencial federada para deploy do Serilog via GitHub Actions`
+- Público-alvo: `api://AzureADTokenExchange`
+ 
+ 
 
 
 ### 3. Dar permissão na assinatura
