@@ -1,25 +1,8 @@
 # Engenharia de Software
 
-> Guia prático para Engenharia de Software Moderna utilizando .NET, Arquitetura de Software, Cloud Computing, DevOps e Inteligência Artificial.
+Guia prático para Engenharia de Software Moderna utilizando .NET, Arquitetura de Software, Cloud Computing, DevOps e Inteligência Artificial.
 
----
 
-# Roadmap
-
-- ✅ Fundamentos da Linguagem
-- ✅ Princípios de Engenharia de Software
-- ✅ Arquitetura de Software
-- ✅ Persistência de Dados
-- ✅ APIs Modernas
-- ✅ Testes e Qualidade
-- ✅ Observabilidade
-- ✅ Segurança
-- ✅ Containers e DevOps
-- ✅ Sistemas Distribuídos
-- ✅ Inteligência Artificial
-- ✅ Governança Técnica
-
----
 
 # 1 Fundamentos do C#
 
