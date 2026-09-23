@@ -404,17 +404,111 @@ Com o Log Analytics, é possível realizar consultas avançadas, exportar result
 
 ---
 
-# Explorando Análise de Logs na Prática
+# Configurando a Análise de Logs
 
-No laboratório do módulo 11, trabalhamos com a administração de monitoramento dentro do Microsoft Azure, focando na análise de logs com o Log Analytics. Após criar o workspace, é possível acessar o serviço pelo Azure Monitor, onde encontramos logs de atividades, alertas, métricas e registros consolidados da assinatura.
+Olá, seguimos no nosso módulo 11 da formação AZ-104 Administrator, e agora estamos falando sobre a administração de monitoramento. No último vídeo falamos sobre análise de logs, isso mesmo. Ao longo deste conteúdo vamos validar o uso do Log Analytics: como criamos um workspace, como funciona a consulta e análise de logs com base nas informações contidas ali, e como vamos estruturar as consultas do Log Analytics.
 
-O Log Analytics funciona como um container que armazena dados coletados de diferentes fontes. As consultas são feitas em **KQL**, permitindo recuperar e consolidar informações de forma rápida e precisa. Existem consultas prontas disponíveis no ambiente, mas também é possível criar consultas personalizadas para atender necessidades específicas. Isso é especialmente útil em cenários de segurança, auditoria e monitoramento de desempenho.
+Iniciando a parte de monitoramento, sabemos que precisamos reunir informações, e essas informações podem disparar alertas com base nas regras que determinarmos. Mas existem situações onde precisamos analisar esses dados de uma forma um pouco mais minuciosa, e é aqui que entra a validação por meio do Log Analytics. Lembrando que, conforme vamos represando as informações, é interessante que a gente faça alguma coisa com esse dado — não vamos simplesmente deixar um monte de dados lá consumindo espaço, gastando dinheiro e não fazendo nada com isso. Então temos, dentro do Log Analytics, um ambiente onde podemos fazer consultas, o nosso famoso KQL. Essa é a linguagem utilizada para fazer as consultas com base nas informações que já temos represadas no nosso ambiente.
 
-As consultas podem ser configuradas para rodar automaticamente, integradas a alertas, ou exportadas para ferramentas como Power BI e Excel. Exemplos de consultas incluem auditoria de monitoramento, análise de recursos, desktops virtuais, containers, bancos de dados, segurança, máquinas virtuais e workloads. É possível verificar discos livres, eventos aguardando processamento, serviços do Windows parados, entre outros.
+Dentro do Azure temos um serviço para coletar e analisar esses dados, que vão sendo gerados com base nos recursos e ambientes. É importante avaliar também que não é somente o ambiente de nuvem — o ambiente local também pode ter consultas escritas de log, analisando interativamente esses resultados, fazendo uma pesquisa específica para consultar uma informação. Por exemplo, posso avaliar dentro do meu Entra ID (antigo Azure AD) todos os sinais de login de uma determinada pessoa, mas posso também, no Log Analytics, fazer uma consulta mais específica direcionada ao usuário, direcionada a um IP, porque ali tenho represadas todas essas informações. Podemos avaliar atualizações de sistema, solucionar problemas de incidentes operacionais, uma série de coisas.
 
-A linguagem KQL é essencial para explorar o Log Analytics. Com ela, administradores podem buscar informações específicas, como falhas de autorização ou eventos críticos, e consolidar dados por usuário, recurso ou período de tempo. Embora algumas consultas já estejam disponíveis, é importante saber como criar novas, adaptando-se às necessidades do ambiente.
+<img width="1543" height="741" alt="image" src="https://github.com/user-attachments/assets/d6c2f8ac-6cc6-4e6e-b503-3923eb4d1971" />
 
-Portanto, o Log Analytics é uma ferramenta poderosa para coleta, análise e consulta de dados no Azure. Ele permite que administradores tenham maior controle sobre o ambiente, identifiquem problemas rapidamente e tomem decisões baseadas em informações detalhadas e confiáveis.
+A questão é que primeiro é preciso ter um workspace. Fazendo um comparativo, se você for usar o Sentinel — uma ferramenta de gerenciamento de segurança, por exemplo — o primeiro passo também é criar um workspace, exatamente como nesta tela, porque ele precisa de dados, precisa de informações, para que a partir daí venha a avaliar a segurança do nosso ambiente com base nos conectores que formos configurando. Então a criação de um workspace é a primeira coisa que precisamos fazer, determinando aqueles pontos que já conhecemos: assinatura, grupo de recursos, nome do workspace e a região em que ele vai ficar. A partir daí temos a coleta de dados.
 
+Na criação do workspace, vamos ter, como recurso do Azure, o que é conhecido como container, mas ali, na verdade, vamos ter todos os dados que podemos analisar, e eles vão estar represados com base no escopo que estamos determinando, ou seja, de onde vamos pegar essa informação. Podemos ter vários workspaces por assinatura, não precisamos ter apenas um, podemos ter uma série deles com base na nossa necessidade.
+
+A partir daí vamos fazer a consulta e análise de logs com base nas informações que temos. Como vimos na aula passada, podemos determinar algumas regras, alguns alertas, eventos, com base naquilo que está acontecendo em um host, em um serviço web. Mas também há casos onde precisamos fazer consultas, precisamos analisar os logs. Podemos colocar um filtro, mas nem sempre o filtro funciona; então, na análise de logs, o fato de você saber exatamente o que está procurando funciona de uma forma muito mais rápida. Essa é a grande vantagem de termos as informações ali. Essa análise de logs que vamos fazer é feita por meio de uma linguagem de consulta, por isso chamamos de KQL, e isso é um termo que também cai na prova — muita atenção a esse detalhe. Nesse caso conseguimos recuperar a informação necessária de uma forma muito mais rápida, e não dependendo apenas de filtros padrão que possamos ter dentro do ambiente.
+
+Com base nessa análise de logs, também podemos exportar essas informações para o Excel, ou executar automaticamente, criando um alerta. Então é mais uma ferramenta que nos ajuda nessa análise de informações. Por exemplo, temos os logs de eventos do Windows, temos os logs para avaliar os eventos, onde você pode procurar — isso caiu na prova, inclusive, e eu não me lembrava que tinha todos esses tópicos, obviamente eram esses logs, mas caiu no Windows também — informações dos agentes, logs personalizados, regras de alerta, tudo isso vem para cá, tudo isso alimenta o Log Analytics, e a partir daí vamos utilizar esse modelo de linguagem, conhecido como KQL, para fazer as consultas das informações necessárias no nosso ambiente.
+
+<img width="1549" height="766" alt="image" src="https://github.com/user-attachments/assets/f44f57ea-54b9-40d8-a347-fe59361907a1" />
+
+Aqui temos um modelo de consulta: quando esse evento for de um determinado nível, o modelo de erro gerado há mais de um dia, mas não acima de um dia, sumarizado pelo computador, top 10 erros descendente. Esse é um modelo de consulta do Log Analytics, com base na estratégia da minha prova: não tinha o código em si nem pedia para montar o código, mas sim questionava como se fazia a consulta, qual modelo de linguagem era utilizado. Esse é um ponto interessante, quando vou precisar entender bem esse tipo de linguagem. Olha, depende muito da situação; há pessoas que já utilizam isso mais em algum contexto de segurança, por exemplo, para utilizar o Sentinel, até mesmo para eventos, administradores do Windows.
+
+<img width="1664" height="339" alt="image" src="https://github.com/user-attachments/assets/16c6b977-f43f-467c-87f0-ee49df6920f2" />
+
+Mas o KQL é uma linguagem interessante para você buscar informações dentro do Azure — acho que é um tipo de coisa que você vai aprimorando conforme está utilizando o ambiente, mas em termos de prova é um ponto importante que precisamos saber, pelo menos quando eu fiz a minha não havia necessidade de digitar, mas se você puder se aprofundar no assunto, tenho certeza que seria bem interessante.
+
+Vamos então para o nosso laboratório saber um pouco mais sobre o nosso querido workspace analítico e companhia.
+
+# Criando Alerta
+
+Aqui temos o cenário de laboratório com uma máquina virtual. O que vamos fazer: criar um modelo para provisionar essa infraestrutura, vamos criar um alerta, vamos criar notificações de grupo de ação, vamos acionar um alerta de processamento e vamos utilizar as consultas do nosso querido Azure para, literalmente, ter uma visão de tudo que está ocorrendo.
+
+
+<img width="1000" height="534" alt="image" src="https://github.com/user-attachments/assets/34775132-de8e-4e3a-8137-b037cc44dfc1" />
+
+Então, para começar, vamos vir aqui na parte de deploy de um template e vamos fazer aqui o nosso deploy padrão. Deixa eu fazer o seguinte: depois vou fazer aqui o load do meu arquivo .json, deixa eu puxar aquilo, Laboratórios módulo 11  aqui está o meu template, já fez o download aqui, tudo certo, usuário, minha máquina, mexeu, dá um save aqui.
+
+<img width="1799" height="627" alt="image" src="https://github.com/user-attachments/assets/9d76d6c5-7799-48ef-8c22-f259185cd80d" />
+
+Vou selecionar o grupo de recursos que já tinha feito para a finalização do nosso laboratório, vou colocar aqui um usuário, uma senha mais ou menos complexa e vamos usar um review mais create para criar aqui a infraestrutura inicial, para que possamos validar esses próximos tópicos. Assim que ele finalizar a criação desse recurso, eu volto aqui com vocês.
+
+<img width="1551" height="709" alt="image" src="https://github.com/user-attachments/assets/e72156d6-81e8-4574-980d-a7ccb084ab50" />
+
+Finalizou a criação, vamos lá no nosso grupo de recursos ver se está tudo em casa: ok, máquina virtual, storage account, rede virtual e NSG, tudo certo, beleza. Então, o que vamos fazer agora: vamos configurar o Azure Monitor para as nossas máquinas virtuais. Vamos no Monitor, está aqui, agora vamos vir VM insights e vamos habilitar aqui, configurar os nossos insights.
+
+<img width="1504" height="800" alt="image" src="https://github.com/user-attachments/assets/74f9c40b-ba80-4ebd-b980-fcc2a7b0a4b8" />
+
+A máquina já identificou nosso recurso e está como "não monitorado". A gente fez o procedimento parecido em um dos laboratórios, em que venho aqui e mando habilitar o monitoramento da VM, na subscrição, e vem aqui em configure e vamos habilitar. Aqui não precisamos trocar nenhuma configuração, e o que ele vai fazer nesse momento é mandar um agente para a nossa máquina, para que ela comece a ser monitorada pelo nosso recurso. Vai levar alguns instantes até ele terminar essa parte, e assim que terminar eu volto de novo.
+
+<img width="1532" height="720" alt="image" src="https://github.com/user-attachments/assets/084b1098-c349-4dfd-923e-8d87be91063d" />
+
+
+Agora sim, finalizou: ele saiu da parte de "não monitorado", está aparecendo aqui "monitorado, habilitado", dizendo qual é o Data Collection Rule que está represando as informações da minha VM. Nossa tarefa 2 agora é criar um alerta.
+
+<img width="1816" height="593" alt="image" src="https://github.com/user-attachments/assets/b1f50fd1-6203-412f-83b8-8cf81c6963f4" />
+
+Então, aqui na guia, na parte verde, vamos em alertas no momento não tenho nenhum então vamos criar uma nova regra de alerta.  
+ 
+ <img width="1836" height="579" alt="image" src="https://github.com/user-attachments/assets/7d367ed1-ed1f-492a-a75e-7cbb52f72ce1" />
+
+Aqui precisamos selecionar o nosso escopo, onde vamos aplicar essa regra; então vamos selecionar o nosso grupo de recursos, onde tenho a máquina, definindo o nosso escopo, e depois vamos adicionar a condição que vai receber a nossa regra. Já selecionei o meu grupo de recursos, vamos clicar em aplicar, vamos para a condição: qual é o sinal aqui que vamos estar procurando? Vamos buscar por todos os sinais e vamos pegar aqui "Delete Virtual Machine", vamos clicar em aplicar, e ele já está aparecendo, deixa eu ver aqui, beleza.
+
+<img width="1774" height="351" alt="image" src="https://github.com/user-attachments/assets/65bf9e1f-79f4-482f-8c52-643acf9737bc" />
+
+<img width="1833" height="462" alt="image" src="https://github.com/user-attachments/assets/b21432cd-dede-4eba-a64e-f9f0f990d355" />
+
+Em Alert Logic vamos selecionar o seguinte: vamos deixar em Event Level para todos, em Review Status também todos, e aqui em Initiated By também todos marcados. Aí agora vamos para ações  agora sim vamos ter uma ação tomada dependendo daquilo que acontecer aqui no nosso resource group. Quais são os pontos que vamos marcar aqui como valor?
+
+<img width="1827" height="379" alt="image" src="https://github.com/user-attachments/assets/89766e1e-5073-4fb9-8686-1dd61874863d" />
+
+Temos as ações: ações rápidas, usar grupos de ação, ou então posso deixar como nenhum o que não é o indicado e criar aqui algum tipo de ação relacionado ao que está acontecendo. Então, aqui em Quick Actions podemos adicionar um grupo de ação; qual é o nome, se vamos estar trabalhando em cima de alguma role ou não. Temos as opções de usar uma ação rápida, usar um grupo de ações onde vamos criar um grupo, ou nenhum. 
+
+<img width="1450" height="664" alt="image" src="https://github.com/user-attachments/assets/86694f83-afca-4b3d-b6a9-21d40be40fe1" />
+
+Vamos vir aqui na seleção do meio, usar Action Groups; como não temos nenhum, vamos criar um. Vou selecionar o restante desse grupo, a região vamos deixar Global, que é o padrão, o nome desse Action Group vou colocar como um alerta para o meu grupo de operações. Nas notificações, qual o tipo de notificação que vamos selecionar para esse modelo de recurso? 
+
+<img width="1624" height="383" alt="image" src="https://github.com/user-attachments/assets/0c7bc54b-f967-489f-9521-3fdcabd8f64c" />
+
+Vamos ver o que ele traz para nós: e-mail, SMS, Push, Voice, ou Azure Resource Manager Role como não tenho nenhuma, vou selecionar essa de baixo, e aí vou colocar aqui como nome "a VM foi deletada". Aqui, na parte do lápis, editei e coloquei um e-mail meu particular, para que ele avise quando acontecer algum problema, ali em ações, notificação. A partir de ações não vamos alterar nada, e já vou mandar aqui um review mais create para ele criar esse Action Group.
+
+<img width="1692" height="533" alt="image" src="https://github.com/user-attachments/assets/a57f7e20-a6ce-4e5f-9a4c-848dcf482a38" />
+
+Qual é a estratégia: cada vez que isso acontecer, caso seja um alerta, vai ser enviado por e-mail quando a sua máquina for excluída. 
+
+<img width="1809" height="320" alt="image" src="https://github.com/user-attachments/assets/698d5393-ccaf-46c8-9a5c-cd36d51bbeb5" />
+
+Ele já está mostrando aqui: "Alert Operation Team" para a minha subscrição, a ação é mandar um e-mail, e está habilitado. Então, aqui no Monitor, quando vejo os meus grupos de ações, já está aparecendo com uma ação minha; a alert rule ainda não tem aqui, porque ainda não aconteceu nenhum evento que disparasse esse alerta. Agora vamos fazer com que esse teste de fato seja efetivo, isso vai dar tudo certo.
+Como vamos fazer isso: aquela regra de alerta está relacionada à nossa máquina virtual, então vou vir aqui no resource group, vou selecionar ali a máquina virtual  aquela regra de alerta está configurada para que, quando essa máquina for excluída, ela dispare.
+
+<img width="1613" height="637" alt="image" src="https://github.com/user-attachments/assets/1e51b798-d950-4ed4-8f7b-58b3922ccae4" />
+
+Então vou mandar uma exclusão, entrando aqui e aplicando o delete, deletar todos os recursos da VM, e vamos mandar ela ser excluída. 
+
+<img width="1835" height="571" alt="image" src="https://github.com/user-attachments/assets/6de6b574-2ed8-4bcb-8559-b7245ad279a8" />
+
+Deixa eu puxar aqui para vocês: já apareceu que foi adicionado um grupo de ações, o Alert Options já veio para mim, começou ali a deleção da máquina, o grupo de ações foi criado, meu e-mail foi adicionado. Agora o objetivo é que, com o envio dessa exclusão de máquina, exista aqui um alerta. Deixa eu dar uma olhada aqui no monitoramento, atualizando aqui, ele ainda está executando a parte de deleção.
+
+<img width="1023" height="564" alt="image" src="https://github.com/user-attachments/assets/f95b5ff7-e403-40af-9f3e-c59efe3cc5bd" />
+
+Olha só, passaram uns dois minutos depois que fiz a exclusão da máquina, e agora sim apareceram os alertas aqui no portal. Deixa eu puxar aqui o e-mail que veio para mim, com a mensagem de exclusão: "Alerta do Azure Monitor: a VM foi excluída", ativado para o nome da VM só o horário que não está certo, porque o recurso também está em outra região  e informando ali os dados de qual é o resource group, o nome da máquina, e que ela foi deletada. Então aquele alerta que configuramos já deu retorno e já apareceu para nós todos os cenários referentes a isso.
+
+<img width="1829" height="603" alt="image" src="https://github.com/user-attachments/assets/ee5bc58e-3eca-405b-bfe6-03fc4e928d36" />
+
+Ou seja, a partir do momento em que coloco esse modelo de processamento, consigo ter um controle daquilo que está acontecendo. Então, se era um recurso de produção, isso poderia gerar algum problema, e se ele não tivesse um lock, por exemplo, de exclusão na própria estação, a gente ficaria sabendo. Então é interessante também colocar esse cenário de monitoramento, ele fica só como um aviso, porque às vezes não temos certeza se essa máquina era de homologação ou de produção, mas é importante que tenhamos um pleno controle de tudo aquilo que está acontecendo no nosso ambiente. Então a parte de monitoramento nos traz essa visibilidade, em que temos controle da parte do Activity Log, e consigo ver tudo aquilo que estava acontecendo dentro do meu ambiente, todas as modificações que estávamos fazendo. Não se esqueçam que a parte de Service Health é onde vou consultar a saúde, não apenas do meu ambiente, mas a saúde do ambiente da própria Microsoft, validando se há alguma manutenção planejada que vai afetar os meus recursos. É o nosso canal de controle de tudo aquilo que está acontecendo no nosso ambiente como um todo.
+
+Encerra-se aqui o nosso conteúdo da formação AZ-104. Espero que você tenha gostado desse curso, que ele tenha agregado tecnicamente para você, e ainda mais informações. E claro, eu te desejo muito sucesso, e que venham esses PS, porque você está merecendo. Então, até uma próxima oportunidade, forte abraço.
 
 
