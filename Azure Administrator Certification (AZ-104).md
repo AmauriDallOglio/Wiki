@@ -1,59 +1,104 @@
 # Formação AZ-104: Azure Administrator
 
+
 ## 1. Administração de Identidade
+
 1.1. Introdução ao Azure Administrator Certification (AZ-104) com a Microsoft
+
 1.2. Configurando o Microsoft Entra ID
+
 1.3. Configurando Contas de Usuário e de Grupo
 
+
 ## 2. Administração de Governança e Conformidade
+
 2.1. Configurando Assinaturas do Azure
+
 2.2. Configurando o Azure Policy
+
 2.3. Configurando o Controle de Acesso Baseado em Função
 
+
 ## 3. Administração dos Recursos do Azure
+
 3.1. Configurando Recursos do Azure com Ferramentas
+
 3.2. Configurando Recursos com Modelos ARM
 
+
 ## 4. Administração de Rede Virtual
+
 4.1. Configurando Redes Virtuais
+
 4.2. Configurando Grupos de Segurança de Rede
+
 4.3. Configurando o DNS do Azure
 
+
 ## 5. Administração de Conectividade entre Sites
+
 5.1. Configurando o Emparelhamento de VNet
+
 5.2. Configurando Pontos de Extremidade e Roteamento de Rede
 
+
 ## 6. Administração do Tráfego de Rede
+
 6.1. Configurando o Azure Load Balancer
+
 6.2. Configurando o Gateway de Aplicativo
+
 6.3. Configurando o Observador de Rede
 
+
 ## 7. Administração do Armazenamento do Azure
+
 7.1. Configurando Contas de Armazenamento
+
 7.2. Configurando Armazenamento de Blobs
+
 7.3. Configurando a Segurança de Armazenamento
+
 7.4. Configurando Arquivos do Azure
 
+
 ## 8. Administração de Máquinas Virtuais do Azure
+
 8.1. Configurando Máquinas Virtuais no Azure
+
 8.2. Configurando a Disponibilidade da Máquina Virtual no Azure
+
 8.3. Gerenciando Máquinas Virtuais no Azure
 
+
 ## 9. Administração de Opções de Computação PaaS
+
 9.1. Configurando Planos do Serviço de Aplicativo do Azure
+
 9.2. Configurando os Serviços de Aplicativos do Azure
+
 9.3. Configurando Instâncias de Contêiner do Azure
 
+
 ## 10. Administração de Proteção de Dados
+
 10.1. Configurando Backups de Arquivos e Pastas no Azure
+
 10.2. Configurando Backups da Máquina Virtual no Azure
+
 10.3. Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional
+
 10.4. Associando Conceitos de Identidade, Rede e Armazenamento
 
+
 ## 11. Administração de Monitoramento
+
 11.1. Configurando o Azure Monitor
+
 11.2. Configurando Alertas do Azure
+
 11.3. Configurando a Análise de Logs
+
 
 
 
