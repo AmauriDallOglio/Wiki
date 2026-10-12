@@ -20,6 +20,8 @@ Instalar: ollama run qwen2.5vl
 <img width="1592" height="577" alt="image" src="https://github.com/user-attachments/assets/73290c09-b8ec-4571-86bc-420193dc4d1f" />
 
 
+```text
+
 $imagem = "C:\Temp\hotwheels.jpg"
 $base64 = [Convert]::ToBase64String(
     [System.IO.File]::ReadAllBytes($imagem)
@@ -39,6 +41,10 @@ $resposta = Invoke-RestMethod `
     -Body $body
 
 $resposta.response
+
+```
+
+
 
 <img width="1797" height="824" alt="image" src="https://github.com/user-attachments/assets/dbfbc7ef-76ce-4529-9191-b566314e2b1e" />
 
