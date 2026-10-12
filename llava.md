@@ -5,8 +5,10 @@ Instalar: ollama run llava
 
 <img width="1599" height="282" alt="image" src="https://github.com/user-attachments/assets/e0022e0d-6118-4247-88ce-7273e1eb60c3" />
 
-<!-- 
-$imagem = "C:\Temp\hotwheels.jpg"
+Codigo para execução de teste:
+
+```text
+ $imagem = "C:\Temp\hotwheels.jpg"
 
 $base64 = [Convert]::ToBase64String(
     [System.IO.File]::ReadAllBytes($imagem)
@@ -26,9 +28,12 @@ $resposta = Invoke-RestMethod `
     -Body $body
 
 $resposta.response
--->
+ 
+
+```
 
 <img width="1889" height="932" alt="image" src="https://github.com/user-attachments/assets/53091678-6423-4922-8650-5ad3bed67929" />
 
+Exemplo do ollama:
 
 <img width="1452" height="1020" alt="image" src="https://github.com/user-attachments/assets/b744540f-18ea-44a5-a324-dd01e0ec8c17" />
