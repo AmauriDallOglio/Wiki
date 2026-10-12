@@ -51,6 +51,9 @@ Confira a versão do executável instalado: (Get-Item "$env:LOCALAPPDATA\Program
 
 
 
+Update: ollama pull gemma4:12b
+
+<img width="1501" height="271" alt="image" src="https://github.com/user-attachments/assets/4be4f29e-319c-4b5b-9fce-0089ff7cbfb4" />
 
 
 
