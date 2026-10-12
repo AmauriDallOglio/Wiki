@@ -30,6 +30,10 @@ Depois, confira se foi instalado: ollama list
 <img width="1528" height="491" alt="image" src="https://github.com/user-attachments/assets/37ec8ac4-f24a-4278-b324-1f1cdc92dfc7" />
 
 
+Update: ollama pull llama3.2-vision:latest
+
+<img width="1592" height="251" alt="image" src="https://github.com/user-attachments/assets/eaf3eb83-2ba4-4006-93f2-6267f4525dde" />
+
 
 
 
