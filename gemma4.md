@@ -56,6 +56,10 @@ Update: ollama pull gemma4:12b
 <img width="1501" height="271" alt="image" src="https://github.com/user-attachments/assets/4be4f29e-319c-4b5b-9fce-0089ff7cbfb4" />
 
 
+Testando no ollama:
+
+
+<img width="1450" height="1025" alt="image" src="https://github.com/user-attachments/assets/09b9aae8-d29e-4861-8bfa-8773a7daf741" />
 
 
 
