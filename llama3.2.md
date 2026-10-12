@@ -9,3 +9,6 @@ No prompt: ollama run llama3.2
 
 
 
+Update: ollama pull llama3.2:latest
+
+<img width="1519" height="245" alt="image" src="https://github.com/user-attachments/assets/97f80d1a-7ea5-4bd4-a105-602e0309fa8a" />
