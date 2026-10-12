@@ -19,5 +19,5 @@ Explique em português o que é inteligência artificial em 3 frases.
 
 <img width="1775" height="201" alt="image" src="https://github.com/user-attachments/assets/ec8d3ac2-e56e-40df-b36b-71e46403d875" />
 
-
+Para sair: /bye
 
