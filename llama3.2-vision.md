@@ -1,4 +1,4 @@
-Instale o LLM
+Instale o modelo
 
 https://ollama.com/library/llama3.2-vision:latest
 
