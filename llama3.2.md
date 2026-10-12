@@ -1,3 +1,9 @@
+Instale o LLM
+
+https://ollama.com/library/llama3.2-vision:latest
+
+<img width="1867" height="872" alt="image" src="https://github.com/user-attachments/assets/fd591582-0d2e-43a4-8994-d7e854e0ad37" />
+
 
 https://ollama.com/library/llama3.2:latest
 
