@@ -20,6 +20,11 @@ Instalar: ollama run qwen2.5vl
 <img width="1592" height="577" alt="image" src="https://github.com/user-attachments/assets/73290c09-b8ec-4571-86bc-420193dc4d1f" />
 
 
+Testando:
+
+<img width="1822" height="669" alt="image" src="https://github.com/user-attachments/assets/4c596f48-bb98-4bb5-aad0-b50adc8ac847" />
+
+
 ```text
 
 $imagem = "C:\Temp\hotwheels.jpg"
@@ -46,7 +51,6 @@ $resposta.response
 
 
 
-<img width="1797" height="824" alt="image" src="https://github.com/user-attachments/assets/dbfbc7ef-76ce-4529-9191-b566314e2b1e" />
 
 
 <img width="1444" height="1018" alt="image" src="https://github.com/user-attachments/assets/8e898ac8-2d46-48b1-91b1-20faae80482b" />
