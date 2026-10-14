@@ -62,6 +62,32 @@ Testando no ollama:
 <img width="1450" height="1025" alt="image" src="https://github.com/user-attachments/assets/09b9aae8-d29e-4861-8bfa-8773a7daf741" />
 
 
+```text
+Analise a imagem deste carrinho colecionável Hot Wheels.
+
+Retorne os resultados em JSON válido, usando exatamente estes campos:
+
+{
+"categoria": "Carrinhos",
+"fabricante": null,
+"modelo": null,
+"cor": null,
+"escala": null,
+"anoFabricacao": null,
+"serie": null,
+"inscricoesVisiveis": [],
+"descricaoVisual": "",
+"informacoesNaoIdentificadas": []
+}
+
+Regras:
+- Identifique somente informações que possam ser observadas ou inferidas com justificativa.
+- Não invente o modelo exato, o ano ou a série.
+- Use null quando não houver evidências suficientes.
+- Diferencie características visíveis de suposições.
+- Retorne somente o JSON, sem explicações fora dele.
+
+```
 
 
 
