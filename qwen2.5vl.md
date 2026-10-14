@@ -28,7 +28,7 @@ $base64 = [Convert]::ToBase64String(
 )
 
 $body = @{
-    model = "llama3.2-vision:latest"
+    model = "qwen2.5vl:latest"
     prompt = "Descreva somente as características visíveis do carrinho na imagem."
     images = @($base64)
     stream = $false
@@ -52,3 +52,32 @@ $resposta.response
 <img width="1444" height="1018" alt="image" src="https://github.com/user-attachments/assets/8e898ac8-2d46-48b1-91b1-20faae80482b" />
 
 
+```text
+
+Analise a imagem deste carrinho colecionável Hot Wheels.
+
+Retorne os resultados em JSON válido, usando exatamente estes campos:
+
+{
+"categoria": "Carrinhos",
+"fabricante": null,
+"modelo": null,
+"cor": null,
+"escala": null,
+"anoFabricacao": null,
+"serie": null,
+"inscricoesVisiveis": [],
+"descricaoVisual": "",
+"informacoesNaoIdentificadas": []
+}
+
+Regras:
+- Identifique somente informações que possam ser observadas ou inferidas com justificativa.
+- Não invente o modelo exato, o ano ou a série.
+- Use null quando não houver evidências suficientes.
+- Diferencie características visíveis de suposições.
+- Retorne somente o JSON, sem explicações fora dele.
+- 
+
+
+```
