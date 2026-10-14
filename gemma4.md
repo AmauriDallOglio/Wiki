@@ -58,6 +58,8 @@ Update: ollama pull gemma4:12b
 
 Testando no ollama:
 
+<img width="1279" height="896" alt="image" src="https://github.com/user-attachments/assets/5b2ce128-0c02-4d1f-a09e-45871c8bac85" />
+
 
 ```text
  $imagem = "C:\Temp\hotwheels.jpg"
