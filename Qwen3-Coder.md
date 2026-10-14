@@ -13,6 +13,10 @@ Aguarde o modelo carregar. Depois, digite esta pergunta: Explique o que é inje�
 
 <img width="1373" height="827" alt="image" src="https://github.com/user-attachments/assets/b7f87d95-536f-4a38-87cb-c9b5c2093f6d" />
 
+Esse comando abre uma conversa com o modelo, mas não fornece automaticamente a estrutura nem o conteúdo da solução. Por isso, ele respondeu de forma genérica.
+
+O próximo exemplo será teste com o projeto;
+
 Teste 2
 
 Descubra a estrutura do projeto: Get-ChildItem -Force
