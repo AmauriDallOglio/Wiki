@@ -59,6 +59,31 @@ Update: ollama pull gemma4:12b
 Testando no ollama:
 
 
+```text
+ $imagem = "C:\Temp\hotwheels.jpg"
+
+$base64 = [Convert]::ToBase64String(
+    [System.IO.File]::ReadAllBytes($imagem)
+)
+
+$body = @{
+    model = "gemma4:12b"
+    prompt = "Describe the objects visible in this photo. What type of vehicle is shown? Mention its color and distinctive features."
+    images = @($base64)
+    stream = $false
+} | ConvertTo-Json -Depth 5
+
+$resposta = Invoke-RestMethod `
+    -Uri "http://localhost:11434/api/generate" `
+    -Method Post `
+    -ContentType "application/json" `
+    -Body $body
+
+$resposta.response
+ 
+
+```
+
 <img width="1450" height="1025" alt="image" src="https://github.com/user-attachments/assets/09b9aae8-d29e-4861-8bfa-8773a7daf741" />
 
 
