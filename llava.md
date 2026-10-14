@@ -5,7 +5,12 @@ Instalar: ollama run llava
 
 <img width="1599" height="282" alt="image" src="https://github.com/user-attachments/assets/e0022e0d-6118-4247-88ce-7273e1eb60c3" />
 
-Codigo para execução de teste:
+Teste:
+
+
+<img width="1895" height="877" alt="image" src="https://github.com/user-attachments/assets/2ddef872-87bf-4656-acf3-41d3c6fc9374" />
+
+
 
 ```text
  $imagem = "C:\Temp\hotwheels.jpg"
@@ -32,9 +37,9 @@ $resposta.response
 
 ```
 
-<img width="1889" height="932" alt="image" src="https://github.com/user-attachments/assets/53091678-6423-4922-8650-5ad3bed67929" />
 
-Exemplo do ollama:
+
+
 
 <img width="1452" height="1020" alt="image" src="https://github.com/user-attachments/assets/b744540f-18ea-44a5-a324-dd01e0ec8c17" />
 
